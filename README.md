@@ -10,7 +10,7 @@ Perhaps you are also interested in the sister project AIASS for Max4Live:
 
 https://github.com/gh0stless/AIASS-for-MAX4LIVE
 
-![](./docs/AIASS-Uno-VST-Preview.jpg)
+![](./docs/AIASS-Mono-VST-Preview.jpg)
 
 ## Description
 In the event of errors (wrong or missing DLL, no SIDBlaster connected) the red LED flashes.
