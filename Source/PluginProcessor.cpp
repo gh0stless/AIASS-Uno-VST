@@ -1209,7 +1209,7 @@
 		// audio processing...
 		for (int channel = 0; channel < totalNumInputChannels; ++channel)
 		{
-			float* channelData = buffer.getWritePointer(channel);
+			//float* channelData = buffer.getWritePointer(channel);
 
 			// ..do something to the data...
 		}

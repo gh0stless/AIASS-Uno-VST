@@ -1349,9 +1349,9 @@ void AiassAudioProcessorEditor::timerCallback()
             legatomode->setEnabled(false);
             noteprioritymode->setEnabled(false);
 
-            Voice1->setToggleState(true,true);
-            Voice2->setToggleState(true,true);
-            Voice3->setToggleState(true,true);
+            Voice1->setToggleState(true,sendNotification);
+            Voice2->setToggleState(true,sendNotification);
+            Voice3->setToggleState(true,sendNotification);
             Voice1->setEnabled(false);
             Voice2->setEnabled(false);
             Voice3->setEnabled(false);
