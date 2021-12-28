@@ -4,9 +4,9 @@
 
 Compiled binary files also on www.crazy-midi.de.
 
-I hope that the source code can be a basis to create more VST plugins for the SIDBlaster-USB. 
+It is the further development of the AIASS-mono.
 
-Perhaps you are also interested in the sister project AIASS for Max4Live:
+The AIASS-Uno now also has a poly mode.
 
 https://github.com/gh0stless/AIASS-for-MAX4LIVE
 
