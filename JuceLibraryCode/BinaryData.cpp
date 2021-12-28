@@ -123,7 +123,7 @@ static const unsigned char temp_binary_data_1[] =
 "\r\n"
 "history\r\n"
 "-------\r\n"
-"- 2021/12/16 app name changed to ASIASS-Uno v.0.1\r\n"
+"- 2021/12/16 app name changed to ASIASS-Uno v.0.9\r\n"
 "  - Poly Mode added\r\n"
 "- 2021/11/08 - releasing v.0.9\r\n"
 "  - PianoRol added (displays and playing notes)\r\n"

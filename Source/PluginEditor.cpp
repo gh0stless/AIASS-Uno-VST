@@ -7,7 +7,7 @@
   the "//[xyz]" and "//[/xyz]" sections will be retained when the file is loaded
   and re-saved.
 
-  Created with Projucer version: 6.1.3
+  Created with Projucer version: 6.1.4
 
   ------------------------------------------------------------------------------
 
@@ -1276,7 +1276,7 @@ void AiassAudioProcessorEditor::paint (juce::Graphics& g)
 
     {
         int x = 336, y = 49, width = 50, height = 20;
-        juce::String text (TRANS("v. 0.1"));
+        juce::String text (TRANS("v. 0.9"));
         juce::Colour fillColour = juce::Colours::black;
         //[UserPaintCustomArguments] Customize the painting arguments here..
         //[/UserPaintCustomArguments]
@@ -1489,7 +1489,7 @@ BEGIN_JUCER_METADATA
            mode="0"/>
     <IMAGE pos="14 28 315 41" resource="typenschild_a_png" opacity="1.0"
            mode="0"/>
-    <TEXT pos="336 49 50 20" fill="solid: ff000000" hasStroke="0" text="v. 0.1"
+    <TEXT pos="336 49 50 20" fill="solid: ff000000" hasStroke="0" text="v. 0.9"
           fontname="Default font" fontsize="15.0" kerning="0.0" bold="0"
           italic="0" justification="36"/>
     <IMAGE pos="728 312 159 125" resource="sidblaster02_png" opacity="1.0"

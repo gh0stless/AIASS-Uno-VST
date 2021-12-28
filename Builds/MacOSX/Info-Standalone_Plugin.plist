@@ -18,9 +18,9 @@
     <key>CFBundleSignature</key>
     <string>????</string>
     <key>CFBundleShortVersionString</key>
-    <string>0.1</string>
+    <string>0.9</string>
     <key>CFBundleVersion</key>
-    <string>0.1</string>
+    <string>0.9</string>
     <key>NSHumanReadableCopyright</key>
     <string>crazy-midi.de 2017-2021</string>
     <key>NSHighResolutionCapable</key>
