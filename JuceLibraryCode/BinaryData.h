@@ -9,10 +9,10 @@
 namespace BinaryData
 {
     extern const char*   hardsid_dll_how_to_and_hints_txt;
-    const int            hardsid_dll_how_to_and_hints_txtSize = 4164;
+    const int            hardsid_dll_how_to_and_hints_txtSize = 4062;
 
     extern const char*   README_md;
-    const int            README_mdSize = 656;
+    const int            README_mdSize = 631;
 
     // Number of elements in the namedResourceList and originalFileNames arrays.
     const int namedResourceListSize = 2;
