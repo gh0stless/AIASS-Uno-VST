@@ -295,7 +295,7 @@
 	{
 		//OK: n is a real frequency
 		//Calculate SID-frequency
-		float SF = (17.02841924F * f);
+		float SF = (f * pow(2,24)) / (17734472.0F / 18.0F);
 		SF += 0.5;
 		int SID_FREQ = SF;
 		if ((SID_FREQ >= 0) && (SID_FREQ <= 65535))

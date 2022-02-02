@@ -42,6 +42,9 @@ public:
 	}
 
 	bool LED = false;
+	bool LED1 = false;
+	bool LED2 = false;
+	bool LED3 = false;
 	bool LINK = false;
 	bool RESET = false;
 	bool INIT = false;
@@ -166,6 +169,8 @@ private:
 	int PULSEW2 = 1024;
 	int PULSEW3 = 1024;
 
+	float TUNE = 0;
+
 	double MyFreq1 = 0.0;
 	double MyFreq2 = 0.0;
 	double MyFreq3 = 0.0;
@@ -189,6 +194,8 @@ private:
 	Array <SIDStateVoice> SIDSTATE {};
 		
 	int MyProgram = 0;
+
+	
 	
 	public:
 	juce::MidiKeyboardState keyboardState; 

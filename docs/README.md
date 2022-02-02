@@ -5,6 +5,9 @@ todo (for v.1.0):
 
 history
 -------
+- 2022/02/01 v.0.9.3
+  - Tune function added
+  - LED indicators for voices added
 - 2021/12/16 app name changed to ASIASS-Uno v.0.9
   - Poly Mode added
 - 2021/11/08 - releasing v.0.9

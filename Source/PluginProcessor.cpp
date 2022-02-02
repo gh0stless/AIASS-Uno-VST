@@ -55,7 +55,7 @@
 		}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("AttAck1",       // parameterID
-			"Attack 1",       // parameter name
+			"Attack1",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 15.0f, 1.0f),    // range
 			1.0f,         // default value
@@ -63,7 +63,7 @@
 			nullptr));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("AttAck2",       // parameterID
-			"Attack 2",       // parameter name
+			"Attack2",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 15.0f, 1.0f),    // range
 			1.0f,         // default value
@@ -71,7 +71,7 @@
 			nullptr));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("AttAck3",       // parameterID
-			"Attack 3",       // parameter name
+			"Attack3",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 15.0f, 1.0f),    // range
 			1.0f,         // default value
@@ -79,7 +79,7 @@
 			nullptr));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("DeCay1",       // parameterID
-			"Decay 1",       // parameter name
+			"Decay1",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 15.0f, 1.0f),    // range
 			7.0f,         // default value
@@ -87,7 +87,7 @@
 			nullptr));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("DeCay2",       // parameterID
-			"Decay 2",       // parameter name
+			"Decay2",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 15.0f, 1.0f),    // range
 			7.0f,         // default value
@@ -95,7 +95,7 @@
 			nullptr));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("DeCay3",       // parameterID
-			"Decay 3",       // parameter name
+			"Decay3",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 15.0f, 1.0f),    // range
 			7.0f,         // default value
@@ -103,7 +103,7 @@
 			nullptr));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("SuStain1",       // parameterID
-			"Sustain 1",       // parameter name
+			"Sustain1",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 15.0f, 1.0f),    // range
 			7.0f,         // default value
@@ -111,7 +111,7 @@
 			nullptr));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("SuStain2",       // parameterID
-			"Sustain 2",       // parameter name
+			"Sustain2",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 15.0f, 1.0f),    // range
 			7.0f,         // default value
@@ -119,7 +119,7 @@
 			nullptr));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("SuStain3",       // parameterID
-			"Sustain 3",       // parameter name
+			"Sustain3",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 15.0f, 1.0f),    // range
 			7.0f,         // default value
@@ -127,7 +127,7 @@
 			nullptr));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("ReLease1",       // parameterID
-			"Release 1",       // parameter name
+			"Release1",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 15.0f, 1.0f),    // range
 			7.0f,         // default value
@@ -135,7 +135,7 @@
 			nullptr));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("ReLease2",       // parameterID
-			"Release 2",       // parameter name
+			"Release2",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 15.0f, 1.0f),    // range
 			7.0f,         // default value
@@ -143,7 +143,7 @@
 			nullptr));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("ReLease3",       // parameterID
-			"Release 3",       // parameter name
+			"Release3",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 15.0f, 1.0f),    // range
 			7.0f,         // default value
@@ -151,7 +151,7 @@
 			nullptr));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("PulsW1",       // parameterID
-			"Pulswith 1",       // parameter name
+			"Pulswith1",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(1.0f, 4094.0f, 1.0f),    // range
 			1024.0f,         // default value
@@ -159,7 +159,7 @@
 			nullptr));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("PulsW2",       // parameterID
-			"Pulswith 2",       // parameter name
+			"Pulswith2",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(1.0f, 4094.0f, 1.0f),    // range
 			1024.0f,         // default value
@@ -167,7 +167,7 @@
 			nullptr));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("PulsW3",       // parameterID
-			"Pulswith 3",       // parameter name
+			"Pulswith3",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(1.0f, 4094.0f, 1.0f),    // range
 			1024.0f,         // default value
@@ -175,7 +175,7 @@
 			nullptr));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("VoiCe1",       // parameterID
-			"Voice 1",       // parameter name
+			"Voice1",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			1.0f,         // default value
@@ -193,7 +193,7 @@
 		}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("VoiCe2",       // parameterID
-			"Voice 2",       // parameter name
+			"Voice2",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			1.0f,         // default value
@@ -211,7 +211,7 @@
 		}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("VoiCe3",       // parameterID
-			"Voice 3",       // parameter name
+			"Voice3",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			1.0f,         // default value
@@ -229,7 +229,7 @@
 			}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("OcTave1",       // parameterID
-			"Octave 1",       // parameter name
+			"Octave1",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(-4.0f, 4.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -237,7 +237,7 @@
 			nullptr));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("OcTave2",       // parameterID
-			"Octave 2",       // parameter name
+			"Octave2",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(-4.0f, 4.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -245,7 +245,7 @@
 			nullptr));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("OcTave3",       // parameterID
-			"Octave 3",       // parameter name
+			"Octave3",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(-4.0f, 4.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -253,7 +253,7 @@
 			nullptr));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("SeMi1",       // parameterID
-			"Semitone 1",       // parameter name
+			"Semitone1",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(-12.0f, 12.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -261,7 +261,7 @@
 			nullptr));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("SeMi2",       // parameterID
-			"Semitone 2",       // parameter name
+			"Semitone2",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(-12.0f, 12.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -269,7 +269,7 @@
 			nullptr));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("SeMi3",       // parameterID
-			"Semitone 3",       // parameter name
+			"Semitone3",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(-12.0f, 12.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -277,7 +277,7 @@
 			nullptr));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("CenT1",       // parameterID
-			"Cent 1",       // parameter name
+			"Cent1",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(-100.0f, 100.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -285,7 +285,7 @@
 			nullptr));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("CenT2",       // parameterID
-			"Cent 2",       // parameter name
+			"Cent2",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(-100.0f, 100.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -293,7 +293,7 @@
 			nullptr));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("CenT3",       // parameterID
-			"Cent 3",       // parameter name
+			"Cent3",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(-100.0f, 100.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -301,7 +301,7 @@
 			nullptr));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("NoiSe1",       // parameterID
-			"Noise 1",       // parameter name
+			"Noise1",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -319,7 +319,7 @@
 		}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("NoiSe2",       // parameterID
-			"Noise 2",       // parameter name
+			"Noise2",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -337,7 +337,7 @@
 		}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("NoiSe3",       // parameterID
-			"Noise 3",       // parameter name
+			"Noise3",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -355,7 +355,7 @@
 		}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("PulSe1",       // parameterID
-			"Pulse 1",       // parameter name
+			"Pulse1",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			1.0f,         // default value
@@ -373,7 +373,7 @@
 		}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("PulSe2",       // parameterID
-			"Pulse 2",       // parameter name
+			"Pulse2",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			1.0f,         // default value
@@ -391,7 +391,7 @@
 		}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("PulSe3",       // parameterID
-			"Pulse 3",       // parameter name
+			"Pulse3",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			1.0f,         // default value
@@ -409,7 +409,7 @@
 		}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("SaW1",       // parameterID
-			"Saw 1",       // parameter name
+			"Saw1",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -427,7 +427,7 @@
 		}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("SaW2",       // parameterID
-			"Saw 2",       // parameter name
+			"Saw2",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -445,7 +445,7 @@
 		}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("SaW3",       // parameterID
-			"Saw 3",       // parameter name
+			"Saw3",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -463,7 +463,7 @@
 		}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("TriA1",       // parameterID
-			"Tria 1",       // parameter name
+			"Tria1",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -481,7 +481,7 @@
 		}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("TriA2",       // parameterID
-			"Tria 2",       // parameter name
+			"Tria2",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -499,7 +499,7 @@
 		}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("TriA3",       // parameterID
-			"Tria 3",       // parameter name
+			"Tria3",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -517,7 +517,7 @@
 		}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("RingMod1",       // parameterID
-			"Ringmod 1",       // parameter name
+			"Ringmod1",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -535,7 +535,7 @@
 		}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("RingMod2",       // parameterID
-			"Ringmod 2",       // parameter name
+			"Ringmod2",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -553,7 +553,7 @@
 		}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("RingMod3",       // parameterID
-			"Ringmod 3",       // parameter name
+			"Ringmod3",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -571,7 +571,7 @@
 		}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("SynC1",      // parameterID
-			"Sync 1",       // parameter name
+			"Sync1",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -589,7 +589,7 @@
 		}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("SynC2",      // parameterID
-			"Sync 2",       // parameter name
+			"Sync2",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -607,7 +607,7 @@
 		}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("SynC3",      // parameterID
-			"Sync 3",       // parameter name
+			"Sync3",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -659,7 +659,7 @@
 		}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("FilTer1",       // parameterID
-			"Filter 1",       // parameter name
+			"Filter1",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -677,7 +677,7 @@
 		}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("FilTer2",       // parameterID
-			"Filter 2",       // parameter name
+			"Filter2",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -695,7 +695,7 @@
 		}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("FilTer3",       // parameterID
-			"Filter 3",       // parameter name
+			"Filter3",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -713,7 +713,7 @@
 		}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("FilTerIn",       // parameterID
-			"Filter In",       // parameter name
+			"FilterIn",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -731,7 +731,7 @@
 		}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("FilTerLP",       // parameterID
-			"Low Pass",       // parameter name
+			"LowPass",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -749,7 +749,7 @@
 		}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("FilTerBP",       // parameterID
-			"Band Pass",       // parameter name
+			"BandPass",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -767,7 +767,7 @@
 		}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("FilTerHP",       // parameterID
-			"High Pass",       // parameter name
+			"HighPass",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -862,8 +862,8 @@
 				return 0.0f;
 			}));
 
-		parameters.createAndAddParameter(std::make_unique<Parameter>("PitchBend",       // parameterID
-			"PiTchbend",       // parameter name
+		parameters.createAndAddParameter(std::make_unique<Parameter>("PitchBender",       // parameterID
+			"Pitchbender",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(-8191.0f, 8191.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -889,7 +889,7 @@
 			}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("BeNd1",       // parameterID
-			"BeND1",       // parameter name
+			"Bend1",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			1.0f,         // default value
@@ -907,7 +907,7 @@
 			}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("BeNd2",       // parameterID
-			"BeND2",       // parameter name
+			"Bend2",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			1.0f,         // default value
@@ -925,7 +925,7 @@
 			}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("BeNd3",       // parameterID
-			"BeND3",       // parameter name
+			"Bend3",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			1.0f,         // default value
@@ -943,7 +943,7 @@
 			}));
 
 		parameters.createAndAddParameter(std::make_unique<Parameter>("ModeButton",       // parameterID
-			"MoDebutton",       // parameter name
+			"Modebutton",       // parameter name
 			String(),     // parameter label (suffix)
 			NormalisableRange<float>(0.0f, 1.0f, 1.0f),    // range
 			0.0f,         // default value
@@ -959,6 +959,14 @@
 				if (text == "On")  return 1.0f;
 				return 0.0f;
 			}));
+
+		parameters.createAndAddParameter(std::make_unique<Parameter>("TuNe",       // parameterID
+			"Tune",       // parameter name
+			String(),     // parameter label (suffix)
+			NormalisableRange<float>(-100.0f, 100.0f, 1.0f),    // range
+			0.0f,         // default value
+			nullptr,
+			nullptr));
 		
 		parameters.state = ValueTree(Identifier("AIASS"));
 
@@ -1025,12 +1033,13 @@
 		parameters.addParameterListener("MidiChannel", this);	//60
 		parameters.addParameterListener("LinkButton",this);
 		parameters.addParameterListener("ResetButton", this);
-		parameters.addParameterListener("PitchBend", this);
+		parameters.addParameterListener("PitchBender", this);
 		parameters.addParameterListener("InitButton", this);
 		parameters.addParameterListener("BeNd1", this);		//65
 		parameters.addParameterListener("BeNd2", this);
 		parameters.addParameterListener("BeNd3", this);
 		parameters.addParameterListener("ModeButton", this);
+		parameters.addParameterListener("TuNe", this);
 
 		m_sid = new Sid();
 
@@ -1498,9 +1507,11 @@
 					float CCBend = (float)(m.getPitchWheelValue());
 					if ((m.getPitchWheelValue() >= (8191+100)) || (m.getPitchWheelValue() <= (8191 - 100))) MIDIBENDACTIVE = true;
 					else  MIDIBENDACTIVE = false;
-					float newBend = (CCBend - 8191);
-					parameterChanged("PitchBend", newBend);
-					float newGUIBend = ((float)CCBend) * (1.0f / 16383.0f);
+					float newBend = (CCBend - 8192);
+					parameterChanged("PitchBender", newBend);
+					float newGUIBend = 0;
+					if (newBend == 0) newGUIBend = 0.5f;
+					else newGUIBend = ((float)CCBend) * (1.0f / 16383.0f);
 					sendParamChangeMessageToListeners(63, newGUIBend);
 				}
 			}
@@ -2149,12 +2160,10 @@
 			SIDSTATE.clearQuick();
 			heldNotesList.clearQuick();
 		}
-		else if (parameterID == "PitchBend")
+		else if (parameterID == "PitchBender")
 		{
 			PITCHBEND = newValue;
-			//PITCHBEND = PITCHBEND + 8192;
 			handlepitch(false);
-
 		}
 		else if (parameterID == "BeNd1")
 		{
@@ -2176,6 +2185,10 @@
 		m_sid->stop(1);
 		m_sid->stop(2);
 		m_sid->stop(3);
+		}
+		else if (parameterID == "TuNe")
+		{
+		TUNE = newValue;
 		}
 
 	}
@@ -2357,30 +2370,33 @@
 			SIDVolume = (float)(MyVel * (15.0f / 127.0f));
 		}
 		
-		if (MODE) {
+		if (MODE) { //Polymode
 			switch (VoiceNo) {
-				case 1:				
+				case 1:	
+					LED1 = true;
 					MyNote1 = (MyNote + (OCTAVE1 * 12)) + SEMI1;
 					MyFreq1 = mm.getMidiNoteInHertz(MyNote1, 440.0);
-					MyFreq1 = MyFreq1 * pow(2, (CENT1 / 1200.0));
+					MyFreq1 = MyFreq1 * pow(2, ((CENT1 + TUNE) / 1200.0));
 					newFreq1 = MyFreq1;
 					if (BEND1 && (PITCHBEND != 0)) newFreq1 = scaleInterval(PITCHBEND, -8191.0f, 8191.0f, MyFreq1 / 2.0f, MyFreq1 * 2.0f);
 					m_sid->set_freq(1, (float)newFreq1);
 					m_sid->play(1);
 				break;
 				case 2:
+					LED2 = true;
 					MyNote2 = (MyNote + (OCTAVE2 * 12)) + SEMI2;
 					MyFreq2 = mm.getMidiNoteInHertz(MyNote2, 440.0);
-					MyFreq2 = MyFreq2 * pow(2, (CENT2 / 1200.0));
+					MyFreq2 = MyFreq2 * pow(2, ((CENT2 + TUNE) / 1200.0));
 					newFreq2 = MyFreq2;
 					if (BEND2 && (PITCHBEND != 0)) newFreq2 = scaleInterval(PITCHBEND, -8191.0f, 8191.0f, MyFreq2 / 2.0f, MyFreq2 * 2.0f);
 					m_sid->set_freq(2, (float)newFreq2);
 					m_sid->play(2);
 				break;
 				case 3:
+					LED3 = true;
 					MyNote3 = (MyNote + (OCTAVE3 * 12)) + SEMI3;
 					MyFreq3 = mm.getMidiNoteInHertz(MyNote3, 440.0);
-					MyFreq3 = MyFreq3 * pow(2, (CENT3 / 1200.0));
+					MyFreq3 = MyFreq3 * pow(2, ((CENT3 + TUNE) / 1200.0));
 					newFreq3 = MyFreq3;
 					if (BEND3 && (PITCHBEND != 0)) newFreq3 = scaleInterval(PITCHBEND, -8191.0f, 8191.0f, MyFreq3 / 2.0f, MyFreq3 * 2.0f);
 					m_sid->set_freq(3, (float)newFreq3);
@@ -2389,25 +2405,29 @@
 			}
 		}
 		else { //Mono Mode
-			handlepitch(true);
+			
 
 			MyNote1 = (MyNote + (OCTAVE1 * 12)) + SEMI1;
 			MyFreq1 = mm.getMidiNoteInHertz(MyNote1, 440.0);
-			MyFreq1 = MyFreq1 * pow(2, (CENT1 / 1200.0));
+			MyFreq1 = MyFreq1 * pow(2, ((CENT1 + TUNE) / 1200.0));
 
 			MyNote2 = (MyNote + (OCTAVE2 * 12)) + SEMI2;
 			MyFreq2 = mm.getMidiNoteInHertz(MyNote2, 440.0);
-			MyFreq2 = MyFreq2 * pow(2, (CENT2 / 1200.0));
+			MyFreq2 = MyFreq2 * pow(2, ((CENT2 + TUNE) / 1200.0));
 
 			MyNote3 = (MyNote + (OCTAVE3 * 12)) + SEMI3;
 			MyFreq3 = mm.getMidiNoteInHertz(MyNote3, 440.0);
-			MyFreq3 = MyFreq3 * pow(2, (CENT3 / 1200.0));
+			MyFreq3 = MyFreq3 * pow(2, ((CENT3 + TUNE) / 1200.0));
 
+			handlepitch(true);
+			
 			if (VOICE1)
 			{
+				
 				m_sid->set_freq(1, (float)newFreq1);
 				if (triggernote)
 				{
+					LED1 = true;
 					//if (V1isPlaying) m_sid->stop(1);
 					m_sid->play(1);
 				}
@@ -2416,9 +2436,11 @@
 
 			if (VOICE2)
 			{
+				
 				m_sid->set_freq(2, (float)newFreq2);
 				if (triggernote)
 				{
+					LED2 = true;
 					//if (V2isPlaying) m_sid->stop(2);
 					m_sid->play(2);
 				}
@@ -2426,9 +2448,11 @@
 			}
 			if (VOICE3)
 			{
+				LED3 = true;
 				m_sid->set_freq(3, (float)newFreq3);
 				if (triggernote)
 				{
+					LED3 = true;
 					//if (V3isPlaying) m_sid->stop(3);
 					m_sid->play(3);
 				}
@@ -2443,12 +2467,15 @@
 		if (MODE) {
 			switch (VoiceNo) {
 			case 1:
+				LED1 = false;
 				m_sid->stop(1);
 				break;
 			case 2:
+				LED2 = false;
 				m_sid->stop(2);
 				break;
 			case 3:
+				LED3 = false;
 				m_sid->stop(3);
 				break;
 			}
@@ -2458,6 +2485,7 @@
 			
 			if (VOICE1)
 			{
+				LED1 = false;
 				m_sid->stop(1);
 				V1isPlaying = false;
 			}
@@ -2465,12 +2493,14 @@
 			{
 				if (V1isPlaying)
 				{
+					LED1 = false;
 					m_sid->stop(1);
 					V1isPlaying = false;
 				}
 			}
 			if (VOICE2)
 			{
+				LED2 = false;
 				m_sid->stop(2);
 				V2isPlaying = false;
 			}
@@ -2478,12 +2508,14 @@
 			{
 				if (V2isPlaying)
 				{
+					LED2 = false;
 					m_sid->stop(2);
 					V2isPlaying = false;
 				}
 			}
 			if (VOICE3)
 			{
+				LED3 = false;
 				m_sid->stop(3);
 				V3isPlaying = false;
 			}
@@ -2491,6 +2523,7 @@
 			{
 				if (V3isPlaying)
 				{
+					LED3 = false;
 					m_sid->stop(3);
 					V3isPlaying = false;
 				}

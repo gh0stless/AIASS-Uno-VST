@@ -56,12 +56,30 @@ public:
 		return static_cast<AiassAudioProcessor&> (processor);
 	}
 
-	void set_LED_On(void) {
-		Led->setState(juce::Button::buttonDown);
-	}
-	void set_LED_Off(void) {
-		Led->setState(juce::Button::buttonNormal);
-	}
+
+    void handleLED(bool on, int lednummer) {
+        switch (lednummer)
+        {
+            case 0:
+                if (on) Led->setState(juce::Button::buttonDown);
+                else Led->setState(juce::Button::buttonNormal);
+                break;
+            case 1:
+                if (on) Voice1LED->setState(juce::Button::buttonDown);
+                else Voice1LED->setState(juce::Button::buttonNormal);
+                break;
+            case 2:
+                if (on) Voice2LED->setState(juce::Button::buttonDown);
+                else Voice2LED->setState(juce::Button::buttonNormal);
+                break;
+            case 3:
+                if (on) Voice3LED->setState(juce::Button::buttonDown);
+                else Voice3LED->setState(juce::Button::buttonNormal);
+                break;
+            default:
+                break;
+        }
+    }
 
 	void timerCallback() override;
 
@@ -167,6 +185,7 @@ private:
        std::unique_ptr<ButtonAttachment>Bend2Attachment;
        std::unique_ptr<ButtonAttachment>Bend3Attachment;
        std::unique_ptr<ButtonAttachment>ModeAttachment;
+       std::unique_ptr<SliderAttachment>TuneAttachment;
 
 	   TooltipWindow tooltipWindow; // to add tooltips to an application, you
 									// just need to create one of these and leave it
@@ -188,9 +207,12 @@ private:
     //[/UserVariables]
 
     //==============================================================================
+    std::unique_ptr<juce::GroupComponent> centgroup;
+    std::unique_ptr<juce::GroupComponent> voicegroup;
+    std::unique_ptr<juce::Slider> Octave1;
+    std::unique_ptr<juce::GroupComponent> octavegroup;
     std::unique_ptr<juce::GroupComponent> tonegroup;
     std::unique_ptr<juce::GroupComponent> semigroup;
-    std::unique_ptr<juce::GroupComponent> octavegroup;
     std::unique_ptr<juce::Slider> Semi1;
     std::unique_ptr<juce::Slider> Cent1;
     std::unique_ptr<juce::Slider> Attack1;
@@ -198,12 +220,10 @@ private:
     std::unique_ptr<juce::Slider> Sustain1;
     std::unique_ptr<juce::GroupComponent> soundgroup;
     std::unique_ptr<juce::Slider> Release1;
-    std::unique_ptr<juce::Slider> Octave1;
     std::unique_ptr<juce::GroupComponent> releasegroup;
     std::unique_ptr<juce::GroupComponent> sustaingroup;
     std::unique_ptr<juce::GroupComponent> decaygroup;
     std::unique_ptr<juce::GroupComponent> attackgroup;
-    std::unique_ptr<juce::GroupComponent> centgroup;
     std::unique_ptr<juce::Slider> Decay2;
     std::unique_ptr<juce::GroupComponent> pulsewidhgroup;
     std::unique_ptr<juce::Slider> Pulsew1;
@@ -275,6 +295,10 @@ private:
     std::unique_ptr<juce::ImageButton> mode__imageButton;
     std::unique_ptr<juce::Label> mono__label;
     std::unique_ptr<juce::Label> poly__label2;
+    std::unique_ptr<juce::ImageButton> Voice1LED;
+    std::unique_ptr<juce::ImageButton> Voice2LED;
+    std::unique_ptr<juce::ImageButton> Voice3LED;
+    std::unique_ptr<juce::Slider> Tune;
     juce::Image cachedImage_aiasshintergrund_png_1;
     juce::Image cachedImage_typenschild_a_png_2;
     juce::Image cachedImage_sidblaster02_png_3;

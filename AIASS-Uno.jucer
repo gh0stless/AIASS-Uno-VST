@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="xAsfkL" name="AIASS-Uno" displaySplashScreen="1" reportAppUsage="1"
-              splashScreenColour="Dark" projectType="audioplug" version="0.9"
+              splashScreenColour="Dark" projectType="audioplug" version="0.9.3"
               bundleIdentifier="com.crazy-midi.AIASS-Uno" includeBinaryInAppConfig="1"
               companyCopyright="crazy-midi.de 2017-2021" buildVST="1" buildVST3="1"
               buildAU="0" buildAUv3="0" buildRTAS="0" buildAAX="0" buildStandalone="1"
