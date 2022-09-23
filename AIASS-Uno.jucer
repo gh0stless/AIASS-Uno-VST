@@ -35,7 +35,7 @@
     <FILE id="A3xJbT" name="README.md" compile="0" resource="1" file="docs/README.md"/>
   </MAINGROUP>
   <EXPORTFORMATS>
-    <VS2019 targetFolder="VisualStudio2019" windowsTargetPlatformVersion="10.0.16299.0"
+    <VS2019 targetFolder="Builds/VisualStudio2019" windowsTargetPlatformVersion="10.0.16299.0"
             toolset="v140">
       <CONFIGURATIONS>
         <CONFIGURATION isDebug="1" name="Debug" binaryPath="Builds\Windows\Debug"/>
