@@ -20,34 +20,42 @@
 
 	Sid::Sid()
 	{
-		
-
 		#if defined(_WIN32) || defined(_WIN64)
-		hardsiddll = LoadLibrary("hardsid.dll");
+		hardsiddll = hardsidlibrary.open("hardsid.dll");
+		#endif	
+
+		#if defined(__linux)
+		hardsiddll = hardsidlibrary.open("libhardsid.so");
+		#endif
+
+		#if defined(__APPLE__)
+		hardsiddll = hardsidlibrary.open("libhardsid.dylib");
+		#endif
 		// Check to see if the library was loaded successfully 
-		if (hardsiddll != 0) {
-			HardSID_Version = (lpHardSID_Version)GetProcAddress(hardsiddll, "HardSID_Version");
-			HardSID_Devices = (lpHardSID_Devices)GetProcAddress(hardsiddll, "HardSID_Devices");
-			HardSID_Delay = (lpHardSID_Delay)GetProcAddress(hardsiddll, "HardSID_Delay");
-			HardSID_Write = (lpHardSID_Write)GetProcAddress(hardsiddll, "HardSID_Write");
-			HardSID_Read = (lpHardSID_Read)GetProcAddress(hardsiddll, "HardSID_Read");
-			HardSID_Flush = (lpHardSID_Flush)GetProcAddress(hardsiddll, "HardSID_Flush");
-			HardSID_SoftFlush = (lpHardSID_SoftFlush)GetProcAddress(hardsiddll, "HardSID_SoftFlush");
-			HardSID_Lock = (lpHardSID_Lock)GetProcAddress(hardsiddll, "HardSID_Lock");
-			HardSID_Filter = (lpHardSID_Filter)GetProcAddress(hardsiddll, "HardSID_Filter");
-			HardSID_Reset = (lpHardSID_Reset)GetProcAddress(hardsiddll, "HardSID_Reset");
-			HardSID_Sync = (lpHardSID_Sync)GetProcAddress(hardsiddll, "HardSID_Sync");
-			HardSID_Mute = (lpHardSID_Mute)GetProcAddress(hardsiddll, "HardSID_Mute");
-			HardSID_MuteAll = (lpHardSID_MuteAll)GetProcAddress(hardsiddll, "HardSID_MuteAll");
-			InitHardSID_Mapper = (lpInitHardSID_Mapper)GetProcAddress(hardsiddll, "InitHardSID_Mapper");
-			GetHardSIDCount = (lpGetHardSIDCount)GetProcAddress(hardsiddll, "GetHardSIDCount");
-			WriteToHardSID = (lpWriteToHardSID)GetProcAddress(hardsiddll, "WriteToHardSID");
-			ReadFromHardSID = (lpReadFromHardSID)GetProcAddress(hardsiddll, "ReadFromHardSID");
-			MuteHardSID_Line = (lpMuteHardSID_Line)GetProcAddress(hardsiddll, "MuteHardSID_Line");
-			HardSID_Reset2 = (lpHardSID_Reset2)GetProcAddress(hardsiddll, "HardSID_Reset2");
-			HardSID_Unlock = (lpHardSID_Unlock)GetProcAddress(hardsiddll, "HardSID_Unlock");
-			HardSID_Try_Write = (lpHardSID_Try_Write)GetProcAddress(hardsiddll, "HardSID_Try_Write");
-			HardSID_ExternalTiming = (lpHardSID_ExternalTiming)GetProcAddress(hardsiddll, "HardSID_ExternalTiming");
+		if (hardsiddll == true) {
+
+			HardSID_Version = (lpHardSID_Version)hardsidlibrary.getFunction("HardSID_Version");
+			HardSID_Devices = (lpHardSID_Devices)hardsidlibrary.getFunction("HardSID_Devices");
+			HardSID_Delay = (lpHardSID_Delay)hardsidlibrary.getFunction("HardSID_Delay");
+			HardSID_Write = (lpHardSID_Write)hardsidlibrary.getFunction("HardSID_Write");
+			HardSID_Read = (lpHardSID_Read)hardsidlibrary.getFunction("HardSID_Read");
+			HardSID_Flush = (lpHardSID_Flush)hardsidlibrary.getFunction("HardSID_Flush");
+			HardSID_SoftFlush = (lpHardSID_SoftFlush)hardsidlibrary.getFunction("HardSID_SoftFlush");
+			HardSID_Lock = (lpHardSID_Lock)hardsidlibrary.getFunction("HardSID_Lock");
+			HardSID_Filter = (lpHardSID_Filter)hardsidlibrary.getFunction("HardSID_Filter");
+			HardSID_Reset = (lpHardSID_Reset)hardsidlibrary.getFunction("HardSID_Reset");
+			HardSID_Sync = (lpHardSID_Sync)hardsidlibrary.getFunction("HardSID_Sync");
+			HardSID_Mute = (lpHardSID_Mute)hardsidlibrary.getFunction("HardSID_Mute");
+			HardSID_MuteAll = (lpHardSID_MuteAll)hardsidlibrary.getFunction("HardSID_MuteAll");
+			InitHardSID_Mapper = (lpInitHardSID_Mapper)hardsidlibrary.getFunction("InitHardSID_Mapper");
+			GetHardSIDCount = (lpGetHardSIDCount)hardsidlibrary.getFunction("GetHardSIDCount");
+			WriteToHardSID = (lpWriteToHardSID)hardsidlibrary.getFunction("WriteToHardSID");
+			ReadFromHardSID = (lpReadFromHardSID)hardsidlibrary.getFunction("ReadFromHardSID");
+			MuteHardSID_Line = (lpMuteHardSID_Line)hardsidlibrary.getFunction("MuteHardSID_Line");
+			HardSID_Reset2 = (lpHardSID_Reset2)hardsidlibrary.getFunction("HardSID_Reset2");
+			HardSID_Unlock = (lpHardSID_Unlock)hardsidlibrary.getFunction("HardSID_Unlock");
+			HardSID_Try_Write = (lpHardSID_Try_Write)hardsidlibrary.getFunction("HardSID_Try_Write");
+			HardSID_ExternalTiming = (lpHardSID_ExternalTiming)hardsidlibrary.getFunction("HardSID_ExternalTiming");
 			//Check Version & Device-count
 			DLL_Version = (int)HardSID_Version();
 			if (DLL_Version < 515) {
@@ -67,28 +75,11 @@
 			dll_initialized = false;
 			error_state = 1;
 		}
-		#endif
-		
-		#if defined(__linux) || defined(__APPLE__)
-		dll_initialized = true;
-		error_state = 0;
-		DLL_Version = (int)HardSID_Version();
-		if (DLL_Version < 515) {
-			error_state = 2;
-		}
-        Number_Of_Devices = (int)HardSID_Devices();
-        if (Number_Of_Devices == 0)
-        {
-            error_state = 3;
-        }
-        #endif
 	}
 
 	Sid::~Sid()
 	{
-		#if defined(_WIN32) || defined(_WIN64)
-		if (hardsiddll != 0) FreeLibrary(hardsiddll);
-		#endif
+		hardsidlibrary.close();
 	}
 
 //------------------------------------------------------------------------------

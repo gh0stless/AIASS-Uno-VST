@@ -65,16 +65,18 @@ class Sid
 		int Number_Of_Devices = 0;
 		int DLL_Version = 0;
 		#if defined(_WIN32) || defined(_WIN64)
-		HINSTANCE hardsiddll = 0;
+		bool hardsiddll = false;
 		#endif
 		bool dll_initialized = false;
+
+		juce::DynamicLibrary hardsidlibrary;
 
 		enum HSID_STATES{
 			HSID_USB_WSTATE_OK = 1, HSID_USB_WSTATE_BUSY,
 			HSID_USB_WSTATE_ERROR, HSID_USB_WSTATE_END
 		};
 	    #if defined(_WIN32) || defined(_WIN64)
-		typedef Uint16  (CALLBACK* lpHardSID_Version)(void);
+		typedef Uint16(CALLBACK* lpHardSID_Version)(void);
 		typedef Uint8   (CALLBACK* lpHardSID_Devices)(void);
 		typedef void    (CALLBACK* lpHardSID_Delay)(Uint8 DeviceID, Uint16 Cycles);
 		typedef void    (CALLBACK* lpHardSID_Write)(Uint8 DeviceID, Uint16 Cycles, Uint8 SID_reg, Uint8 Data);
@@ -96,8 +98,10 @@ class Sid
 		typedef void    (CALLBACK* lpHardSID_Unlock)(Uint8 DeviceID);
 		typedef Uint8   (CALLBACK* lpHardSID_Try_Write)(Uint8 DeviceID, Uint16 Cycles, Uint8 SID_reg, Uint8 Data);
 		typedef BOOL    (CALLBACK* lpHardSID_ExternalTiming)(Uint8 DeviceID);
+		
 
 
+		
 		lpHardSID_Version HardSID_Version = NULL;
 		lpHardSID_Devices HardSID_Devices = NULL;
 		lpHardSID_Delay HardSID_Delay = NULL;

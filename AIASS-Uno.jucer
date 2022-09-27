@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="xAsfkL" name="AIASS-Uno" displaySplashScreen="1" reportAppUsage="1"
-              splashScreenColour="Dark" projectType="audioplug" version="0.9.3"
+              splashScreenColour="Dark" projectType="audioplug" version="0.9.5"
               bundleIdentifier="com.crazy-midi.AIASS-Uno" includeBinaryInAppConfig="1"
-              companyCopyright="crazy-midi.de 2017-2021" buildVST="1" buildVST3="1"
+              companyCopyright="crazy-midi.de 2017-2022" buildVST="1" buildVST3="1"
               buildAU="0" buildAUv3="0" buildRTAS="0" buildAAX="0" buildStandalone="1"
               enableIAA="0" pluginName="AIASS-Uno" pluginDesc="AIASS Is A SID Synthesizer"
               pluginManufacturer="crazy-midi.de" pluginManufacturerCode="CRMI"
@@ -13,7 +13,7 @@
               pluginAAXCategory="2" companyName="crazy-midi.de" companyWebsite="www.crazy-midi.de"
               companyEmail="info@crazy-midi.de" pluginFormats="buildVST,buildVST3,buildStandalone"
               pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn"
-              userNotes="AIASS was coded by Andreas Schumm (gh0stless) for www-crazy-midi.de 2017-2021"
+              userNotes="AIASS was coded by Andreas Schumm (gh0stless) for www-crazy-midi.de 2017-2022"
               jucerFormatVersion="1" pluginRTASDisableBypass="0" pluginRTASDisableMultiMono="0"
               pluginAAXDisableBypass="0" pluginAAXDisableMultiMono="0">
   <MAINGROUP id="wcvXYs" name="AIASS-Uno">
