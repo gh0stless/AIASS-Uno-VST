@@ -29,7 +29,7 @@
 typedef unsigned char Uint8;
 typedef unsigned short Uint16;
 typedef unsigned char  BYTE;
-typedef bool    boolean;
+//typedef bool    boolean;
 
 class Sid
 {

@@ -19,8 +19,9 @@
 
 Sid::Sid()
 	{
+	
 		#if defined(_WIN32) || defined(_WIN64)
-		hardsiddll = hardsidlibrary.open("hardsid.dll");
+		hardsiddll = hardsidlibrary.open("C://Program Files//Common Files//VST3//hardsid.dll");
 		#endif	
 
 		#if defined(__linux)
