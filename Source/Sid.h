@@ -29,6 +29,7 @@
 typedef unsigned char Uint8;
 typedef unsigned short Uint16;
 typedef unsigned char  BYTE;
+typedef bool    boolean;
 
 class Sid
 {
@@ -64,9 +65,7 @@ class Sid
 		int Nr_Of_Instances = 0;
 		int Number_Of_Devices = 0;
 		int DLL_Version = 0;
-		#if defined(_WIN32) || defined(_WIN64)
 		bool hardsiddll = false;
-		#endif
 		bool dll_initialized = false;
 
 		juce::DynamicLibrary hardsidlibrary;
@@ -75,56 +74,55 @@ class Sid
 			HSID_USB_WSTATE_OK = 1, HSID_USB_WSTATE_BUSY,
 			HSID_USB_WSTATE_ERROR, HSID_USB_WSTATE_END
 		};
-	    #if defined(_WIN32) || defined(_WIN64)
-		typedef Uint16(CALLBACK* lpHardSID_Version)(void);
-		typedef Uint8   (CALLBACK* lpHardSID_Devices)(void);
-		typedef void    (CALLBACK* lpHardSID_Delay)(Uint8 DeviceID, Uint16 Cycles);
-		typedef void    (CALLBACK* lpHardSID_Write)(Uint8 DeviceID, Uint16 Cycles, Uint8 SID_reg, Uint8 Data);
-		typedef Uint8   (CALLBACK* lpHardSID_Read)(Uint8 DeviceID, Uint16 Cycles, Uint8 SID_reg);
-		typedef void    (CALLBACK* lpHardSID_Flush)(Uint8 DeviceID);
-		typedef void    (CALLBACK* lpHardSID_SoftFlush)(Uint8 DeviceID);
-		typedef boolean (CALLBACK* lpHardSID_Lock)(Uint8 DeviceID);
-		typedef void    (CALLBACK* lpHardSID_Filter)(Uint8 DeviceID, boolean Filter);
-		typedef void    (CALLBACK* lpHardSID_Reset)(Uint8 DeviceID);
-		typedef void    (CALLBACK* lpHardSID_Sync)(Uint8 DeviceID);
-		typedef void    (CALLBACK* lpHardSID_Mute)(Uint8 DeviceID, Uint8 Channel, boolean Mute);
-		typedef void    (CALLBACK* lpHardSID_MuteAll)(Uint8 DeviceID, boolean Mute);
-		typedef void    (CALLBACK* lpInitHardSID_Mapper)(void);
-		typedef Uint8   (CALLBACK* lpGetHardSIDCount)(void);
-		typedef void    (CALLBACK* lpWriteToHardSID)(Uint8 DeviceID, Uint8 SID_reg, Uint8 Data);
-		typedef Uint8   (CALLBACK* lpReadFromHardSID)(Uint8 DeviceID, Uint8 SID_reg);
-		typedef void    (CALLBACK* lpMuteHardSID_Line)(int Mute);
-		typedef void    (CALLBACK* lpHardSID_Reset2)(Uint8 DeviceID, Uint8 Volume);
-		typedef void    (CALLBACK* lpHardSID_Unlock)(Uint8 DeviceID);
-		typedef Uint8   (CALLBACK* lpHardSID_Try_Write)(Uint8 DeviceID, Uint16 Cycles, Uint8 SID_reg, Uint8 Data);
-		typedef BOOL    (CALLBACK* lpHardSID_ExternalTiming)(Uint8 DeviceID);
-		
+	    
+        typedef Uint16  (*lpHardSID_Version)(void);
+		typedef Uint8   (*lpHardSID_Devices)(void);
+		typedef void    (*lpHardSID_Delay)(Uint8 DeviceID, Uint16 Cycles);
+		typedef void    (*lpHardSID_Write)(Uint8 DeviceID, Uint16 Cycles, Uint8 SID_reg, Uint8 Data);
+		typedef Uint8   (*lpHardSID_Read)(Uint8 DeviceID, Uint16 Cycles, Uint8 SID_reg);
+		typedef void    (*lpHardSID_Flush)(Uint8 DeviceID);
+		typedef void    (*lpHardSID_SoftFlush)(Uint8 DeviceID);
+		typedef boolean (*lpHardSID_Lock)(Uint8 DeviceID);
+		typedef void    (*lpHardSID_Filter)(Uint8 DeviceID, boolean Filter);
+		typedef void    (*lpHardSID_Reset)(Uint8 DeviceID);
+		typedef void    (*lpHardSID_Sync)(Uint8 DeviceID);
+		typedef void    (*lpHardSID_Mute)(Uint8 DeviceID, Uint8 Channel, boolean Mute);
+		typedef void    (*lpHardSID_MuteAll)(Uint8 DeviceID, boolean Mute);
+		typedef void    (*lpInitHardSID_Mapper)(void);
+		typedef Uint8   (*lpGetHardSIDCount)(void);
+		typedef void    (*lpWriteToHardSID)(Uint8 DeviceID, Uint8 SID_reg, Uint8 Data);
+		typedef Uint8   (*lpReadFromHardSID)(Uint8 DeviceID, Uint8 SID_reg);
+		typedef void    (*lpMuteHardSID_Line)(int Mute);
+		typedef void    (*lpHardSID_Reset2)(Uint8 DeviceID, Uint8 Volume);
+		typedef void    (*lpHardSID_Unlock)(Uint8 DeviceID);
+		typedef Uint8   (*lpHardSID_Try_Write)(Uint8 DeviceID, Uint16 Cycles, Uint8 SID_reg, Uint8 Data);
+		typedef boolean (*lpHardSID_ExternalTiming)(Uint8 DeviceID);
+        typedef void    (*lpHardSID_Uninitialize)(void);
 
-
-		
-		lpHardSID_Version HardSID_Version = NULL;
-		lpHardSID_Devices HardSID_Devices = NULL;
-		lpHardSID_Delay HardSID_Delay = NULL;
-		lpHardSID_Write HardSID_Write = NULL;
-		lpHardSID_Read HardSID_Read = NULL;
-		lpHardSID_Flush HardSID_Flush = NULL;
-		lpHardSID_SoftFlush HardSID_SoftFlush = NULL;
-		lpHardSID_Lock HardSID_Lock = NULL;
-		lpHardSID_Filter HardSID_Filter = NULL;
-		lpHardSID_Reset HardSID_Reset = NULL;
-		lpHardSID_Sync HardSID_Sync = NULL;
-		lpHardSID_Mute HardSID_Mute = NULL;
-		lpHardSID_MuteAll HardSID_MuteAll = NULL;
-		lpInitHardSID_Mapper InitHardSID_Mapper = NULL;
-		lpGetHardSIDCount GetHardSIDCount = NULL;
-		lpWriteToHardSID WriteToHardSID = NULL;
-		lpReadFromHardSID ReadFromHardSID = NULL;
-		lpMuteHardSID_Line MuteHardSID_Line = NULL;
-		lpHardSID_Reset2 HardSID_Reset2 = NULL;
-		lpHardSID_Unlock HardSID_Unlock = NULL;
-		lpHardSID_Try_Write HardSID_Try_Write = NULL;
-		lpHardSID_ExternalTiming HardSID_ExternalTiming = NULL;
-		#endif
+    lpHardSID_Version My_HardSID_Version = nullptr;
+    lpHardSID_Devices My_HardSID_Devices = nullptr;
+    lpHardSID_Delay My_HardSID_Delay = nullptr;
+    lpHardSID_Write My_HardSID_Write = nullptr;
+    lpHardSID_Read My_HardSID_Read = nullptr;
+    lpHardSID_Flush My_HardSID_Flush = nullptr;
+    lpHardSID_SoftFlush My_HardSID_SoftFlush = nullptr;
+    lpHardSID_Lock My_HardSID_Lock = nullptr;
+    lpHardSID_Filter My_HardSID_Filter = nullptr;
+    lpHardSID_Reset My_HardSID_Reset = nullptr;
+    lpHardSID_Sync My_HardSID_Sync = nullptr;
+    lpHardSID_Mute My_HardSID_Mute = nullptr;
+    lpHardSID_MuteAll My_HardSID_MuteAll = nullptr;
+    lpInitHardSID_Mapper My_InitHardSID_Mapper = nullptr;
+    lpGetHardSIDCount My_GetHardSIDCount = nullptr;
+    lpWriteToHardSID My_WriteToHardSID = nullptr;
+    lpReadFromHardSID My_ReadFromHardSID = nullptr;
+    lpMuteHardSID_Line My_MuteHardSID_Line = nullptr;
+    lpHardSID_Reset2 My_HardSID_Reset2 = nullptr;
+    lpHardSID_Unlock My_HardSID_Unlock = nullptr;
+    lpHardSID_Try_Write My_HardSID_Try_Write = nullptr;
+    lpHardSID_ExternalTiming My_HardSID_ExternalTiming = nullptr;
+    lpHardSID_Uninitialize My_HardSID_Uninitialize = nullptr;
+    
 		struct SID_Voice {
 			Uint8 FREQ_LO;
 			Uint8 FREQ_HI;

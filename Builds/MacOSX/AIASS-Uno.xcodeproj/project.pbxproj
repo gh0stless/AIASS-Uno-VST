@@ -729,7 +729,7 @@
 				LIBRARY_STYLE = Bundle;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../../../Frameworks/VST_SDK_legacy/VST2_SDK $(SRCROOT)/../../JuceLibraryCode $(HOME)/JUCE/modules $(HOME)/JUCE/modules/juce_audio_plugin_client";
-				OTHER_LDFLAGS = "-bundle -lAIASS-Uno libhardsid.dylib";
+				OTHER_LDFLAGS = "-bundle -lAIASS-Uno";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crazy-midi.AIASS-Uno;
 				PRODUCT_NAME = "AIASS-Uno";
 				USE_HEADERMAP = NO;
@@ -794,7 +794,7 @@
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../../../Frameworks/VST_SDK_legacy/VST2_SDK $(SRCROOT)/../../JuceLibraryCode $(HOME)/JUCE/modules $(HOME)/JUCE/modules/juce_audio_plugin_client";
-				OTHER_LDFLAGS = "-bundle -lAIASS-Uno libhardsid.dylib";
+				OTHER_LDFLAGS = "-bundle -lAIASS-Uno";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crazy-midi.AIASS-Uno;
 				PRODUCT_NAME = "AIASS-Uno";
 				USE_HEADERMAP = NO;
@@ -851,7 +851,7 @@
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../../../Frameworks/VST_SDK_legacy/VST2_SDK $(SRCROOT)/../../JuceLibraryCode $(HOME)/JUCE/modules $(HOME)/JUCE/modules/juce_audio_plugin_client";
-				OTHER_LDFLAGS = "-bundle -lAIASS-Uno libhardsid.dylib";
+				OTHER_LDFLAGS = "-bundle -lAIASS-Uno";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crazy-midi.AIASS-Uno;
 				PRODUCT_NAME = "AIASS-Uno";
 				USE_HEADERMAP = NO;
@@ -960,7 +960,7 @@
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../../../Frameworks/VST_SDK_legacy/VST2_SDK $(SRCROOT)/../../JuceLibraryCode $(HOME)/JUCE/modules $(HOME)/JUCE/modules/juce_audio_plugin_client";
-				OTHER_LDFLAGS = "-lAIASS-Uno libhardsid.dylib";
+				OTHER_LDFLAGS = "-lAIASS-Uno";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crazy-midi.AIASS-Uno;
 				PRODUCT_NAME = "AIASS-Uno";
 				USE_HEADERMAP = NO;
@@ -1010,7 +1010,7 @@
 				INFOPLIST_PREPROCESS = NO;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../../../Frameworks/VST_SDK_legacy/VST2_SDK $(SRCROOT)/../../JuceLibraryCode $(HOME)/JUCE/modules $(HOME)/JUCE/modules/juce_audio_plugin_client";
-				OTHER_LDFLAGS = "-lAIASS-Uno libhardsid.dylib";
+				OTHER_LDFLAGS = "-lAIASS-Uno";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crazy-midi.AIASS-Uno;
 				PRODUCT_NAME = "AIASS-Uno";
 				USE_HEADERMAP = NO;
@@ -1061,7 +1061,6 @@
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../../../Frameworks/VST_SDK_legacy/VST2_SDK $(SRCROOT)/../../JuceLibraryCode $(HOME)/JUCE/modules $(HOME)/JUCE/modules/juce_audio_plugin_client";
-				OTHER_LDFLAGS = "libhardsid.dylib";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crazy-midi.AIASS-Uno;
 				PRODUCT_NAME = "AIASS-Uno";
 				SKIP_INSTALL = YES;
@@ -1112,7 +1111,6 @@
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../../../Frameworks/VST_SDK_legacy/VST2_SDK $(SRCROOT)/../../JuceLibraryCode $(HOME)/JUCE/modules $(HOME)/JUCE/modules/juce_audio_plugin_client";
-				OTHER_LDFLAGS = "libhardsid.dylib";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crazy-midi.AIASS-Uno;
 				PRODUCT_NAME = "AIASS-Uno";
 				SKIP_INSTALL = YES;
@@ -1168,7 +1166,7 @@
 				LIBRARY_STYLE = Bundle;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../../../Frameworks/VST_SDK_legacy/VST2_SDK $(SRCROOT)/../../JuceLibraryCode $(HOME)/JUCE/modules $(HOME)/JUCE/modules/juce_audio_plugin_client";
-				OTHER_LDFLAGS = "-bundle -lAIASS-Uno libhardsid.dylib";
+				OTHER_LDFLAGS = "-bundle -lAIASS-Uno";
 				PRODUCT_BUNDLE_IDENTIFIER = com.crazy-midi.AIASS-Uno;
 				PRODUCT_NAME = "AIASS-Uno";
 				USE_HEADERMAP = NO;

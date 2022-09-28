@@ -8,7 +8,7 @@ enum {  HSID_USB_WSTATE_OK = 1, HSID_USB_WSTATE_BUSY, HSID_USB_WSTATE_ERROR, HSI
 
 typedef unsigned char Uint8;
 typedef unsigned short Uint16;
-typedef unsigned char boolean;
+//typedef unsigned char boolean;
 
 Uint8 HardSID_Read(Uint8 DeviceID, int Cycles, Uint8 SID_reg);
 
