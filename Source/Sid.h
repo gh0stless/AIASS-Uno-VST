@@ -75,19 +75,19 @@ class Sid
 			HSID_USB_WSTATE_ERROR, HSID_USB_WSTATE_END
 		};
 	    
-        typedef Uint16  (*lpHardSID_Version)(void);
+        	typedef Uint16  (*lpHardSID_Version)(void);
 		typedef Uint8   (*lpHardSID_Devices)(void);
 		typedef void    (*lpHardSID_Delay)(Uint8 DeviceID, Uint16 Cycles);
 		typedef void    (*lpHardSID_Write)(Uint8 DeviceID, Uint16 Cycles, Uint8 SID_reg, Uint8 Data);
 		typedef Uint8   (*lpHardSID_Read)(Uint8 DeviceID, Uint16 Cycles, Uint8 SID_reg);
 		typedef void    (*lpHardSID_Flush)(Uint8 DeviceID);
 		typedef void    (*lpHardSID_SoftFlush)(Uint8 DeviceID);
-		typedef boolean (*lpHardSID_Lock)(Uint8 DeviceID);
-		typedef void    (*lpHardSID_Filter)(Uint8 DeviceID, boolean Filter);
+		typedef bool    (*lpHardSID_Lock)(Uint8 DeviceID);
+		typedef void    (*lpHardSID_Filter)(Uint8 DeviceID, bool Filter);
 		typedef void    (*lpHardSID_Reset)(Uint8 DeviceID);
 		typedef void    (*lpHardSID_Sync)(Uint8 DeviceID);
-		typedef void    (*lpHardSID_Mute)(Uint8 DeviceID, Uint8 Channel, boolean Mute);
-		typedef void    (*lpHardSID_MuteAll)(Uint8 DeviceID, boolean Mute);
+		typedef void    (*lpHardSID_Mute)(Uint8 DeviceID, Uint8 Channel, bool Mute);
+		typedef void    (*lpHardSID_MuteAll)(Uint8 DeviceID, bool Mute);
 		typedef void    (*lpInitHardSID_Mapper)(void);
 		typedef Uint8   (*lpGetHardSIDCount)(void);
 		typedef void    (*lpWriteToHardSID)(Uint8 DeviceID, Uint8 SID_reg, Uint8 Data);
@@ -96,8 +96,8 @@ class Sid
 		typedef void    (*lpHardSID_Reset2)(Uint8 DeviceID, Uint8 Volume);
 		typedef void    (*lpHardSID_Unlock)(Uint8 DeviceID);
 		typedef Uint8   (*lpHardSID_Try_Write)(Uint8 DeviceID, Uint16 Cycles, Uint8 SID_reg, Uint8 Data);
-		typedef boolean (*lpHardSID_ExternalTiming)(Uint8 DeviceID);
-        typedef void    (*lpHardSID_Uninitialize)(void);
+		typedef bool    (*lpHardSID_ExternalTiming)(Uint8 DeviceID);
+                typedef void    (*lpHardSID_Uninitialize)(void);
 
     lpHardSID_Version My_HardSID_Version = nullptr;
     lpHardSID_Devices My_HardSID_Devices = nullptr;

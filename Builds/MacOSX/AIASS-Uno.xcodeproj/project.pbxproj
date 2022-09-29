@@ -91,6 +91,7 @@
 		294B4B880A56340BB8D9A6CF /* PluginProcessor.h */ /* PluginProcessor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PluginProcessor.h; path = ../../Source/PluginProcessor.h; sourceTree = SOURCE_ROOT; };
 		2B1332AE3EFBEB483AAC2F79 /* Sid.h */ /* Sid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Sid.h; path = ../../Source/Sid.h; sourceTree = SOURCE_ROOT; };
 		2EE23D1B68473C38E2F766D8 /* juce_data_structures */ /* juce_data_structures */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_data_structures; path = "~/JUCE/modules/juce_data_structures"; sourceTree = "<absolute>"; };
+		31C62C435690A008C39948DE /* libhardsid.h */ /* libhardsid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = libhardsid.h; path = ../../Source/libhardsid.h; sourceTree = SOURCE_ROOT; };
 		34D9691F7E008AF1B57FF74B /* Info-VST3.plist */ /* Info-VST3.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-VST3.plist"; path = "Info-VST3.plist"; sourceTree = SOURCE_ROOT; };
 		3D6DE13C2E7F39028D5C2D17 /* JuceHeader.h */ /* JuceHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JuceHeader.h; path = ../../JuceLibraryCode/JuceHeader.h; sourceTree = SOURCE_ROOT; };
 		3EB153B2800E3F42354BEEF3 /* juce_graphics */ /* juce_graphics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_graphics; path = "~/JUCE/modules/juce_graphics"; sourceTree = "<absolute>"; };
@@ -238,6 +239,7 @@
 			children = (
 				640FA4A5532A10E2E884B58F,
 				68739F588938AFD900293FEA,
+				31C62C435690A008C39948DE,
 				04006F2026F7BDE3A4CF4072,
 			);
 			name = "AIASS-Uno";

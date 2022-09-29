@@ -11,9 +11,6 @@
 #include "Sid.h"
 #include <chrono>
 #include <thread>
-#if defined(__linux) || defined(__APPLE__)
-#include "libhardsid.h"
-#endif
 
 //------------------------------------------------------------------------------
 
@@ -25,7 +22,7 @@ Sid::Sid()
 		#endif	
 
 		#if defined(__linux)
-		hardsiddll = hardsidlibrary.open("libhardsid.so");
+		hardsiddll = hardsidlibrary.open("/usr/local/lib/libhardsid.so");
 		#endif
 
 		#if defined(__APPLE__)
@@ -82,6 +79,14 @@ Sid::Sid()
 	Sid::~Sid()
 	{
         
+
+        
+        #if defined(__linux) || defined(__APPLE__)
+            My_HardSID_Uninitialize();
+        #endif
+        
+        hardsidlibrary.close();
+        
         My_HardSID_Version = nullptr;
         My_HardSID_Devices = nullptr;
         My_HardSID_Delay = nullptr;
@@ -103,12 +108,6 @@ Sid::Sid()
         My_HardSID_Reset2 = nullptr;
         My_HardSID_ExternalTiming = nullptr;
         My_HardSID_Uninitialize = nullptr;
-        
-        #if defined(__linux) || defined(__APPLE__)
-            My_HardSID_Uninitialize();
-        #endif
-        
-        hardsidlibrary.close();
 	}
 
 //------------------------------------------------------------------------------

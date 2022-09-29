@@ -26,17 +26,17 @@ void HardSID_Flush(Uint8 DeviceID);
 
 void HardSID_SoftFlush(Uint8 DeviceID);
 
-boolean HardSID_Lock(Uint8 DeviceID);
+bool HardSID_Lock(Uint8 DeviceID);
 
-void HardSID_Filter(Uint8 DeviceID, boolean Filter);
+void HardSID_Filter(Uint8 DeviceID, bool Filter);
 
 void HardSID_Reset(Uint8 DeviceID);
 
 void HardSID_Sync(Uint8 DeviceID);
 
-void HardSID_Mute(Uint8 DeviceID, Uint8 Channel, boolean Mute);
+void HardSID_Mute(Uint8 DeviceID, Uint8 Channel, bool Mute);
 
-void HardSID_MuteAll(Uint8 DeviceID, boolean Mute);
+void HardSID_MuteAll(Uint8 DeviceID, bool Mute);
 
 void InitHardSID_Mapper(void);
 
@@ -55,7 +55,7 @@ void HardSID_Unlock(Uint8 DeviceID);
 // DLLs version 0x0301 and above
 Uint8 HardSID_Try_Write(Uint8 DeviceID, int Cycles, Uint8 SID_reg, Uint8 Data);
 
-boolean HardSID_ExternalTiming(Uint8 DeviceID);
+bool HardSID_ExternalTiming(Uint8 DeviceID);
 
 // 0x202
 void HardSID_GetSerial(char* output, int bufferSize, Uint8 DeviceID);
