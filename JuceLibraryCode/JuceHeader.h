@@ -50,8 +50,8 @@
 #if ! JUCE_DONT_DECLARE_PROJECTINFO
 namespace ProjectInfo
 {
-    const char* const  projectName    = "AIASS-Uno";
-    const char* const  companyName    = "crazy-midi.de";
+    const char* const  projectName    = "AIASS";
+    const char* const  companyName    = "crazy";
     const char* const  versionString  = "0.9.5";
     const int          versionNumber  = 0x905;
 }

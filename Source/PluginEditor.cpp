@@ -7,7 +7,7 @@
   the "//[xyz]" and "//[/xyz]" sections will be retained when the file is loaded
   and re-saved.
 
-  Created with Projucer version: 6.1.6
+  Created with Projucer version: 7.0.2
 
   ------------------------------------------------------------------------------
 
@@ -448,7 +448,7 @@ AiassAudioProcessorEditor::AiassAudioProcessorEditor (AiassAudioProcessor& p, Au
     noteprioritymode->setBounds (401, 400, 150, 24);
 
     hyperlinkButton.reset (new juce::HyperlinkButton (TRANS("crazy-midi.de"),
-                                                      URL ("http://www.crazy-midi.de")));
+                                                      juce::URL ("http://www.crazy-midi.de")));
     addAndMakeVisible (hyperlinkButton.get());
     hyperlinkButton->setTooltip (TRANS("http://www.crazy-midi.de"));
     hyperlinkButton->setButtonText (TRANS("crazy-midi.de"));

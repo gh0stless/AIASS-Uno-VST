@@ -7,26 +7,23 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		CCF2483332BE193B503FA2E2 /* AIASS-Uno - All */ = {
+		CCF2483332BE193B503FA2E2 /* AIASS - All */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = 290B4CDAE05FD8D91B1FD7C1;
 			buildPhases = (
 			);
 			dependencies = (
-				2DE159BCDEBDEF9C12B4CDFE,
-				AEA65AF693F544B9DD8D8212,
 				D15793CACC29DB0B77439656,
 				C4E74E089ECAA4E6E5246486,
 			);
-			name = "AIASS-Uno - All";
-			productName = "AIASS-Uno";
+			name = "AIASS - All";
+			productName = AIASS;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
 		007AED47B294FCC24468BC69 /* OpenGL.framework */ = {isa = PBXBuildFile; fileRef = 2286061A1426AB9D22FB7BC9; };
 		05DE25C3EA92366496DB9C29 /* include_juce_audio_processors_lv2_libs.cpp */ = {isa = PBXBuildFile; fileRef = 9E0E82CA5DD83B2C9AFD307C; };
-		08D3E2CFCAC4E9CD5F6C5583 /* include_juce_audio_plugin_client_VST3.cpp */ = {isa = PBXBuildFile; fileRef = 0D6492183507AAF8414D0CF6; };
 		187A7B65171E25F642E11010 /* include_juce_audio_basics.mm */ = {isa = PBXBuildFile; fileRef = 6CC57311243FC1781CB1C5DE; };
 		22BF96B4788B6D4C2292D708 /* Standalone Plugin */ = {isa = PBXBuildFile; fileRef = 05902585D9BD18E398E79A74; };
 		22C5A5899E768735A90EBA30 /* include_juce_audio_plugin_client_Standalone.cpp */ = {isa = PBXBuildFile; fileRef = D7A73C65CE0CBCE0339F0C24; };
@@ -54,7 +51,6 @@
 		B3225013454A31B6DF502ED9 /* include_juce_graphics.mm */ = {isa = PBXBuildFile; fileRef = 61B1A8A2F1E72247F70AC580; };
 		B55E2A9C6CC1EA3C188E93A1 /* include_juce_events.mm */ = {isa = PBXBuildFile; fileRef = B700D624EB0B9E9F6169CAE3; };
 		B60A3CE897282F5235801B51 /* include_juce_video.mm */ = {isa = PBXBuildFile; fileRef = F7A411CC598A59DCFA30049C; };
-		B62346D779E1445896847D71 /* VST */ = {isa = PBXBuildFile; fileRef = 8DE1D89E83032C36EAF3A561; };
 		B8456D62392B5C701F520621 /* include_juce_cryptography.mm */ = {isa = PBXBuildFile; fileRef = ADE520FCC25F055C3A695421; };
 		BB9663344BE39B9A3984999E /* IOKit.framework */ = {isa = PBXBuildFile; fileRef = 544B5D6DF2DEEA63F75CE869; };
 		C332C0DB92DA8C45EF1871F2 /* PluginProcessor.cpp */ = {isa = PBXBuildFile; fileRef = 18B416BF83506E3D0B7E9F40; };
@@ -65,27 +61,23 @@
 		D6EA4122E328DB13A6A5C0B8 /* Shared Code */ = {isa = PBXBuildFile; fileRef = 03FD6FA25845FBD426296F07; };
 		DB7455916606824E47E2394D /* CoreMedia.framework */ = {isa = PBXBuildFile; fileRef = FC42B581C66CF9CF8BC66022; };
 		DFCF450DDC16E1015D341246 /* Sid.cpp */ = {isa = PBXBuildFile; fileRef = C7DC42EF7910C2C31AE294E7; };
-		E3991D63FF2BD78D6A2D5A64 /* VST3 */ = {isa = PBXBuildFile; fileRef = 4E44822961A3D165A50E411B; };
 		E4AB2E2E2DC0CA6ECA35C8ED /* AVKit.framework */ = {isa = PBXBuildFile; fileRef = 07901A871474038D5FEAD8EF; };
 		E758601822423FC58F362E4B /* include_juce_audio_devices.mm */ = {isa = PBXBuildFile; fileRef = 2079DC7D399D3A5F1B7F3EF5; };
 		E7ED4BB8243318B0CCBA54BE /* include_juce_gui_basics.mm */ = {isa = PBXBuildFile; fileRef = E36A9FADDD827DA05FA132E8; };
 		E8C33320895995466A766693 /* include_juce_gui_extra.mm */ = {isa = PBXBuildFile; fileRef = 4A00AB3F4C5ABF864CF455F1; };
-		F655E1D522CB38E9A6115A45 /* include_juce_audio_plugin_client_VST2.cpp */ = {isa = PBXBuildFile; fileRef = 15DCDE70098B56E7D7F5CCCA; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		005835E360E9ED9839C856AB /* juce_gui_basics */ /* juce_gui_basics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_gui_basics; path = "~/JUCE/modules/juce_gui_basics"; sourceTree = "<absolute>"; };
 		034B58615AFFAC662A023908 /* juce_core */ /* juce_core */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_core; path = "~/JUCE/modules/juce_core"; sourceTree = "<absolute>"; };
-		03FD6FA25845FBD426296F07 /* Shared Code */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libAIASS-Uno.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		03FD6FA25845FBD426296F07 /* Shared Code */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAIASS.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		04006F2026F7BDE3A4CF4072 /* README.md */ /* README.md */ = {isa = PBXFileReference; lastKnownFileType = file.md; name = README.md; path = ../../docs/README.md; sourceTree = SOURCE_ROOT; };
-		05902585D9BD18E398E79A74 /* Standalone Plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AIASS-Uno.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		05902585D9BD18E398E79A74 /* Standalone Plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIASS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07901A871474038D5FEAD8EF /* AVKit.framework */ /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		09939C0A8C53E3FCB184D259 /* juce_opengl */ /* juce_opengl */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_opengl; path = "~/JUCE/modules/juce_opengl"; sourceTree = "<absolute>"; };
 		0A99DE1A89FECE769469588D /* juce_audio_plugin_client */ /* juce_audio_plugin_client */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_plugin_client; path = "~/JUCE/modules/juce_audio_plugin_client"; sourceTree = "<absolute>"; };
-		0D6492183507AAF8414D0CF6 /* include_juce_audio_plugin_client_VST3.cpp */ /* include_juce_audio_plugin_client_VST3.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_audio_plugin_client_VST3.cpp; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_VST3.cpp; sourceTree = SOURCE_ROOT; };
 		0D6B8FBEB60AE2B41C11799D /* juce_audio_formats */ /* juce_audio_formats */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_formats; path = "~/JUCE/modules/juce_audio_formats"; sourceTree = "<absolute>"; };
 		15530DA21AC1C946FFB6A28E /* BinaryData.h */ /* BinaryData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BinaryData.h; path = ../../JuceLibraryCode/BinaryData.h; sourceTree = SOURCE_ROOT; };
-		15DCDE70098B56E7D7F5CCCA /* include_juce_audio_plugin_client_VST2.cpp */ /* include_juce_audio_plugin_client_VST2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_audio_plugin_client_VST2.cpp; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_VST2.cpp; sourceTree = SOURCE_ROOT; };
 		18B416BF83506E3D0B7E9F40 /* PluginProcessor.cpp */ /* PluginProcessor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = PluginProcessor.cpp; path = ../../Source/PluginProcessor.cpp; sourceTree = SOURCE_ROOT; };
 		2079DC7D399D3A5F1B7F3EF5 /* include_juce_audio_devices.mm */ /* include_juce_audio_devices.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_devices.mm; path = ../../JuceLibraryCode/include_juce_audio_devices.mm; sourceTree = SOURCE_ROOT; };
 		2286061A1426AB9D22FB7BC9 /* OpenGL.framework */ /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
@@ -94,14 +86,12 @@
 		2B1332AE3EFBEB483AAC2F79 /* Sid.h */ /* Sid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Sid.h; path = ../../Source/Sid.h; sourceTree = SOURCE_ROOT; };
 		2EE23D1B68473C38E2F766D8 /* juce_data_structures */ /* juce_data_structures */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_data_structures; path = "~/JUCE/modules/juce_data_structures"; sourceTree = "<absolute>"; };
 		31C62C435690A008C39948DE /* libhardsid.h */ /* libhardsid.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = libhardsid.h; path = ../../Source/libhardsid.h; sourceTree = SOURCE_ROOT; };
-		34D9691F7E008AF1B57FF74B /* Info-VST3.plist */ /* Info-VST3.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-VST3.plist"; path = "Info-VST3.plist"; sourceTree = SOURCE_ROOT; };
 		3D6DE13C2E7F39028D5C2D17 /* JuceHeader.h */ /* JuceHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JuceHeader.h; path = ../../JuceLibraryCode/JuceHeader.h; sourceTree = SOURCE_ROOT; };
 		3EB153B2800E3F42354BEEF3 /* juce_graphics */ /* juce_graphics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_graphics; path = "~/JUCE/modules/juce_graphics"; sourceTree = "<absolute>"; };
 		49BB455AAC33B2497530398D /* JucePluginDefines.h */ /* JucePluginDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JucePluginDefines.h; path = ../../JuceLibraryCode/JucePluginDefines.h; sourceTree = SOURCE_ROOT; };
 		49E03E644758E09488403361 /* include_juce_audio_utils.mm */ /* include_juce_audio_utils.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_utils.mm; path = ../../JuceLibraryCode/include_juce_audio_utils.mm; sourceTree = SOURCE_ROOT; };
 		4A00AB3F4C5ABF864CF455F1 /* include_juce_gui_extra.mm */ /* include_juce_gui_extra.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_gui_extra.mm; path = ../../JuceLibraryCode/include_juce_gui_extra.mm; sourceTree = SOURCE_ROOT; };
 		4D9C1395B664DF0810B0AE67 /* QuartzCore.framework */ /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		4E44822961A3D165A50E411B /* VST3 */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AIASS-Uno.vst3"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FBA5FB6A049DEBAA0F7BCDF /* AudioToolbox.framework */ /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		50FE484CD2DD8BB62EB557BC /* juce_video */ /* juce_video */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_video; path = "~/JUCE/modules/juce_video"; sourceTree = "<absolute>"; };
 		544B5D6DF2DEEA63F75CE869 /* IOKit.framework */ /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
@@ -122,7 +112,6 @@
 		850CBDFE59C8924239640CFC /* juce_audio_basics */ /* juce_audio_basics */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_audio_basics; path = "~/JUCE/modules/juce_audio_basics"; sourceTree = "<absolute>"; };
 		852DBA96B24FA1E1D42F2353 /* include_juce_audio_formats.mm */ /* include_juce_audio_formats.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_audio_formats.mm; path = ../../JuceLibraryCode/include_juce_audio_formats.mm; sourceTree = SOURCE_ROOT; };
 		8A3F25E145C69919EAEF2173 /* AVFoundation.framework */ /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		8DE1D89E83032C36EAF3A561 /* VST */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AIASS-Uno.vst"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F6BAE466146505791EA076C /* Cocoa.framework */ /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		949B46BCA0251713C4D4D80D /* CoreMIDI.framework */ /* CoreMIDI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMIDI.framework; path = System/Library/Frameworks/CoreMIDI.framework; sourceTree = SDKROOT; };
 		9BCDE6AFD642B577AFFF7873 /* include_juce_core.mm */ /* include_juce_core.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_core.mm; path = ../../JuceLibraryCode/include_juce_core.mm; sourceTree = SOURCE_ROOT; };
@@ -144,7 +133,6 @@
 		D7A73C65CE0CBCE0339F0C24 /* include_juce_audio_plugin_client_Standalone.cpp */ /* include_juce_audio_plugin_client_Standalone.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_audio_plugin_client_Standalone.cpp; path = ../../JuceLibraryCode/include_juce_audio_plugin_client_Standalone.cpp; sourceTree = SOURCE_ROOT; };
 		DBCF90888B8D7C78920B8251 /* include_juce_audio_processors_ara.cpp */ /* include_juce_audio_processors_ara.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = include_juce_audio_processors_ara.cpp; path = ../../JuceLibraryCode/include_juce_audio_processors_ara.cpp; sourceTree = SOURCE_ROOT; };
 		E36A9FADDD827DA05FA132E8 /* include_juce_gui_basics.mm */ /* include_juce_gui_basics.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = include_juce_gui_basics.mm; path = ../../JuceLibraryCode/include_juce_gui_basics.mm; sourceTree = SOURCE_ROOT; };
-		E6A91751FCFB43C9E5936B4A /* Info-VST.plist */ /* Info-VST.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info-VST.plist"; path = "Info-VST.plist"; sourceTree = SOURCE_ROOT; };
 		E789AA44DD9AA2F61A01B271 /* BinaryData.cpp */ /* BinaryData.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = BinaryData.cpp; path = ../../JuceLibraryCode/BinaryData.cpp; sourceTree = SOURCE_ROOT; };
 		E8013BA1F1DB5043E24C1E7F /* juce_events */ /* juce_events */ = {isa = PBXFileReference; lastKnownFileType = folder; name = juce_events; path = "~/JUCE/modules/juce_events"; sourceTree = "<absolute>"; };
 		F7666F0A11BD664DE775F6EE /* RecentFilesMenuTemplate.nib */ /* RecentFilesMenuTemplate.nib */ = {isa = PBXFileReference; lastKnownFileType = file.nib; name = RecentFilesMenuTemplate.nib; path = RecentFilesMenuTemplate.nib; sourceTree = SOURCE_ROOT; };
@@ -153,50 +141,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		1F734B0987DD206CBE24F54A = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4F359DE9192B57C637DA8CD7,
-				CD5A69E3A748CA7DC3A66754,
-				2D1950B0BD726604087C5CC3,
-				E4AB2E2E2DC0CA6ECA35C8ED,
-				31C96A956F6FDFC4D3AF039B,
-				873DAB17B560B5F08AB47493,
-				8B6BA909B267293FAFBB542B,
-				DB7455916606824E47E2394D,
-				75A6051574D91B1BC4BE7743,
-				45AB32A38C6EB19284573E81,
-				93F835B88BB3215CAD23B26A,
-				BB9663344BE39B9A3984999E,
-				007AED47B294FCC24468BC69,
-				777CDF2B7D68EE9963A257D6,
-				99FD001A059DBA9655F950C4,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5BDDA76ED56F5A8631D89BE9 = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4F359DE9192B57C637DA8CD7,
-				CD5A69E3A748CA7DC3A66754,
-				2D1950B0BD726604087C5CC3,
-				E4AB2E2E2DC0CA6ECA35C8ED,
-				31C96A956F6FDFC4D3AF039B,
-				873DAB17B560B5F08AB47493,
-				8B6BA909B267293FAFBB542B,
-				DB7455916606824E47E2394D,
-				75A6051574D91B1BC4BE7743,
-				45AB32A38C6EB19284573E81,
-				93F835B88BB3215CAD23B26A,
-				BB9663344BE39B9A3984999E,
-				007AED47B294FCC24468BC69,
-				777CDF2B7D68EE9963A257D6,
-				99FD001A059DBA9655F950C4,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BDBC7C6EEA6275935AFC7C6E = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -235,7 +179,7 @@
 			name = Source;
 			sourceTree = "<group>";
 		};
-		1FE6E133948AB016D4D23C71 /* AIASS-Uno */ = {
+		1FE6E133948AB016D4D23C71 /* AIASS */ = {
 			isa = PBXGroup;
 			children = (
 				640FA4A5532A10E2E884B58F,
@@ -243,14 +187,12 @@
 				31C62C435690A008C39948DE,
 				04006F2026F7BDE3A4CF4072,
 			);
-			name = "AIASS-Uno";
+			name = AIASS;
 			sourceTree = "<group>";
 		};
 		3059918C3273087778D39E83 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E6A91751FCFB43C9E5936B4A,
-				34D9691F7E008AF1B57FF74B,
 				7DEF4967D5FE2A2F0DC26597,
 				F7666F0A11BD664DE775F6EE,
 			);
@@ -319,8 +261,6 @@
 		A4547701CEAC0E47DCAAB019 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8DE1D89E83032C36EAF3A561,
-				4E44822961A3D165A50E411B,
 				05902585D9BD18E398E79A74,
 				03FD6FA25845FBD426296F07,
 			);
@@ -340,8 +280,6 @@
 				D7A73C65CE0CBCE0339F0C24,
 				9FE4AA5FC729B4512FC67A8B,
 				777395CFFA902BCD64F46621,
-				15DCDE70098B56E7D7F5CCCA,
-				0D6492183507AAF8414D0CF6,
 				6D435DCA100406CA199E0D83,
 				DBCF90888B8D7C78920B8251,
 				9E0E82CA5DD83B2C9AFD307C,
@@ -364,25 +302,7 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		049B066192BA19F3C1CDC510 /* AIASS-Uno - VST3 */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 169C30357C84AEBDBA1E79CA;
-			buildPhases = (
-				AE888DA91D7B6A8EAB308217,
-				44ABD84C2BF06DE40897BA7B,
-				1F734B0987DD206CBE24F54A,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E06C64C28F36B2A29AB41DFE,
-			);
-			name = "AIASS-Uno - VST3";
-			productName = "AIASS-Uno";
-			productReference = 4E44822961A3D165A50E411B;
-			productType = "com.apple.product-type.bundle";
-		};
-		5C48E58614477578BD3269DD /* AIASS-Uno - Shared Code */ = {
+		5C48E58614477578BD3269DD /* AIASS - Shared Code */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B1B20CE48E025EF826AF66D7;
 			buildPhases = (
@@ -392,30 +312,12 @@
 			);
 			dependencies = (
 			);
-			name = "AIASS-Uno - Shared Code";
-			productName = "AIASS-Uno";
+			name = "AIASS - Shared Code";
+			productName = AIASS;
 			productReference = 03FD6FA25845FBD426296F07;
 			productType = "com.apple.product-type.library.static";
 		};
-		6B9D660CCBEA41D01E53AC0B /* AIASS-Uno - VST */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D5B5EEB24565C2DA91B68A0F;
-			buildPhases = (
-				28B6FCFA67B9C073AAFFF191,
-				3DB9C750E0E8F6E956359805,
-				5BDDA76ED56F5A8631D89BE9,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7C255BFF9FC9973BE12B3213,
-			);
-			name = "AIASS-Uno - VST";
-			productName = "AIASS-Uno";
-			productReference = 8DE1D89E83032C36EAF3A561;
-			productType = "com.apple.product-type.bundle";
-		};
-		75CB5E424406DA694018E8E1 /* AIASS-Uno - Standalone Plugin */ = {
+		75CB5E424406DA694018E8E1 /* AIASS - Standalone Plugin */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0095C2FE18FE239516814201;
 			buildPhases = (
@@ -428,8 +330,8 @@
 			dependencies = (
 				867DDAE578DC2D415039FBBF,
 			);
-			name = "AIASS-Uno - Standalone Plugin";
-			productName = "AIASS-Uno";
+			name = "AIASS - Standalone Plugin";
+			productName = AIASS;
 			productReference = 05902585D9BD18E398E79A74;
 			productType = "com.apple.product-type.application";
 		};
@@ -440,53 +342,9 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1340;
-				ORGANIZATIONNAME = "crazy-midi-de";
+				ORGANIZATIONNAME = "crazy";
 				TargetAttributes = {
-					049B066192BA19F3C1CDC510 = {
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 0;
-							};
-							com.apple.HardenedRuntime = {
-								enabled = 0;
-							};
-							com.apple.InAppPurchase = {
-								enabled = 0;
-							};
-							com.apple.InterAppAudio = {
-								enabled = 0;
-							};
-							com.apple.Push = {
-								enabled = 0;
-							};
-							com.apple.Sandbox = {
-								enabled = 0;
-							};
-						};
-					};
 					5C48E58614477578BD3269DD = {
-						SystemCapabilities = {
-							com.apple.ApplicationGroups.iOS = {
-								enabled = 0;
-							};
-							com.apple.HardenedRuntime = {
-								enabled = 0;
-							};
-							com.apple.InAppPurchase = {
-								enabled = 0;
-							};
-							com.apple.InterAppAudio = {
-								enabled = 0;
-							};
-							com.apple.Push = {
-								enabled = 0;
-							};
-							com.apple.Sandbox = {
-								enabled = 0;
-							};
-						};
-					};
-					6B9D660CCBEA41D01E53AC0B = {
 						SystemCapabilities = {
 							com.apple.ApplicationGroups.iOS = {
 								enabled = 0;
@@ -566,8 +424,6 @@
 			projectRoot = "";
 			targets = (
 				CCF2483332BE193B503FA2E2,
-				6B9D660CCBEA41D01E53AC0B,
-				049B066192BA19F3C1CDC510,
 				75CB5E424406DA694018E8E1,
 				5C48E58614477578BD3269DD,
 			);
@@ -575,22 +431,6 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		28B6FCFA67B9C073AAFFF191 = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2D89D0AA0F853AAA411C5ABB,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AE888DA91D7B6A8EAB308217 = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2D89D0AA0F853AAA411C5ABB,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BE533195723F1BBAB401DACA = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -602,22 +442,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		3DB9C750E0E8F6E956359805 = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F655E1D522CB38E9A6115A45,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		44ABD84C2BF06DE40897BA7B = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				08D3E2CFCAC4E9CD5F6C5583,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		DC852C5D93371E6792268AD9 = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -660,21 +484,9 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2DE159BCDEBDEF9C12B4CDFE = {
-			isa = PBXTargetDependency;
-			target = 6B9D660CCBEA41D01E53AC0B;
-		};
-		7C255BFF9FC9973BE12B3213 = {
-			isa = PBXTargetDependency;
-			target = 5C48E58614477578BD3269DD;
-		};
 		867DDAE578DC2D415039FBBF = {
 			isa = PBXTargetDependency;
 			target = 5C48E58614477578BD3269DD;
-		};
-		AEA65AF693F544B9DD8D8212 = {
-			isa = PBXTargetDependency;
-			target = 049B066192BA19F3C1CDC510;
 		};
 		C4E74E089ECAA4E6E5246486 = {
 			isa = PBXTargetDependency;
@@ -684,69 +496,9 @@
 			isa = PBXTargetDependency;
 			target = 75CB5E424406DA694018E8E1;
 		};
-		E06C64C28F36B2A29AB41DFE = {
-			isa = PBXTargetDependency;
-			target = 5C48E58614477578BD3269DD;
-		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		26D4AC86FD5B6E98CE6129B6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_LINK_OBJC_RUNTIME = NO;
-				CODE_SIGN_IDENTITY = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
-				COPY_PHASE_STRIP = NO;
-				DEPLOYMENT_LOCATION = YES;
-				DSTROOT = /;
-				EXCLUDED_ARCHS = "i386";
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"_DEBUG=1",
-					"DEBUG=1",
-					"JUCER_XCODE_MAC_F6D2F4CF=1",
-					"JUCE_APP_VERSION=0.9.5",
-					"JUCE_APP_VERSION_HEX=0x905",
-					"JucePlugin_Build_VST=0",
-					"JucePlugin_Build_VST3=1",
-					"JucePlugin_Build_AU=0",
-					"JucePlugin_Build_AUv3=0",
-					"JucePlugin_Build_AAX=0",
-					"JucePlugin_Build_Standalone=0",
-					"JucePlugin_Build_Unity=0",
-					"JucePlugin_Build_LV2=0",
-				);
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GENERATE_PKGINFO_FILE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
-					"$(SRCROOT)/../../../../Frameworks/VST_SDK_legacy/VST2_SDK",
-					"$(SRCROOT)/../../JuceLibraryCode",
-					"$(HOME)/JUCE/modules",
-					"$(HOME)/JUCE/modules/juce_audio_plugin_client",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Info-VST3.plist;
-				INFOPLIST_PREPROCESS = NO;
-				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/VST3/";
-				LIBRARY_STYLE = Bundle;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../../../Frameworks/VST_SDK_legacy/VST2_SDK $(SRCROOT)/../../JuceLibraryCode $(HOME)/JUCE/modules $(HOME)/JUCE/modules/juce_audio_plugin_client";
-				OTHER_LDFLAGS = "-bundle -lAIASS-Uno -weak_framework Metal -weak_framework MetalKit";
-				PRODUCT_BUNDLE_IDENTIFIER = com.crazy-midi.AIASS-Uno;
-				PRODUCT_NAME = "AIASS-Uno";
-				USE_HEADERMAP = NO;
-				VALIDATE_WORKSPACE_SKIPPED_SDK_FRAMEWORKS = OpenGL;
-				VALID_ARCHS = "arm64 arm64e x86_64";
-				WRAPPER_EXTENSION = vst3;
-			};
-			name = Debug;
-		};
 		2F85DC2B95797C071ED61D40 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -754,120 +506,6 @@
 				SDKROOT = macosx;
 			};
 			name = Debug;
-		};
-		324F703822F32781CBD17128 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_LINK_OBJC_RUNTIME = NO;
-				CODE_SIGN_IDENTITY = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
-				DEAD_CODE_STRIPPING = YES;
-				DEPLOYMENT_LOCATION = YES;
-				DSTROOT = /;
-				EXCLUDED_ARCHS = "i386";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"_NDEBUG=1",
-					"NDEBUG=1",
-					"JUCER_XCODE_MAC_F6D2F4CF=1",
-					"JUCE_APP_VERSION=0.9.5",
-					"JUCE_APP_VERSION_HEX=0x905",
-					"JucePlugin_Build_VST=0",
-					"JucePlugin_Build_VST3=1",
-					"JucePlugin_Build_AU=0",
-					"JucePlugin_Build_AUv3=0",
-					"JucePlugin_Build_AAX=0",
-					"JucePlugin_Build_Standalone=0",
-					"JucePlugin_Build_Unity=0",
-					"JucePlugin_Build_LV2=0",
-				);
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GENERATE_PKGINFO_FILE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
-					"$(SRCROOT)/../../../../Frameworks/VST_SDK_legacy/VST2_SDK",
-					"$(SRCROOT)/../../JuceLibraryCode",
-					"$(HOME)/JUCE/modules",
-					"$(HOME)/JUCE/modules/juce_audio_plugin_client",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Info-VST3.plist;
-				INFOPLIST_PREPROCESS = NO;
-				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/VST3/";
-				LIBRARY_STYLE = Bundle;
-				LLVM_LTO = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../../../Frameworks/VST_SDK_legacy/VST2_SDK $(SRCROOT)/../../JuceLibraryCode $(HOME)/JUCE/modules $(HOME)/JUCE/modules/juce_audio_plugin_client";
-				OTHER_LDFLAGS = "-bundle -lAIASS-Uno -weak_framework Metal -weak_framework MetalKit";
-				PRODUCT_BUNDLE_IDENTIFIER = com.crazy-midi.AIASS-Uno;
-				PRODUCT_NAME = "AIASS-Uno";
-				USE_HEADERMAP = NO;
-				VALIDATE_WORKSPACE_SKIPPED_SDK_FRAMEWORKS = OpenGL;
-				VALID_ARCHS = "arm64 arm64e x86_64";
-				WRAPPER_EXTENSION = vst3;
-			};
-			name = Release;
-		};
-		36CE2E04BEDDF1FCF19C7F5C /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_LINK_OBJC_RUNTIME = NO;
-				CODE_SIGN_IDENTITY = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
-				DEAD_CODE_STRIPPING = YES;
-				DEPLOYMENT_LOCATION = YES;
-				DSTROOT = /;
-				EXCLUDED_ARCHS = "i386";
-				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-				GCC_OPTIMIZATION_LEVEL = 3;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"_NDEBUG=1",
-					"NDEBUG=1",
-					"JUCER_XCODE_MAC_F6D2F4CF=1",
-					"JUCE_APP_VERSION=0.9.5",
-					"JUCE_APP_VERSION_HEX=0x905",
-					"JucePlugin_Build_VST=1",
-					"JucePlugin_Build_VST3=0",
-					"JucePlugin_Build_AU=0",
-					"JucePlugin_Build_AUv3=0",
-					"JucePlugin_Build_AAX=0",
-					"JucePlugin_Build_Standalone=0",
-					"JucePlugin_Build_Unity=0",
-					"JucePlugin_Build_LV2=0",
-				);
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GENERATE_PKGINFO_FILE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
-					"$(SRCROOT)/../../../../Frameworks/VST_SDK_legacy/VST2_SDK",
-					"$(SRCROOT)/../../JuceLibraryCode",
-					"$(HOME)/JUCE/modules",
-					"$(HOME)/JUCE/modules/juce_audio_plugin_client",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Info-VST.plist;
-				INFOPLIST_PREPROCESS = NO;
-				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/VST/";
-				LIBRARY_STYLE = Bundle;
-				LLVM_LTO = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../../../Frameworks/VST_SDK_legacy/VST2_SDK $(SRCROOT)/../../JuceLibraryCode $(HOME)/JUCE/modules $(HOME)/JUCE/modules/juce_audio_plugin_client";
-				OTHER_LDFLAGS = "-bundle -lAIASS-Uno -weak_framework Metal -weak_framework MetalKit";
-				PRODUCT_BUNDLE_IDENTIFIER = com.crazy-midi.AIASS-Uno;
-				PRODUCT_NAME = "AIASS-Uno";
-				USE_HEADERMAP = NO;
-				VALIDATE_WORKSPACE_SKIPPED_SDK_FRAMEWORKS = OpenGL;
-				VALID_ARCHS = "arm64 arm64e x86_64";
-				WRAPPER_EXTENSION = vst;
-			};
-			name = Release;
 		};
 		3892EE275196698ABCF1270D /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -919,7 +557,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME = "AIASS-Uno";
+				PRODUCT_NAME = "AIASS";
 				SDKROOT = macosx;
 				WARNING_CFLAGS = "-Wreorder";
 				ZERO_LINK = NO;
@@ -956,8 +594,6 @@
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
-					"$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
-					"$(SRCROOT)/../../../../Frameworks/VST_SDK_legacy/VST2_SDK",
 					"$(SRCROOT)/../../JuceLibraryCode",
 					"$(HOME)/JUCE/modules",
 					"$(HOME)/JUCE/modules/juce_audio_plugin_client",
@@ -967,10 +603,10 @@
 				INFOPLIST_PREPROCESS = NO;
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../../../Frameworks/VST_SDK_legacy/VST2_SDK $(SRCROOT)/../../JuceLibraryCode $(HOME)/JUCE/modules $(HOME)/JUCE/modules/juce_audio_plugin_client";
-				OTHER_LDFLAGS = "-lAIASS-Uno -weak_framework Metal -weak_framework MetalKit";
-				PRODUCT_BUNDLE_IDENTIFIER = com.crazy-midi.AIASS-Uno;
-				PRODUCT_NAME = "AIASS-Uno";
+				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../JuceLibraryCode $(HOME)/JUCE/modules $(HOME)/JUCE/modules/juce_audio_plugin_client";
+				OTHER_LDFLAGS = "-lAIASS -weak_framework Metal -weak_framework MetalKit";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crazymidi.AIASSUno;
+				PRODUCT_NAME = "AIASS";
 				USE_HEADERMAP = NO;
 				VALIDATE_WORKSPACE_SKIPPED_SDK_FRAMEWORKS = OpenGL;
 				VALID_ARCHS = "arm64 arm64e x86_64";
@@ -1007,8 +643,6 @@
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
-					"$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
-					"$(SRCROOT)/../../../../Frameworks/VST_SDK_legacy/VST2_SDK",
 					"$(SRCROOT)/../../JuceLibraryCode",
 					"$(HOME)/JUCE/modules",
 					"$(HOME)/JUCE/modules/juce_audio_plugin_client",
@@ -1017,10 +651,10 @@
 				INFOPLIST_FILE = Info-Standalone_Plugin.plist;
 				INFOPLIST_PREPROCESS = NO;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../../../Frameworks/VST_SDK_legacy/VST2_SDK $(SRCROOT)/../../JuceLibraryCode $(HOME)/JUCE/modules $(HOME)/JUCE/modules/juce_audio_plugin_client";
-				OTHER_LDFLAGS = "-lAIASS-Uno -weak_framework Metal -weak_framework MetalKit";
-				PRODUCT_BUNDLE_IDENTIFIER = com.crazy-midi.AIASS-Uno;
-				PRODUCT_NAME = "AIASS-Uno";
+				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../JuceLibraryCode $(HOME)/JUCE/modules $(HOME)/JUCE/modules/juce_audio_plugin_client";
+				OTHER_LDFLAGS = "-lAIASS -weak_framework Metal -weak_framework MetalKit";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crazymidi.AIASSUno;
+				PRODUCT_NAME = "AIASS";
 				USE_HEADERMAP = NO;
 				VALIDATE_WORKSPACE_SKIPPED_SDK_FRAMEWORKS = OpenGL;
 				VALID_ARCHS = "arm64 arm64e x86_64";
@@ -1046,8 +680,8 @@
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
 					"JUCE_APP_VERSION=0.9.5",
 					"JUCE_APP_VERSION_HEX=0x905",
-					"JucePlugin_Build_VST=1",
-					"JucePlugin_Build_VST3=1",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=0",
 					"JucePlugin_Build_AU=0",
 					"JucePlugin_Build_AUv3=0",
 					"JucePlugin_Build_AAX=0",
@@ -1058,8 +692,6 @@
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
-					"$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
-					"$(SRCROOT)/../../../../Frameworks/VST_SDK_legacy/VST2_SDK",
 					"$(SRCROOT)/../../JuceLibraryCode",
 					"$(HOME)/JUCE/modules",
 					"$(HOME)/JUCE/modules/juce_audio_plugin_client",
@@ -1068,10 +700,10 @@
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				LLVM_LTO = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../../../Frameworks/VST_SDK_legacy/VST2_SDK $(SRCROOT)/../../JuceLibraryCode $(HOME)/JUCE/modules $(HOME)/JUCE/modules/juce_audio_plugin_client";
+				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../JuceLibraryCode $(HOME)/JUCE/modules $(HOME)/JUCE/modules/juce_audio_plugin_client";
 				OTHER_LDFLAGS = "-weak_framework Metal -weak_framework MetalKit";
-				PRODUCT_BUNDLE_IDENTIFIER = com.crazy-midi.AIASS-Uno;
-				PRODUCT_NAME = "AIASS-Uno";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crazymidi.AIASSUno;
+				PRODUCT_NAME = "AIASS";
 				SKIP_INSTALL = YES;
 				USE_HEADERMAP = NO;
 				VALIDATE_WORKSPACE_SKIPPED_SDK_FRAMEWORKS = OpenGL;
@@ -1098,8 +730,8 @@
 					"JUCER_XCODE_MAC_F6D2F4CF=1",
 					"JUCE_APP_VERSION=0.9.5",
 					"JUCE_APP_VERSION_HEX=0x905",
-					"JucePlugin_Build_VST=1",
-					"JucePlugin_Build_VST3=1",
+					"JucePlugin_Build_VST=0",
+					"JucePlugin_Build_VST3=0",
 					"JucePlugin_Build_AU=0",
 					"JucePlugin_Build_AUv3=0",
 					"JucePlugin_Build_AAX=0",
@@ -1110,8 +742,6 @@
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
-					"$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
-					"$(SRCROOT)/../../../../Frameworks/VST_SDK_legacy/VST2_SDK",
 					"$(SRCROOT)/../../JuceLibraryCode",
 					"$(HOME)/JUCE/modules",
 					"$(HOME)/JUCE/modules/juce_audio_plugin_client",
@@ -1119,70 +749,14 @@
 				);
 				INSTALL_PATH = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../../../Frameworks/VST_SDK_legacy/VST2_SDK $(SRCROOT)/../../JuceLibraryCode $(HOME)/JUCE/modules $(HOME)/JUCE/modules/juce_audio_plugin_client";
+				MTL_HEADER_SEARCH_PATHS = "$(SRCROOT)/../../JuceLibraryCode $(HOME)/JUCE/modules $(HOME)/JUCE/modules/juce_audio_plugin_client";
 				OTHER_LDFLAGS = "-weak_framework Metal -weak_framework MetalKit";
-				PRODUCT_BUNDLE_IDENTIFIER = com.crazy-midi.AIASS-Uno;
-				PRODUCT_NAME = "AIASS-Uno";
+				PRODUCT_BUNDLE_IDENTIFIER = com.crazymidi.AIASSUno;
+				PRODUCT_NAME = "AIASS";
 				SKIP_INSTALL = YES;
 				USE_HEADERMAP = NO;
 				VALIDATE_WORKSPACE_SKIPPED_SDK_FRAMEWORKS = OpenGL;
 				VALID_ARCHS = "arm64 arm64e x86_64";
-			};
-			name = Debug;
-		};
-		AE0B45AA3233C3F56B388257 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_LINK_OBJC_RUNTIME = NO;
-				CODE_SIGN_IDENTITY = "";
-				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = "$(PROJECT_DIR)/build/$(CONFIGURATION)";
-				COPY_PHASE_STRIP = NO;
-				DEPLOYMENT_LOCATION = YES;
-				DSTROOT = /;
-				EXCLUDED_ARCHS = "i386";
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"_DEBUG=1",
-					"DEBUG=1",
-					"JUCER_XCODE_MAC_F6D2F4CF=1",
-					"JUCE_APP_VERSION=0.9.5",
-					"JUCE_APP_VERSION_HEX=0x905",
-					"JucePlugin_Build_VST=1",
-					"JucePlugin_Build_VST3=0",
-					"JucePlugin_Build_AU=0",
-					"JucePlugin_Build_AUv3=0",
-					"JucePlugin_Build_AAX=0",
-					"JucePlugin_Build_Standalone=0",
-					"JucePlugin_Build_Unity=0",
-					"JucePlugin_Build_LV2=0",
-				);
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				GENERATE_PKGINFO_FILE = YES;
-				HEADER_SEARCH_PATHS = (
-					"$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK",
-					"$(SRCROOT)/../../../../Frameworks/VST_SDK_legacy/VST2_SDK",
-					"$(SRCROOT)/../../JuceLibraryCode",
-					"$(HOME)/JUCE/modules",
-					"$(HOME)/JUCE/modules/juce_audio_plugin_client",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = Info-VST.plist;
-				INFOPLIST_PREPROCESS = NO;
-				INSTALL_PATH = "$(HOME)/Library/Audio/Plug-Ins/VST/";
-				LIBRARY_STYLE = Bundle;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MTL_HEADER_SEARCH_PATHS = "$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK $(SRCROOT)/../../../../Frameworks/VST_SDK_legacy/VST2_SDK $(SRCROOT)/../../JuceLibraryCode $(HOME)/JUCE/modules $(HOME)/JUCE/modules/juce_audio_plugin_client";
-				OTHER_LDFLAGS = "-bundle -lAIASS-Uno -weak_framework Metal -weak_framework MetalKit";
-				PRODUCT_BUNDLE_IDENTIFIER = com.crazy-midi.AIASS-Uno;
-				PRODUCT_NAME = "AIASS-Uno";
-				USE_HEADERMAP = NO;
-				VALIDATE_WORKSPACE_SKIPPED_SDK_FRAMEWORKS = OpenGL;
-				VALID_ARCHS = "arm64 arm64e x86_64";
-				WRAPPER_EXTENSION = vst;
 			};
 			name = Debug;
 		};
@@ -1227,7 +801,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PRODUCT_NAME = "AIASS-Uno";
+				PRODUCT_NAME = "AIASS";
 				SDKROOT = macosx;
 				WARNING_CFLAGS = "-Wreorder";
 				ZERO_LINK = NO;
@@ -1242,15 +816,6 @@
 			buildConfigurations = (
 				8FD14505EBD932A53F1B992D,
 				5163D9CC109E2B398E8AA4EB,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		169C30357C84AEBDBA1E79CA = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				26D4AC86FD5B6E98CE6129B6,
-				324F703822F32781CBD17128,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
@@ -1278,15 +843,6 @@
 			buildConfigurations = (
 				98F6CDACC8E56CD0BE3823E9,
 				972B83059ADEC233F5E6B297,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
-		};
-		D5B5EEB24565C2DA91B68A0F = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AE0B45AA3233C3F56B388257,
-				36CE2E04BEDDF1FCF19C7F5C,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

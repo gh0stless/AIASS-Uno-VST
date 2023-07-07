@@ -4,6 +4,8 @@
 
 */
 
+#include <cstring>
+
 namespace BinaryData
 {
 
@@ -123,6 +125,8 @@ static const unsigned char temp_binary_data_1[] =
 "\r\n"
 "history\r\n"
 "-------\r\n"
+"- 2022/09/29 v.0.9.5\r\n"
+"  -change DLL handling\r\n"
 "- 2022/02/01 v.0.9.3\r\n"
 "  - Tune function added\r\n"
 "  - LED indicators for voices added\r\n"
@@ -161,7 +165,7 @@ const char* getNamedResource (const char* resourceNameUTF8, int& numBytes)
     switch (hash)
     {
         case 0xc1b26097:  numBytes = 4164; return hardsid_dll_how_to_and_hints_txt;
-        case 0x64791dc8:  numBytes = 740; return README_md;
+        case 0x64791dc8:  numBytes = 786; return README_md;
         default: break;
     }
 
@@ -185,10 +189,8 @@ const char* getNamedResourceOriginalFilename (const char* resourceNameUTF8);
 const char* getNamedResourceOriginalFilename (const char* resourceNameUTF8)
 {
     for (unsigned int i = 0; i < (sizeof (namedResourceList) / sizeof (namedResourceList[0])); ++i)
-    {
-        if (namedResourceList[i] == resourceNameUTF8)
+        if (strcmp (namedResourceList[i], resourceNameUTF8) == 0)
             return originalFilenames[i];
-    }
 
     return nullptr;
 }

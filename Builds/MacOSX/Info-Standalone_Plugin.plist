@@ -8,11 +8,11 @@
     <key>CFBundleIconFile</key>
     <string></string>
     <key>CFBundleIdentifier</key>
-    <string>com.crazy-midi.AIASS-Uno</string>
+    <string>com.crazymidi.AIASSUno</string>
     <key>CFBundleName</key>
-    <string>AIASS-Uno</string>
+    <string>AIASS</string>
     <key>CFBundleDisplayName</key>
-    <string>AIASS-Uno</string>
+    <string>AIASS</string>
     <key>CFBundlePackageType</key>
     <string>APPL</string>
     <key>CFBundleSignature</key>

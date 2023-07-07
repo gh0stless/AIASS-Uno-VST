@@ -28,6 +28,9 @@ Sid::Sid()
 		#if defined(__APPLE__)
 		hardsiddll = hardsidlibrary.open("/usr/local/lib/libhardsid.dylib");
 		#endif
+
+		#if !defined(__ANDROID__)
+
 		// Check to see if the library was loaded successfully 
 		if (hardsiddll == true) {
           
@@ -69,11 +72,17 @@ Sid::Sid()
 				}
 				dll_initialized = true;
 			}
+		
 		}
 		else {
 			dll_initialized = false;
 			error_state = 1;
 		}
+		#endif
+		#if defined(__ANDROID__)
+		dll_initialized = false;
+		error_state = 1;
+		#endif
 	}
 
 	Sid::~Sid()
@@ -84,7 +93,7 @@ Sid::Sid()
         #if defined(__linux) || defined(__APPLE__)
             My_HardSID_Uninitialize();
         #endif
-        
+#if !defined(__ANDROID__)
         hardsidlibrary.close();
         
         My_HardSID_Version = nullptr;
@@ -108,6 +117,7 @@ Sid::Sid()
         My_HardSID_Reset2 = nullptr;
         My_HardSID_ExternalTiming = nullptr;
         My_HardSID_Uninitialize = nullptr;
+#endif
 	}
 
 //------------------------------------------------------------------------------
@@ -116,11 +126,12 @@ Sid::Sid()
 	{
 		if (dll_initialized && !error_state)
 		{
+#if !defined(__ANDROID__)
 			//Init SID
 			My_HardSID_Reset(My_Device);
 			My_HardSID_Lock(My_Device);
 			My_HardSID_Flush(My_Device);
-
+#endif
 			//Init Registers
 			push_event(0, 0x00);
 			std::this_thread::sleep_for(std::chrono::milliseconds(300));
@@ -185,6 +196,7 @@ Sid::Sid()
 	}
 	void Sid::push_event(Uint8 reg, Uint8 val)
 	{
+#if !defined(__ANDROID__)
 		Uint8 RS = 0;
 		if (dll_initialized && !error_state)
 		{
@@ -195,6 +207,7 @@ Sid::Sid()
 			}
 			My_HardSID_SoftFlush(My_Device);
 		}
+#endif
 	}
 	void Sid::set_a(Uint8 Voice, Uint8 a)
 	{
