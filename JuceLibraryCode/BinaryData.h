@@ -8,14 +8,20 @@
 
 namespace BinaryData
 {
-    extern const char*   hardsid_dll_how_to_and_hints_txt;
-    const int            hardsid_dll_how_to_and_hints_txtSize = 4164;
+    extern const char*   CrazyMidi_grau_png;
+    const int            CrazyMidi_grau_pngSize = 32809;
+
+    extern const char*   CrazyMidi_grau_64x64_png;
+    const int            CrazyMidi_grau_64x64_pngSize = 5324;
+
+    extern const char*   CrazyMidi_grau_128x128_png;
+    const int            CrazyMidi_grau_128x128_pngSize = 21339;
 
     extern const char*   README_md;
     const int            README_mdSize = 786;
 
     // Number of elements in the namedResourceList and originalFileNames arrays.
-    const int namedResourceListSize = 2;
+    const int namedResourceListSize = 4;
 
     // Points to the start of a list of resource names.
     extern const char* namedResourceList[];

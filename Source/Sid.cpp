@@ -87,9 +87,6 @@ Sid::Sid()
 
 	Sid::~Sid()
 	{
-        
-
-        
         #if defined(__linux) || defined(__APPLE__)
             My_HardSID_Uninitialize();
         #endif

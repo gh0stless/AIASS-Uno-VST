@@ -42,7 +42,7 @@
   </ImportGroup>
   <PropertyGroup>
     <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
-    <TargetExt>.vst3</TargetExt>
+    <TargetExt>.dll</TargetExt>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\..\Windows\DebugBuilds\Windows\Debug\VST3\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\VST3\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AIASS</TargetName>
@@ -65,8 +65,8 @@
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
-      <AdditionalIncludeDirectories>E:\Frameworks\JUCE\modules\juce_audio_processors\format_types\VST3_SDK;E:\Frameworks\VST_SDK_legacy\VST2_SDK;..\..\JuceLibraryCode;E:\Frameworks\JUCE\modules;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;DEBUG;_DEBUG;JUCER_VS2022_78A503E=1;JUCE_APP_VERSION=0.9.5;JUCE_APP_VERSION_HEX=0x905;JucePlugin_Build_VST=0;JucePlugin_Build_VST3=1;JucePlugin_Build_AU=0;JucePlugin_Build_AUv3=0;JucePlugin_Build_AAX=0;JucePlugin_Build_Standalone=0;JucePlugin_Build_Unity=0;JucePlugin_Build_LV2=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\Frameworks\JUCE\modules\juce_audio_processors\format_types\VST3_SDK;F:\Frameworks\VST_SDK_legacy\VST2_SDK;..\..\JuceLibraryCode;F:\Frameworks\JUCE\modules;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;DEBUG;_DEBUG;JUCER_VS2022_78A503E=1;JUCE_APP_VERSION=0.9.6;JUCE_APP_VERSION_HEX=0x906;JucePlugin_Build_VST=0;JucePlugin_Build_VST3=1;JucePlugin_Build_AU=0;JucePlugin_Build_AUv3=0;JucePlugin_Build_AAX=0;JucePlugin_Build_Standalone=0;JucePlugin_Build_Unity=0;JucePlugin_Build_LV2=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -76,14 +76,14 @@
       <WarningLevel>Level4</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <LanguageStandard>stdcpp14</LanguageStandard>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>E:\Frameworks\JUCE\modules\juce_audio_processors\format_types\VST3_SDK;E:\Frameworks\VST_SDK_legacy\VST2_SDK;..\..\JuceLibraryCode;E:\Frameworks\JUCE\modules;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;DEBUG;_DEBUG;JUCER_VS2022_78A503E=1;JUCE_APP_VERSION=0.9.5;JUCE_APP_VERSION_HEX=0x905;JucePlugin_Build_VST=0;JucePlugin_Build_VST3=1;JucePlugin_Build_AU=0;JucePlugin_Build_AUv3=0;JucePlugin_Build_AAX=0;JucePlugin_Build_Standalone=0;JucePlugin_Build_Unity=0;JucePlugin_Build_LV2=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\Frameworks\JUCE\modules\juce_audio_processors\format_types\VST3_SDK;F:\Frameworks\VST_SDK_legacy\VST2_SDK;..\..\JuceLibraryCode;F:\Frameworks\JUCE\modules;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;DEBUG;_DEBUG;JUCER_VS2022_78A503E=1;JUCE_APP_VERSION=0.9.6;JUCE_APP_VERSION_HEX=0x906;JucePlugin_Build_VST=0;JucePlugin_Build_VST3=1;JucePlugin_Build_AU=0;JucePlugin_Build_AUv3=0;JucePlugin_Build_AAX=0;JucePlugin_Build_Standalone=0;JucePlugin_Build_Unity=0;JucePlugin_Build_LV2=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
     <Link>
-      <OutputFile>$(OutDir)\AIASS.vst3</OutputFile>
+      <OutputFile>$(OutDir)\AIASS.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <IgnoreSpecificDefaultLibraries>libcmt.lib; msvcrt.lib;;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -99,6 +99,18 @@
     <Lib>
       <AdditionalDependencies>AIASS.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
+    <PreBuildEvent>
+      <Command>if not exist &quot;$(OutDir)\\AIASS.vst3\&quot; del /s /q &quot;$(OutDir)\\AIASS.vst3&quot; &amp;&amp; mkdir &quot;$(OutDir)\\AIASS.vst3&quot;
+if not exist &quot;$(OutDir)\\AIASS.vst3\Contents\&quot; del /s /q &quot;$(OutDir)\\AIASS.vst3\Contents&quot; &amp;&amp; mkdir &quot;$(OutDir)\\AIASS.vst3\Contents&quot;
+if not exist &quot;$(OutDir)\\AIASS.vst3\Contents\x86_64-win\&quot; del /s /q &quot;$(OutDir)\\AIASS.vst3\Contents\x86_64-win&quot; &amp;&amp; mkdir &quot;$(OutDir)\\AIASS.vst3\Contents\x86_64-win&quot;
+</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>copy /Y &quot;$(OutDir)\AIASS.dll&quot; &quot;$(OutDir)\AIASS.vst3\Contents\x86_64-win\AIASS.vst3&quot;
+del /s /q &quot;$(OutDir)/AIASS.vst3\Contents\moduleinfo.json&quot;
+if not exist &quot;$(OutDir)/AIASS.vst3\Contents\Resources\&quot; del /s /q &quot;$(OutDir)/AIASS.vst3\Contents\Resources&quot; &amp;&amp; mkdir &quot;$(OutDir)/AIASS.vst3\Contents\Resources&quot;
+&quot;.\..\Windows\DebugBuilds\Windows\Debug\VST3 Manifest Helper\juce_vst3_helper.exe&quot; -create -version &quot;0.9.6&quot; -path &quot;$(OutDir)/AIASS.vst3&quot; -output &quot;$(OutDir)/AIASS.vst3\Contents\Resources\moduleinfo.json&quot;</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Midl>
@@ -110,8 +122,8 @@
     </Midl>
     <ClCompile>
       <Optimization>Full</Optimization>
-      <AdditionalIncludeDirectories>E:\Frameworks\JUCE\modules\juce_audio_processors\format_types\VST3_SDK;E:\Frameworks\VST_SDK_legacy\VST2_SDK;..\..\JuceLibraryCode;E:\Frameworks\JUCE\modules;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;NDEBUG;JUCER_VS2022_78A503E=1;JUCE_APP_VERSION=0.9.5;JUCE_APP_VERSION_HEX=0x905;JucePlugin_Build_VST=0;JucePlugin_Build_VST3=1;JucePlugin_Build_AU=0;JucePlugin_Build_AUv3=0;JucePlugin_Build_AAX=0;JucePlugin_Build_Standalone=0;JucePlugin_Build_Unity=0;JucePlugin_Build_LV2=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\Frameworks\JUCE\modules\juce_audio_processors\format_types\VST3_SDK;F:\Frameworks\VST_SDK_legacy\VST2_SDK;..\..\JuceLibraryCode;F:\Frameworks\JUCE\modules;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;NDEBUG;JUCER_VS2022_78A503E=1;JUCE_APP_VERSION=0.9.6;JUCE_APP_VERSION_HEX=0x906;JucePlugin_Build_VST=0;JucePlugin_Build_VST3=1;JucePlugin_Build_AU=0;JucePlugin_Build_AUv3=0;JucePlugin_Build_AAX=0;JucePlugin_Build_Standalone=0;JucePlugin_Build_Unity=0;JucePlugin_Build_LV2=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
@@ -121,14 +133,14 @@
       <WarningLevel>Level4</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <LanguageStandard>stdcpp14</LanguageStandard>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <ResourceCompile>
-      <AdditionalIncludeDirectories>E:\Frameworks\JUCE\modules\juce_audio_processors\format_types\VST3_SDK;E:\Frameworks\VST_SDK_legacy\VST2_SDK;..\..\JuceLibraryCode;E:\Frameworks\JUCE\modules;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;NDEBUG;JUCER_VS2022_78A503E=1;JUCE_APP_VERSION=0.9.5;JUCE_APP_VERSION_HEX=0x905;JucePlugin_Build_VST=0;JucePlugin_Build_VST3=1;JucePlugin_Build_AU=0;JucePlugin_Build_AUv3=0;JucePlugin_Build_AAX=0;JucePlugin_Build_Standalone=0;JucePlugin_Build_Unity=0;JucePlugin_Build_LV2=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>F:\Frameworks\JUCE\modules\juce_audio_processors\format_types\VST3_SDK;F:\Frameworks\VST_SDK_legacy\VST2_SDK;..\..\JuceLibraryCode;F:\Frameworks\JUCE\modules;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;NDEBUG;JUCER_VS2022_78A503E=1;JUCE_APP_VERSION=0.9.6;JUCE_APP_VERSION_HEX=0x906;JucePlugin_Build_VST=0;JucePlugin_Build_VST3=1;JucePlugin_Build_AU=0;JucePlugin_Build_AUv3=0;JucePlugin_Build_AAX=0;JucePlugin_Build_Standalone=0;JucePlugin_Build_Unity=0;JucePlugin_Build_LV2=0;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
     <Link>
-      <OutputFile>$(OutDir)\AIASS.vst3</OutputFile>
+      <OutputFile>$(OutDir)\AIASS.dll</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>false</GenerateDebugInformation>
@@ -147,20 +159,34 @@
     <Lib>
       <AdditionalDependencies>AIASS.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
+    <PreBuildEvent>
+      <Command>if not exist &quot;$(OutDir)\\AIASS.vst3\&quot; del /s /q &quot;$(OutDir)\\AIASS.vst3&quot; &amp;&amp; mkdir &quot;$(OutDir)\\AIASS.vst3&quot;
+if not exist &quot;$(OutDir)\\AIASS.vst3\Contents\&quot; del /s /q &quot;$(OutDir)\\AIASS.vst3\Contents&quot; &amp;&amp; mkdir &quot;$(OutDir)\\AIASS.vst3\Contents&quot;
+if not exist &quot;$(OutDir)\\AIASS.vst3\Contents\x86_64-win\&quot; del /s /q &quot;$(OutDir)\\AIASS.vst3\Contents\x86_64-win&quot; &amp;&amp; mkdir &quot;$(OutDir)\\AIASS.vst3\Contents\x86_64-win&quot;
+</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>copy /Y &quot;$(OutDir)\AIASS.dll&quot; &quot;$(OutDir)\AIASS.vst3\Contents\x86_64-win\AIASS.vst3&quot;
+del /s /q &quot;$(OutDir)/AIASS.vst3\Contents\moduleinfo.json&quot;
+if not exist &quot;$(OutDir)/AIASS.vst3\Contents\Resources\&quot; del /s /q &quot;$(OutDir)/AIASS.vst3\Contents\Resources&quot; &amp;&amp; mkdir &quot;$(OutDir)/AIASS.vst3\Contents\Resources&quot;
+&quot;.\..\Windows\ReleaseBuilds\Windows\Release\VST3 Manifest Helper\juce_vst3_helper.exe&quot; -create -version &quot;0.9.6&quot; -path &quot;$(OutDir)/AIASS.vst3&quot; -output &quot;$(OutDir)/AIASS.vst3\Contents\Resources\moduleinfo.json&quot;</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Frameworks\JUCE\modules\juce_audio_plugin_client\VST3\juce_VST3_Wrapper.cpp">
+    <ClCompile Include="F:\Frameworks\JUCE\modules\juce_audio_plugin_client\VST3\juce_VST3ManifestHelper.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Frameworks\JUCE\modules\juce_audio_plugin_client\juce_audio_plugin_client_VST3.cpp">
+    <ClCompile Include="F:\Frameworks\JUCE\modules\juce_audio_plugin_client\juce_audio_plugin_client_VST3.cpp">
       <ExcludedFromBuild>true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_audio_plugin_client_VST3.cpp"/>
   </ItemGroup>
   <ItemGroup/>
   <ItemGroup>
+    <None Include=".\icon.ico"/>
+  </ItemGroup>
+  <ItemGroup>
     <ResourceCompile Include=".\resources.rc"/>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets"/>
-  <ImportGroup Label="ExtensionTargets"/>
 </Project>

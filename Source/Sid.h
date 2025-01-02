@@ -74,8 +74,8 @@ class Sid
 			HSID_USB_WSTATE_OK = 1, HSID_USB_WSTATE_BUSY,
 			HSID_USB_WSTATE_ERROR, HSID_USB_WSTATE_END
 		};
-	    
-        	typedef Uint16  (*lpHardSID_Version)(void);
+
+		typedef Uint16  (*lpHardSID_Version)(void);
 		typedef Uint8   (*lpHardSID_Devices)(void);
 		typedef void    (*lpHardSID_Delay)(Uint8 DeviceID, Uint16 Cycles);
 		typedef void    (*lpHardSID_Write)(Uint8 DeviceID, Uint16 Cycles, Uint8 SID_reg, Uint8 Data);
@@ -97,7 +97,7 @@ class Sid
 		typedef void    (*lpHardSID_Unlock)(Uint8 DeviceID);
 		typedef Uint8   (*lpHardSID_Try_Write)(Uint8 DeviceID, Uint16 Cycles, Uint8 SID_reg, Uint8 Data);
 		typedef bool    (*lpHardSID_ExternalTiming)(Uint8 DeviceID);
-                typedef void    (*lpHardSID_Uninitialize)(void);
+		typedef void    (*lpHardSID_Uninitialize)(void);
 
     lpHardSID_Version My_HardSID_Version = nullptr;
     lpHardSID_Devices My_HardSID_Devices = nullptr;
@@ -122,7 +122,7 @@ class Sid
     lpHardSID_Try_Write My_HardSID_Try_Write = nullptr;
     lpHardSID_ExternalTiming My_HardSID_ExternalTiming = nullptr;
     lpHardSID_Uninitialize My_HardSID_Uninitialize = nullptr;
-    
+
 		struct SID_Voice {
 			Uint8 FREQ_LO;
 			Uint8 FREQ_HI;

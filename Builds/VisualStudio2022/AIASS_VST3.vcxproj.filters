@@ -16,10 +16,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Frameworks\JUCE\modules\juce_audio_plugin_client\VST3\juce_VST3_Wrapper.cpp">
+    <ClCompile Include="F:\Frameworks\JUCE\modules\juce_audio_plugin_client\VST3\juce_VST3ManifestHelper.cpp">
       <Filter>JUCE Modules\juce_audio_plugin_client\VST3</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Frameworks\JUCE\modules\juce_audio_plugin_client\juce_audio_plugin_client_VST3.cpp">
+    <ClCompile Include="F:\Frameworks\JUCE\modules\juce_audio_plugin_client\VST3\juce_VST3ManifestHelper.mm">
+      <Filter>JUCE Modules\juce_audio_plugin_client\VST3</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\Frameworks\JUCE\modules\juce_audio_plugin_client\juce_audio_plugin_client_VST3.cpp">
+      <Filter>JUCE Modules\juce_audio_plugin_client</Filter>
+    </ClCompile>
+    <ClCompile Include="F:\Frameworks\JUCE\modules\juce_audio_plugin_client\juce_audio_plugin_client_VST3.mm">
       <Filter>JUCE Modules\juce_audio_plugin_client</Filter>
     </ClCompile>
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_audio_plugin_client_VST3.cpp">
@@ -27,6 +33,11 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup/>
+  <ItemGroup>
+    <None Include=".\icon.ico">
+      <Filter>JUCE Library Code</Filter>
+    </None>
+  </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include=".\resources.rc">
       <Filter>JUCE Library Code</Filter>
