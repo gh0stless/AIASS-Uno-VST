@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="xAsfkL" name="AIASS" displaySplashScreen="1" reportAppUsage="1"
-              splashScreenColour="Dark" projectType="audioplug" version="0.9.6"
+              splashScreenColour="Dark" projectType="audioplug" version="0.9.7"
               bundleIdentifier="com.crazymidi.AIASSUno" includeBinaryInAppConfig="1"
               companyCopyright="crazy-midi.de 2017-2025" buildVST="1" buildVST3="1"
               buildAU="0" buildAUv3="0" buildRTAS="0" buildAAX="0" buildStandalone="1"
@@ -19,13 +19,26 @@
               cppLanguageStandard="latest">
   <MAINGROUP id="wcvXYs" name="AIASS">
     <GROUP id="{A833233E-AA9A-81CB-EE47-6EDEE7A913DD}" name="Source">
+      <FILE id="iMYCxh" name="red-led-off.png" compile="0" resource="1" file="Source/images/red-led-off.png"/>
+      <FILE id="RG0CIi" name="red-led-on.png" compile="0" resource="1" file="Source/images/red-led-on.png"/>
+      <FILE id="CW47fx" name="hardsid.h" compile="0" resource="0" file="Source/hardsid.h"/>
+      <FILE id="GrIXiY" name="LedIndicator.h" compile="0" resource="0" file="Source/LedIndicator.h"/>
+      <FILE id="dl2nB4" name="libhardsid.h" compile="0" resource="0" file="Source/libhardsid.h"/>
+      <FILE id="qAUMiA" name="Mutex.cpp" compile="0" resource="0" file="Source/Mutex.cpp"/>
+      <FILE id="mmb0rV" name="Mutex.h" compile="0" resource="0" file="Source/Mutex.h"/>
+      <FILE id="kAoe5b" name="sid_definitions.h" compile="0" resource="0"
+            file="Source/sid_definitions.h"/>
+      <FILE id="NCqK3b" name="SIDWriteThread.h" compile="0" resource="0"
+            file="Source/SIDWriteThread.h"/>
+      <FILE id="kOQHAr" name="ThreadSafeRingBuffer.h" compile="0" resource="0"
+            file="Source/ThreadSafeRingBuffer.h"/>
       <FILE id="xfS8js" name="CrazyMidi_grau.png" compile="0" resource="1"
             file="Source/images/CrazyMidi_grau.png"/>
       <FILE id="mWQ68s" name="CrazyMidi_grau_64x64.png" compile="0" resource="1"
             file="Source/images/CrazyMidi_grau_64x64.png"/>
       <FILE id="ZwcFXG" name="CrazyMidi_grau_128x128.png" compile="0" resource="1"
             file="Source/images/CrazyMidi_grau_128x128.png"/>
-      <FILE id="CcWDhU" name="interproc.cpp" compile="1" resource="0" file="Source/interproc.cpp"/>
+      <FILE id="CcWDhU" name="interproc.cpp" compile="0" resource="0" file="Source/interproc.cpp"/>
       <FILE id="srtaoW" name="interproc.h" compile="0" resource="0" file="Source/interproc.h"/>
       <FILE id="dyEJNU" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
@@ -37,8 +50,6 @@
       <FILE id="X3DTcp" name="Sid.cpp" compile="1" resource="0" file="Source/Sid.cpp"/>
       <FILE id="o2CCZE" name="Sid.h" compile="0" resource="0" file="Source/Sid.h"/>
     </GROUP>
-    <FILE id="s6bWeg" name="libhardsid.h" compile="0" resource="0" file="Source/libhardsid.h"/>
-    <FILE id="A3xJbT" name="README.md" compile="0" resource="1" file="docs/README.md"/>
   </MAINGROUP>
   <EXPORTFORMATS>
     <LINUX_MAKE targetFolder="Builds/LinuxMakefile" vstLegacyFolder="../../../Frameworks/VST_SDK_legacy/VST2_SDK">
@@ -91,8 +102,10 @@
     <VS2022 targetFolder="Builds/VisualStudio2022" vstLegacyFolder="F:\Frameworks\VST_SDK_legacy\VST2_SDK"
             smallIcon="mWQ68s" bigIcon="xfS8js">
       <CONFIGURATIONS>
-        <CONFIGURATION isDebug="1" name="Debug" binaryPath="Builds\Windows\DebugBuilds\Windows\Debug"/>
-        <CONFIGURATION isDebug="0" name="Release" binaryPath="Builds\Windows\ReleaseBuilds\Windows\Release"/>
+        <CONFIGURATION isDebug="1" name="Debug" binaryPath="Builds\Windows\DebugBuilds\Windows\Debug"
+                       targetName="AIASS-UNO"/>
+        <CONFIGURATION isDebug="0" name="Release" binaryPath="Builds\Windows\ReleaseBuilds\Windows\Release"
+                       targetName="AIASS-UNO"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_audio_basics" path="E:\Frameworks\JUCE\modules"/>

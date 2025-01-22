@@ -38,7 +38,7 @@ public:
 	void processBlock(AudioSampleBuffer&, MidiBuffer&) override;
 
 	Sid* getSid() {
-		return m_sid;
+		return sid;
 	}
 
 	bool LED = false;
@@ -79,10 +79,10 @@ public:
 
 private:
 	void parameterChanged(const String& parameterID, float newValue) override;
-	void setWaveformStatus(BYTE Voice, BYTE Waveform, bool State);
+	void setWaveformStatus(Uint8 Voice, Uint8 Waveform, bool State);
 private:
-	void setFilterStatus(BYTE FilterStatusBit, bool State);
-	void setFilterMode(BYTE FilterModeBit, bool State);
+	void setFilterStatus(Uint8 FilterStatusBit, bool State);
+	void setFilterMode(Uint8 FilterModeBit, bool State);
 	void noteOn(MidiMessage mm, bool triggernote, int VoiceNo);
 	void noteOff(MidiMessage mm, int VoiceNo);
 	void handlepitch(bool newnote);
@@ -93,7 +93,7 @@ private:
 	enum PlayModes { Retrigger, Legato, LastStep };
 	enum PriorityModes { LastNote, HighNote, LowNote };
 
-	Sid* m_sid;
+	Sid* sid;
 
 	bool VOICE1 = true;
 	bool VOICE2 = true;

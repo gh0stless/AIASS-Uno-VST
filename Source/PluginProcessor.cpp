@@ -1041,26 +1041,26 @@
 		parameters.addParameterListener("ModeButton", this);
 		parameters.addParameterListener("TuNe", this);
 
-		m_sid = new Sid();
+		sid = new Sid();
 
-		m_sid->init();
+		sid->init();
 		
-		m_sid->set_volume(15);
-		m_sid->set_a(1, 1);
-		m_sid->set_d(1, 7);
-		m_sid->set_s(1, 7);
-		m_sid->set_r(1, 7);
-		m_sid->set_a(2, 1);
-		m_sid->set_d(2, 7);
-		m_sid->set_s(2, 7);
-		m_sid->set_r(2, 7);
-		m_sid->set_a(3, 1);
-		m_sid->set_d(3, 7);
-		m_sid->set_s(3, 7);
-		m_sid->set_r(3, 7);
-		m_sid->set_pulsw(1, 1024);
-		m_sid->set_pulsw(2, 1024);
-		m_sid->set_pulsw(3, 1024);
+		sid->set_volume(15);
+		sid->set_a(1, 1);
+		sid->set_d(1, 7);
+		sid->set_s(1, 7);
+		sid->set_r(1, 7);
+		sid->set_a(2, 1);
+		sid->set_d(2, 7);
+		sid->set_s(2, 7);
+		sid->set_r(2, 7);
+		sid->set_a(3, 1);
+		sid->set_d(3, 7);
+		sid->set_s(3, 7);
+		sid->set_r(3, 7);
+		sid->set_pulsw(1, 1024);
+		sid->set_pulsw(2, 1024);
+		sid->set_pulsw(3, 1024);
 
 		setWaveformStatus(1, 3, true);
 		setWaveformStatus(2, 3, true);
@@ -1071,8 +1071,8 @@
 
 	AiassAudioProcessor::~AiassAudioProcessor()
 	{
-		m_sid->init();
-		delete m_sid;
+		sid->init();
+		delete sid;
 	}
 
 	//==============================================================================
@@ -1783,82 +1783,82 @@
 		if (parameterID == "SidVol")
 		{
 			SIDVOL = (int)newValue;
-			m_sid->set_volume((BYTE)newValue);
+			sid->set_volume((Uint8)newValue);
 		}
 		else if (parameterID == "AttAck1")
 		{
 			ATTACK1 = (int)newValue;
-			m_sid->set_a(1, (BYTE)newValue);
+			sid->set_a(1, (Uint8)newValue);
 		}
 		else if (parameterID == "AttAck2")
 		{
 			ATTACK2 = (int)newValue;
-			m_sid->set_a(2, (BYTE)newValue);
+			sid->set_a(2, (Uint8)newValue);
 		}
 		else if (parameterID == "AttAck3")
 		{
 			ATTACK3 = (int)newValue;
-			m_sid->set_a(3, (BYTE)newValue);
+			sid->set_a(3, (Uint8)newValue);
 		}
 		else if (parameterID == "DeCay1")
 		{
 			DECAY1 = (int)newValue;
-			m_sid->set_d(1, (BYTE)newValue);
+			sid->set_d(1, (Uint8)newValue);
 		}
 		else if (parameterID == "DeCay2")
 		{
 			DECAY2 = (int)newValue;
-			m_sid->set_d(2, (BYTE)newValue);
+			sid->set_d(2, (Uint8)newValue);
 		}
 		else if (parameterID == "DeCay3")
 		{
 			DECAY3 = (int)newValue;
-			m_sid->set_d(3, (BYTE)newValue);
+			sid->set_d(3, (Uint8)newValue);
 		}
 		else if (parameterID == "SuStain1")
 		{
 			SUSTAIN1 = (int)newValue;
-			m_sid->set_s(1, (BYTE)newValue);
+			sid->set_s(1, (Uint8)newValue);
 		}
 		else if (parameterID == "SuStain2")
 		{
 			SUSTAIN2 = (int)newValue;
-			m_sid->set_s(2, (BYTE)newValue);
+			sid->set_s(2, (Uint8)newValue);
 		}
 		else if (parameterID == "SuStain3")
 		{
 			SUSTAIN3 = (int)newValue;
-			m_sid->set_s(3, (BYTE)newValue);
+			sid->set_s(3, (Uint8)newValue);
 		}
 		else if (parameterID == "ReLease1")
 		{
 			RELEASE1 = (int)newValue;
-			m_sid->set_r(1, (BYTE)newValue);
+			sid->set_r(1, (Uint8)newValue);
 		}
 		else if (parameterID == "ReLease2")
 		{
 			RELEASE2 = (int)newValue;
-			m_sid->set_r(2, (BYTE)newValue);
+			sid->set_r(2, (Uint8)newValue);
 		}
 		else if (parameterID == "ReLease3")
 		{
 			RELEASE3 = (int)newValue;
-			m_sid->set_r(3, (BYTE)newValue);
+			sid->set_r(3, (Uint8)newValue);
 		}
 		else if (parameterID == "PulsW1")
 		{
 			PULSEW1 = (int)newValue;
-			m_sid->set_pulsw(1, (Uint16)newValue);
+			sid->set_pulsw(1, (Uint16)newValue);
 		}
 		else if (parameterID == "PulsW2")
 		{
 			PULSEW2 = (int)newValue;
-			m_sid->set_pulsw(2, (Uint16)newValue);
+			sid->set_pulsw(2, (Uint16)newValue);
 		}
 		else if (parameterID == "PulsW3")
 		{
 			PULSEW3 = (int)newValue;
-			m_sid->set_pulsw(3, (Uint16)newValue);
+			sid->set_pulsw(3, (Uint16)newValue);
 		}
 		else if (parameterID == "VoiCe1")
 		{
@@ -1975,37 +1975,37 @@
 		{
 			if (newValue == 0) RINGMOD1 = false;
 			else               RINGMOD1 = true;
-			m_sid->set_ringmod(1, RINGMOD1);
+			sid->set_ringmod(1, RINGMOD1);
 		}
 		else if (parameterID == "RingMod2")
 		{
 			if (newValue == 0) RINGMOD2 = false;
 			else               RINGMOD2 = true;
-			m_sid->set_ringmod(2, RINGMOD2);
+			sid->set_ringmod(2, RINGMOD2);
 		}
 		else if (parameterID == "RingMod3")
 		{
 			if (newValue == 0) RINGMOD3 = false;
 			else               RINGMOD3 = true;
-			m_sid->set_ringmod(3, RINGMOD3);
+			sid->set_ringmod(3, RINGMOD3);
 		}
 		else if (parameterID == "SynC1")
 		{
 			if (newValue == 0) SYNC1 = false;
 			else               SYNC1 = true;
-					m_sid->set_sync(1, SYNC1);
+					sid->set_sync(1, SYNC1);
 		}
 		else if (parameterID == "SynC2")
 		{
 			if (newValue == 0) SYNC2 = false;
 			else               SYNC2 = true;
-			m_sid->set_sync(2, SYNC2);
+			sid->set_sync(2, SYNC2);
 		}
 		else if (parameterID == "SynC3")
 		{
 			if (newValue == 0) SYNC3 = false;
 			else               SYNC3 = true;
-			m_sid->set_sync(3, SYNC3);
+			sid->set_sync(3, SYNC3);
 		}
 		else if (parameterID == "FilterFreq")
 		{
@@ -2015,11 +2015,11 @@
 			else { //scale
 				FILTERFREQ = ((int)(newValue * (71.0f / 2047.0f)));
 			}
-			m_sid->set_filterfreq((Uint16)FILTERFREQ);
+			sid->set_filterfreq((Uint16)FILTERFREQ);
 		}
 		else if (parameterID == "ResoNance")
 		{
-			m_sid->set_filterres((Uint8)newValue);
+			sid->set_filterres((Uint8)newValue);
 			FILTERRES = (int)newValue;
 		}
 		else if (parameterID == "FilterScale")
@@ -2100,26 +2100,26 @@
 		{
 			RESET = (bool)newValue;
 			
-			m_sid->init();
+			sid->init();
 			
-			m_sid->set_volume((Uint8)SIDVOL);
+			sid->set_volume((Uint8)SIDVOL);
 			
-			m_sid->set_a(1, (Uint8)ATTACK1);
-			m_sid->set_d(1, (Uint8)DECAY1);
-			m_sid->set_s(1, (Uint8)SUSTAIN1);
-			m_sid->set_r(1, (Uint8)RELEASE1);
-			m_sid->set_a(2, (Uint8)ATTACK2);
-			m_sid->set_d(2, (Uint8)DECAY2);
-			m_sid->set_s(2, (Uint8)SUSTAIN2);
-			m_sid->set_r(2, (Uint8)RELEASE2);
-			m_sid->set_a(3, (Uint8)ATTACK3);
-			m_sid->set_d(3, (Uint8)DECAY3);
-			m_sid->set_s(3, (Uint8)SUSTAIN3);
-			m_sid->set_r(3, (Uint8)RELEASE3);
+			sid->set_a(1, (Uint8)ATTACK1);
+			sid->set_d(1, (Uint8)DECAY1);
+			sid->set_s(1, (Uint8)SUSTAIN1);
+			sid->set_r(1, (Uint8)RELEASE1);
+			sid->set_a(2, (Uint8)ATTACK2);
+			sid->set_d(2, (Uint8)DECAY2);
+			sid->set_s(2, (Uint8)SUSTAIN2);
+			sid->set_r(2, (Uint8)RELEASE2);
+			sid->set_a(3, (Uint8)ATTACK3);
+			sid->set_d(3, (Uint8)DECAY3);
+			sid->set_s(3, (Uint8)SUSTAIN3);
+			sid->set_r(3, (Uint8)RELEASE3);
 			
-			m_sid->set_pulsw(1, (Uint16)PULSEW1);
-			m_sid->set_pulsw(2, (Uint16)PULSEW2);
-			m_sid->set_pulsw(3, (Uint16)PULSEW3);
+			sid->set_pulsw(1, (Uint16)PULSEW1);
+			sid->set_pulsw(2, (Uint16)PULSEW2);
+			sid->set_pulsw(3, (Uint16)PULSEW3);
 
 			setWaveformStatus(1, 1, TRIA1);
 			setWaveformStatus(2, 1, TRIA2);
@@ -2134,15 +2134,15 @@
 			setWaveformStatus(2, 4, NOISE2);
 			setWaveformStatus(3, 4, NOISE3);
 
-			m_sid->set_ringmod(1, RINGMOD1);
-			m_sid->set_ringmod(2, RINGMOD2);
-			m_sid->set_ringmod(3, RINGMOD3);
-			m_sid->set_sync(1, SYNC1);
-			m_sid->set_sync(2, SYNC2);
-			m_sid->set_sync(3, SYNC3);
+			sid->set_ringmod(1, RINGMOD1);
+			sid->set_ringmod(2, RINGMOD2);
+			sid->set_ringmod(3, RINGMOD3);
+			sid->set_sync(1, SYNC1);
+			sid->set_sync(2, SYNC2);
+			sid->set_sync(3, SYNC3);
 
-			m_sid->set_filterfreq((Uint16)FILTERFREQ);
-			m_sid->set_filterres((Uint8)FILTERRES);
+			sid->set_filterfreq((Uint16)FILTERFREQ);
+			sid->set_filterres((Uint8)FILTERRES);
 			setFilterStatus(1, FILTER1);
 			setFilterStatus(2, FILTER2);
 			setFilterStatus(3, FILTER3);
@@ -2182,9 +2182,9 @@
 		MODE = (bool)newValue;
 		SIDSTATE.clearQuick();
 		heldNotesList.clearQuick();
-		m_sid->stop(1);
-		m_sid->stop(2);
-		m_sid->stop(3);
+		sid->stop(1);
+		sid->stop(2);
+		sid->stop(3);
 		}
 		else if (parameterID == "TuNe")
 		{
@@ -2193,7 +2193,7 @@
 
 	}
 
-	void AiassAudioProcessor::setWaveformStatus(BYTE Voice, BYTE Waveform, bool State)
+	void AiassAudioProcessor::setWaveformStatus(Uint8 Voice, Uint8 Waveform, bool State)
 	{
 		Uint8 Waveformnibble = 0;
 
@@ -2287,10 +2287,10 @@
 			break;
 		}
 		
-		m_sid->set_waveform(Voice, Waveformnibble);
+		sid->set_waveform(Voice, Waveformnibble);
 	}
 
-	void AiassAudioProcessor::setFilterStatus(BYTE FilterStatusBit, bool State)
+	void AiassAudioProcessor::setFilterStatus(Uint8 FilterStatusBit, bool State)
 	{
 		Uint8 Statusnibble = 0;
 		
@@ -2321,10 +2321,10 @@
 		Statusnibble = Statusnibble << 1;
 		if (FILTER1) Statusnibble = Statusnibble | 0b00000001;
 		
-		m_sid->set_filterfilt(Statusnibble);
+		sid->set_filterfilt(Statusnibble);
 	}
 
-	void AiassAudioProcessor::setFilterMode(BYTE FilterModeBit, bool State)
+	void AiassAudioProcessor::setFilterMode(Uint8 FilterModeBit, bool State)
 	{
 		Uint8 Modenibble = 0;
 
@@ -2355,7 +2355,7 @@
 			Modenibble = Modenibble << 1;
 			if (LOWPASS) Modenibble = Modenibble | 0b00000001;
 
-			m_sid->set_filtermode(Modenibble);
+			sid->set_filtermode(Modenibble);
 	}
 
 	void AiassAudioProcessor::noteOn(MidiMessage mm, bool triggernote, int VoiceNo)
@@ -2379,8 +2379,8 @@
 					MyFreq1 = MyFreq1 * pow(2, ((CENT1 + TUNE) / 1200.0));
 					newFreq1 = MyFreq1;
 					if (BEND1 && (PITCHBEND != 0)) newFreq1 = scaleInterval(PITCHBEND, -8191.0f, 8191.0f, MyFreq1 / 2.0f, MyFreq1 * 2.0f);
-					m_sid->set_freq(1, (float)newFreq1);
-					m_sid->play(1);
+					sid->set_freq(1, (float)newFreq1);
+					sid->play(1);
 				break;
 				case 2:
 					LED2 = true;
@@ -2389,8 +2389,8 @@
 					MyFreq2 = MyFreq2 * pow(2, ((CENT2 + TUNE) / 1200.0));
 					newFreq2 = MyFreq2;
 					if (BEND2 && (PITCHBEND != 0)) newFreq2 = scaleInterval(PITCHBEND, -8191.0f, 8191.0f, MyFreq2 / 2.0f, MyFreq2 * 2.0f);
-					m_sid->set_freq(2, (float)newFreq2);
-					m_sid->play(2);
+					sid->set_freq(2, (float)newFreq2);
+					sid->play(2);
 				break;
 				case 3:
 					LED3 = true;
@@ -2399,8 +2399,8 @@
 					MyFreq3 = MyFreq3 * pow(2, ((CENT3 + TUNE) / 1200.0));
 					newFreq3 = MyFreq3;
 					if (BEND3 && (PITCHBEND != 0)) newFreq3 = scaleInterval(PITCHBEND, -8191.0f, 8191.0f, MyFreq3 / 2.0f, MyFreq3 * 2.0f);
-					m_sid->set_freq(3, (float)newFreq3);
-					m_sid->play(3);
+					sid->set_freq(3, (float)newFreq3);
+					sid->play(3);
 				break;
 			}
 		}
@@ -2424,12 +2424,12 @@
 			if (VOICE1)
 			{
 				
-				m_sid->set_freq(1, (float)newFreq1);
+				sid->set_freq(1, (float)newFreq1);
 				if (triggernote)
 				{
 					LED1 = true;
-					//if (V1isPlaying) m_sid->stop(1);
-					m_sid->play(1);
+					//if (V1isPlaying) sid->stop(1);
+					sid->play(1);
 				}
 				V1isPlaying = true;
 			}
@@ -2437,24 +2437,24 @@
 			if (VOICE2)
 			{
 				
-				m_sid->set_freq(2, (float)newFreq2);
+				sid->set_freq(2, (float)newFreq2);
 				if (triggernote)
 				{
 					LED2 = true;
-					//if (V2isPlaying) m_sid->stop(2);
-					m_sid->play(2);
+					//if (V2isPlaying) sid->stop(2);
+					sid->play(2);
 				}
 				V2isPlaying = true;
 			}
 			if (VOICE3)
 			{
 				LED3 = true;
-				m_sid->set_freq(3, (float)newFreq3);
+				sid->set_freq(3, (float)newFreq3);
 				if (triggernote)
 				{
 					LED3 = true;
-					//if (V3isPlaying) m_sid->stop(3);
-					m_sid->play(3);
+					//if (V3isPlaying) sid->stop(3);
+					sid->play(3);
 				}
 				V3isPlaying = true;
 			}
@@ -2468,15 +2468,15 @@
 			switch (VoiceNo) {
 			case 1:
 				LED1 = false;
-				m_sid->stop(1);
+				sid->stop(1);
 				break;
 			case 2:
 				LED2 = false;
-				m_sid->stop(2);
+				sid->stop(2);
 				break;
 			case 3:
 				LED3 = false;
-				m_sid->stop(3);
+				sid->stop(3);
 				break;
 			}
 		}
@@ -2486,7 +2486,7 @@
 			if (VOICE1)
 			{
 				LED1 = false;
-				m_sid->stop(1);
+				sid->stop(1);
 				V1isPlaying = false;
 			}
 			else
@@ -2494,14 +2494,14 @@
 				if (V1isPlaying)
 				{
 					LED1 = false;
-					m_sid->stop(1);
+					sid->stop(1);
 					V1isPlaying = false;
 				}
 			}
 			if (VOICE2)
 			{
 				LED2 = false;
-				m_sid->stop(2);
+				sid->stop(2);
 				V2isPlaying = false;
 			}
 			else
@@ -2509,14 +2509,14 @@
 				if (V2isPlaying)
 				{
 					LED2 = false;
-					m_sid->stop(2);
+					sid->stop(2);
 					V2isPlaying = false;
 				}
 			}
 			if (VOICE3)
 			{
 				LED3 = false;
-				m_sid->stop(3);
+				sid->stop(3);
 				V3isPlaying = false;
 			}
 			else
@@ -2524,7 +2524,7 @@
 				if (V3isPlaying)
 				{
 					LED3 = false;
-					m_sid->stop(3);
+					sid->stop(3);
 					V3isPlaying = false;
 				}
 			}
@@ -2542,9 +2542,9 @@
 		if (BEND3 && (PITCHBEND != 0)) newFreq3 = scaleInterval(PITCHBEND, -8191.0f, 8191.0f, MyFreq3 / 2.0f, MyFreq3 * 2.0f);
 
 		if (!newnote) {
-			if (VOICE1) m_sid->set_freq(1, newFreq1);
-			if (VOICE2) m_sid->set_freq(2, newFreq2);
-			if (VOICE3) m_sid->set_freq(3, newFreq3);
+			if (VOICE1) sid->set_freq(1, newFreq1);
+			if (VOICE2) sid->set_freq(2, newFreq2);
+			if (VOICE3) sid->set_freq(3, newFreq3);
 		}
 	}
 

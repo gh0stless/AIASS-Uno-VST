@@ -132,8 +132,8 @@ Sid::Sid()
 			//Init Registers
 			push_event(0, 0x00);
 			std::this_thread::sleep_for(std::chrono::milliseconds(300));
-			BYTE r;
-			for (r = 0; r <= NUMSIDREGS; r++) {
+			
+			for (Uint8 r = 0; r <= NUMSIDREGS; r++) {
 				push_event(r, 0x00);
 			}
 		}

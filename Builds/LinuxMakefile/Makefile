@@ -39,7 +39,7 @@ ifeq ($(CONFIG),Debug)
     TARGET_ARCH := 
   endif
 
-  JUCE_CPPFLAGS := $(DEPFLAGS) "-DLINUX=1" "-DDEBUG=1" "-D_DEBUG=1" "-DJUCER_LINUX_MAKE_6D53C8B4=1" "-DJUCE_APP_VERSION=0.9.6" "-DJUCE_APP_VERSION_HEX=0x906" "-DJUCE_USE_EXTERNAL_TEMPORARY_SUBPROCESS=1" $(shell $(PKG_CONFIG) --cflags $(shell ($(PKG_CONFIG) --exists webkit2gtk-4.1 && echo webkit2gtk-4.1) || echo webkit2gtk-4.0) alsa freetype2 fontconfig gl libcurl gtk+-x11-3.0) -pthread -I$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK -I../../../../../Frameworks/VST_SDK_legacy/VST2_SDK -I../../JuceLibraryCode -Ipre_build -I$(HOME)/JUCE/modules $(CPPFLAGS)
+  JUCE_CPPFLAGS := $(DEPFLAGS) "-DLINUX=1" "-DDEBUG=1" "-D_DEBUG=1" "-DJUCER_LINUX_MAKE_6D53C8B4=1" "-DJUCE_APP_VERSION=0.9.7" "-DJUCE_APP_VERSION_HEX=0x907" "-DJUCE_USE_EXTERNAL_TEMPORARY_SUBPROCESS=1" $(shell $(PKG_CONFIG) --cflags $(shell ($(PKG_CONFIG) --exists webkit2gtk-4.1 && echo webkit2gtk-4.1) || echo webkit2gtk-4.0) alsa freetype2 fontconfig gl libcurl gtk+-x11-3.0) -pthread -I$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK -I../../../../../Frameworks/VST_SDK_legacy/VST2_SDK -I../../JuceLibraryCode -Ipre_build -I$(HOME)/JUCE/modules $(CPPFLAGS)
 
   JUCE_CPPFLAGS_VST :=  "-DJucePlugin_Build_VST=1" "-DJucePlugin_Build_VST3=0" "-DJucePlugin_Build_AU=0" "-DJucePlugin_Build_AUv3=0" "-DJucePlugin_Build_AAX=0" "-DJucePlugin_Build_Standalone=0" "-DJucePlugin_Build_Unity=0" "-DJucePlugin_Build_LV2=0"
   JUCE_CFLAGS_VST := -fPIC -fvisibility=hidden
@@ -85,7 +85,7 @@ ifeq ($(CONFIG),Release)
     TARGET_ARCH := 
   endif
 
-  JUCE_CPPFLAGS := $(DEPFLAGS) "-DLINUX=1" "-DNDEBUG=1" "-DJUCER_LINUX_MAKE_6D53C8B4=1" "-DJUCE_APP_VERSION=0.9.6" "-DJUCE_APP_VERSION_HEX=0x906" "-DJUCE_USE_EXTERNAL_TEMPORARY_SUBPROCESS=1" $(shell $(PKG_CONFIG) --cflags $(shell ($(PKG_CONFIG) --exists webkit2gtk-4.1 && echo webkit2gtk-4.1) || echo webkit2gtk-4.0) alsa freetype2 fontconfig gl libcurl gtk+-x11-3.0) -pthread -I$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK -I../../../../../Frameworks/VST_SDK_legacy/VST2_SDK -I../../JuceLibraryCode -Ipre_build -I$(HOME)/JUCE/modules $(CPPFLAGS)
+  JUCE_CPPFLAGS := $(DEPFLAGS) "-DLINUX=1" "-DNDEBUG=1" "-DJUCER_LINUX_MAKE_6D53C8B4=1" "-DJUCE_APP_VERSION=0.9.7" "-DJUCE_APP_VERSION_HEX=0x907" "-DJUCE_USE_EXTERNAL_TEMPORARY_SUBPROCESS=1" $(shell $(PKG_CONFIG) --cflags $(shell ($(PKG_CONFIG) --exists webkit2gtk-4.1 && echo webkit2gtk-4.1) || echo webkit2gtk-4.0) alsa freetype2 fontconfig gl libcurl gtk+-x11-3.0) -pthread -I$(HOME)/JUCE/modules/juce_audio_processors/format_types/VST3_SDK -I../../../../../Frameworks/VST_SDK_legacy/VST2_SDK -I../../JuceLibraryCode -Ipre_build -I$(HOME)/JUCE/modules $(CPPFLAGS)
 
   JUCE_CPPFLAGS_VST :=  "-DJucePlugin_Build_VST=1" "-DJucePlugin_Build_VST3=0" "-DJucePlugin_Build_AU=0" "-DJucePlugin_Build_AUv3=0" "-DJucePlugin_Build_AAX=0" "-DJucePlugin_Build_Standalone=0" "-DJucePlugin_Build_Unity=0" "-DJucePlugin_Build_LV2=0"
   JUCE_CFLAGS_VST := -fPIC -fvisibility=hidden
@@ -133,7 +133,6 @@ OBJECTS_STANDALONE_PLUGIN := \
   $(JUCE_OBJDIR)/include_juce_audio_plugin_client_Standalone_1a871192.o \
 
 OBJECTS_SHARED_CODE := \
-  $(JUCE_OBJDIR)/interproc_1f8a36b3.o \
   $(JUCE_OBJDIR)/PluginProcessor_a059e380.o \
   $(JUCE_OBJDIR)/PluginEditor_94d4fb09.o \
   $(JUCE_OBJDIR)/Sid_9166ac2f.o \
@@ -194,7 +193,7 @@ $(JUCE_OUTDIR)/$(JUCE_TARGET_VST3) : $(OBJECTS_VST3) $(JUCE_OBJDIR)/execinfo.cmd
 	$(V_AT)$(CXX) -o $(JUCE_OUTDIR)/$(JUCE_TARGET_VST3) $(OBJECTS_VST3) $(JUCE_OUTDIR)/$(JUCE_TARGET_SHARED_CODE) $(JUCE_LDFLAGS) $(shell cat $(JUCE_OBJDIR)/execinfo.cmd) $(JUCE_LDFLAGS_VST3) $(RESOURCES) $(TARGET_ARCH)
 	-$(V_AT)mkdir -p $(JUCE_OUTDIR)/$(JUCE_VST3DIR)/Contents/Resources
 	-$(V_AT)rm -f $(JUCE_OUTDIR)/$(JUCE_VST3DIR)/Contents/moduleinfo.json
-	$(V_AT) $(JUCE_OUTDIR)/$(JUCE_TARGET_VST3_MANIFEST_HELPER) -create -version "0.9.6" -path $(JUCE_OUTDIR)/$(JUCE_VST3DIR) -output $(JUCE_OUTDIR)/$(JUCE_VST3DIR)/Contents/Resources/moduleinfo.json
+	$(V_AT) $(JUCE_OUTDIR)/$(JUCE_TARGET_VST3_MANIFEST_HELPER) -create -version "0.9.7" -path $(JUCE_OUTDIR)/$(JUCE_VST3DIR) -output $(JUCE_OUTDIR)/$(JUCE_VST3DIR)/Contents/Resources/moduleinfo.json
 	-$(V_AT)[ ! "$(JUCE_VST3DESTDIR)" ] || (mkdir -p $(JUCE_VST3DESTDIR) && cp -R $(JUCE_COPYCMD_VST3))
 
 $(JUCE_OUTDIR)/$(JUCE_TARGET_STANDALONE_PLUGIN) : $(OBJECTS_STANDALONE_PLUGIN) $(JUCE_OBJDIR)/execinfo.cmd $(RESOURCES) $(JUCE_OUTDIR)/$(JUCE_TARGET_SHARED_CODE)
@@ -238,11 +237,6 @@ $(JUCE_OBJDIR)/include_juce_audio_plugin_client_Standalone_1a871192.o: ../../Juc
 	-$(V_AT)mkdir -p $(@D)
 	@echo "Compiling include_juce_audio_plugin_client_Standalone.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_STANDALONE_PLUGIN) $(JUCE_CFLAGS_STANDALONE_PLUGIN) -o "$@" -c "$<"
-
-$(JUCE_OBJDIR)/interproc_1f8a36b3.o: ../../Source/interproc.cpp
-	-$(V_AT)mkdir -p $(@D)
-	@echo "Compiling interproc.cpp"
-	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_SHARED_CODE) $(JUCE_CFLAGS_SHARED_CODE) -o "$@" -c "$<"
 
 $(JUCE_OBJDIR)/PluginProcessor_a059e380.o: ../../Source/PluginProcessor.cpp
 	-$(V_AT)mkdir -p $(@D)

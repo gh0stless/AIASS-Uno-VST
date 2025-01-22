@@ -21,6 +21,7 @@
 
 //[Headers]     -- You can add your own extra header files here --
 #include "../JuceLibraryCode/JuceHeader.h"
+#include "Sid.h" 
 #include "PluginProcessor.h"
 //[/Headers]
 
@@ -191,7 +192,7 @@ private:
 									// just need to create one of these and leave it
 									// there to do its work..
 
-	   Sid * m_sid;
+	   Sid * sid;
 
 	   int hz1 = 0; //for error-LED flashing
 

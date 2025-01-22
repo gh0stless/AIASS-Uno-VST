@@ -45,11 +45,11 @@
     <TargetExt>.lib</TargetExt>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\..\Windows\DebugBuilds\Windows\Debug\Shared Code\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\Shared Code\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AIASS</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AIASS-UNO</TargetName>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
     <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\..\Windows\ReleaseBuilds\Windows\Release\Shared Code\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\Shared Code\</IntDir>
-    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AIASS</TargetName>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AIASS-UNO</TargetName>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -64,13 +64,13 @@
       <Optimization>Disabled</Optimization>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <AdditionalIncludeDirectories>F:\Frameworks\JUCE\modules\juce_audio_processors\format_types\VST3_SDK;F:\Frameworks\VST_SDK_legacy\VST2_SDK;..\..\JuceLibraryCode;F:\Frameworks\JUCE\modules;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;DEBUG;_DEBUG;JUCER_VS2022_78A503E=1;JUCE_APP_VERSION=0.9.6;JUCE_APP_VERSION_HEX=0x906;JucePlugin_Build_VST=1;JucePlugin_Build_VST3=1;JucePlugin_Build_AU=0;JucePlugin_Build_AUv3=0;JucePlugin_Build_AAX=0;JucePlugin_Build_Standalone=1;JucePlugin_Build_Unity=0;JucePlugin_Build_LV2=0;JUCE_SHARED_CODE=1;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;DEBUG;_DEBUG;JUCER_VS2022_78A503E=1;JUCE_APP_VERSION=0.9.7;JUCE_APP_VERSION_HEX=0x907;JucePlugin_Build_VST=1;JucePlugin_Build_VST3=1;JucePlugin_Build_AU=0;JucePlugin_Build_AUv3=0;JucePlugin_Build_AAX=0;JucePlugin_Build_Standalone=1;JucePlugin_Build_Unity=0;JucePlugin_Build_LV2=0;JUCE_SHARED_CODE=1;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <AssemblerListingLocation>$(IntDir)\</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)\</ObjectFileName>
-      <ProgramDataBaseFileName>$(IntDir)\AIASS.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(IntDir)\AIASS-UNO.pdb</ProgramDataBaseFileName>
       <WarningLevel>Level4</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -78,20 +78,20 @@
     </ClCompile>
     <ResourceCompile>
       <AdditionalIncludeDirectories>F:\Frameworks\JUCE\modules\juce_audio_processors\format_types\VST3_SDK;F:\Frameworks\VST_SDK_legacy\VST2_SDK;..\..\JuceLibraryCode;F:\Frameworks\JUCE\modules;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;DEBUG;_DEBUG;JUCER_VS2022_78A503E=1;JUCE_APP_VERSION=0.9.6;JUCE_APP_VERSION_HEX=0x906;JucePlugin_Build_VST=1;JucePlugin_Build_VST3=1;JucePlugin_Build_AU=0;JucePlugin_Build_AUv3=0;JucePlugin_Build_AAX=0;JucePlugin_Build_Standalone=1;JucePlugin_Build_Unity=0;JucePlugin_Build_LV2=0;JUCE_SHARED_CODE=1;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;DEBUG;_DEBUG;JUCER_VS2022_78A503E=1;JUCE_APP_VERSION=0.9.7;JUCE_APP_VERSION_HEX=0x907;JucePlugin_Build_VST=1;JucePlugin_Build_VST3=1;JucePlugin_Build_AU=0;JucePlugin_Build_AUv3=0;JucePlugin_Build_AAX=0;JucePlugin_Build_Standalone=1;JucePlugin_Build_Unity=0;JucePlugin_Build_LV2=0;JUCE_SHARED_CODE=1;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
     <Link>
-      <OutputFile>$(OutDir)\AIASS.lib</OutputFile>
+      <OutputFile>$(OutDir)\AIASS-UNO.lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <IgnoreSpecificDefaultLibraries>libcmt.lib; msvcrt.lib;;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <ProgramDatabaseFile>$(IntDir)\AIASS.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(IntDir)\AIASS-UNO.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
       <LargeAddressAware>true</LargeAddressAware>
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(IntDir)\AIASS.bsc</OutputFile>
+      <OutputFile>$(IntDir)\AIASS-UNO.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -105,13 +105,13 @@
     <ClCompile>
       <Optimization>Full</Optimization>
       <AdditionalIncludeDirectories>F:\Frameworks\JUCE\modules\juce_audio_processors\format_types\VST3_SDK;F:\Frameworks\VST_SDK_legacy\VST2_SDK;..\..\JuceLibraryCode;F:\Frameworks\JUCE\modules;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;NDEBUG;JUCER_VS2022_78A503E=1;JUCE_APP_VERSION=0.9.6;JUCE_APP_VERSION_HEX=0x906;JucePlugin_Build_VST=1;JucePlugin_Build_VST3=1;JucePlugin_Build_AU=0;JucePlugin_Build_AUv3=0;JucePlugin_Build_AAX=0;JucePlugin_Build_Standalone=1;JucePlugin_Build_Unity=0;JucePlugin_Build_LV2=0;JUCE_SHARED_CODE=1;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;NDEBUG;JUCER_VS2022_78A503E=1;JUCE_APP_VERSION=0.9.7;JUCE_APP_VERSION_HEX=0x907;JucePlugin_Build_VST=1;JucePlugin_Build_VST3=1;JucePlugin_Build_AU=0;JucePlugin_Build_AUv3=0;JucePlugin_Build_AAX=0;JucePlugin_Build_Standalone=1;JucePlugin_Build_Unity=0;JucePlugin_Build_LV2=0;JUCE_SHARED_CODE=1;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <AssemblerListingLocation>$(IntDir)\</AssemblerListingLocation>
       <ObjectFileName>$(IntDir)\</ObjectFileName>
-      <ProgramDataBaseFileName>$(IntDir)\AIASS.pdb</ProgramDataBaseFileName>
+      <ProgramDataBaseFileName>$(IntDir)\AIASS-UNO.pdb</ProgramDataBaseFileName>
       <WarningLevel>Level4</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -119,14 +119,14 @@
     </ClCompile>
     <ResourceCompile>
       <AdditionalIncludeDirectories>F:\Frameworks\JUCE\modules\juce_audio_processors\format_types\VST3_SDK;F:\Frameworks\VST_SDK_legacy\VST2_SDK;..\..\JuceLibraryCode;F:\Frameworks\JUCE\modules;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;NDEBUG;JUCER_VS2022_78A503E=1;JUCE_APP_VERSION=0.9.6;JUCE_APP_VERSION_HEX=0x906;JucePlugin_Build_VST=1;JucePlugin_Build_VST3=1;JucePlugin_Build_AU=0;JucePlugin_Build_AUv3=0;JucePlugin_Build_AAX=0;JucePlugin_Build_Standalone=1;JucePlugin_Build_Unity=0;JucePlugin_Build_LV2=0;JUCE_SHARED_CODE=1;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_WINDOWS;NDEBUG;JUCER_VS2022_78A503E=1;JUCE_APP_VERSION=0.9.7;JUCE_APP_VERSION_HEX=0x907;JucePlugin_Build_VST=1;JucePlugin_Build_VST3=1;JucePlugin_Build_AU=0;JucePlugin_Build_AUv3=0;JucePlugin_Build_AAX=0;JucePlugin_Build_Standalone=1;JucePlugin_Build_Unity=0;JucePlugin_Build_LV2=0;JUCE_SHARED_CODE=1;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
     <Link>
-      <OutputFile>$(OutDir)\AIASS.lib</OutputFile>
+      <OutputFile>$(OutDir)\AIASS-UNO.lib</OutputFile>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
       <GenerateDebugInformation>false</GenerateDebugInformation>
-      <ProgramDatabaseFile>$(IntDir)\AIASS.pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(IntDir)\AIASS-UNO.pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -135,11 +135,16 @@
     </Link>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>$(IntDir)\AIASS.bsc</OutputFile>
+      <OutputFile>$(IntDir)\AIASS-UNO.bsc</OutputFile>
     </Bscmake>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Source\interproc.cpp"/>
+    <ClCompile Include="..\..\Source\Mutex.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\interproc.cpp">
+      <ExcludedFromBuild>true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\..\Source\PluginProcessor.cpp"/>
     <ClCompile Include="..\..\Source\PluginEditor.cpp"/>
     <ClCompile Include="..\..\Source\Sid.cpp"/>
@@ -2886,11 +2891,17 @@
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_video.cpp"/>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\hardsid.h"/>
+    <ClInclude Include="..\..\Source\LedIndicator.h"/>
+    <ClInclude Include="..\..\Source\libhardsid.h"/>
+    <ClInclude Include="..\..\Source\Mutex.h"/>
+    <ClInclude Include="..\..\Source\sid_definitions.h"/>
+    <ClInclude Include="..\..\Source\SIDWriteThread.h"/>
+    <ClInclude Include="..\..\Source\ThreadSafeRingBuffer.h"/>
     <ClInclude Include="..\..\Source\interproc.h"/>
     <ClInclude Include="..\..\Source\PluginProcessor.h"/>
     <ClInclude Include="..\..\Source\PluginEditor.h"/>
     <ClInclude Include="..\..\Source\Sid.h"/>
-    <ClInclude Include="..\..\Source\libhardsid.h"/>
     <ClInclude Include="F:\Frameworks\JUCE\modules\juce_audio_basics\audio_play_head\juce_AudioPlayHead.h"/>
     <ClInclude Include="F:\Frameworks\JUCE\modules\juce_audio_basics\buffers\juce_AudioChannelSet.h"/>
     <ClInclude Include="F:\Frameworks\JUCE\modules\juce_audio_basics\buffers\juce_AudioDataConverters.h"/>
@@ -4229,10 +4240,11 @@
     <ClInclude Include="..\..\JuceLibraryCode\JucePluginDefines.h"/>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\Source\images\red-led-off.png"/>
+    <None Include="..\..\Source\images\red-led-on.png"/>
     <None Include="..\..\Source\images\CrazyMidi_grau.png"/>
     <None Include="..\..\Source\images\CrazyMidi_grau_64x64.png"/>
     <None Include="..\..\Source\images\CrazyMidi_grau_128x128.png"/>
-    <None Include="..\..\docs\README.md"/>
     <None Include="F:\Frameworks\JUCE\modules\juce_audio_devices\native\oboe\src\common\README.md"/>
     <None Include="F:\Frameworks\JUCE\modules\juce_audio_devices\native\oboe\src\flowgraph\resampler\README.md"/>
     <None Include="F:\Frameworks\JUCE\modules\juce_audio_devices\native\oboe\CMakeLists.txt"/>

@@ -32,7 +32,7 @@
 AiassAudioProcessorEditor::AiassAudioProcessorEditor (AiassAudioProcessor& p, AudioProcessorValueTreeState& vts)
     : AudioProcessorEditor (&p),
       valueTreeState (vts),
-      m_sid(p.getSid()),
+      sid(p.getSid()),
       keyboardComponent (p.keyboardState, juce::MidiKeyboardComponent::horizontalKeyboard)
 {
     //[Constructor_pre] You can add your own custom stuff here..
@@ -1335,7 +1335,7 @@ void AiassAudioProcessorEditor::paint (juce::Graphics& g)
 
     {
         int x = 336, y = 49, width = 50, height = 20;
-        juce::String text (TRANS("v. 0.9.6"));
+        juce::String text (TRANS("v. 0.9.7"));
         juce::Colour fillColour = juce::Colours::black;
         //[UserPaintCustomArguments] Customize the painting arguments here..
         //[/UserPaintCustomArguments]
@@ -1401,7 +1401,7 @@ void AiassAudioProcessorEditor::comboBoxChanged (juce::ComboBox* comboBoxThatHas
 
 void AiassAudioProcessorEditor::timerCallback()
 {
-	int Error_State = (m_sid->error_state);
+	int Error_State = (sid->error_state);
     if (Mode_State != (getProcessor().MODE)) {
         Mode_State = (getProcessor().MODE);
         if (getProcessor().MODE) {
@@ -1550,7 +1550,7 @@ BEGIN_JUCER_METADATA
 <JUCER_COMPONENT documentType="Component" className="AiassAudioProcessorEditor"
                  componentName="" parentClasses="public AudioProcessorEditor, private Timer"
                  constructorParams="AiassAudioProcessor&amp; p, AudioProcessorValueTreeState&amp; vts"
-                 variableInitialisers="AudioProcessorEditor (&amp;p)&#10;valueTreeState (vts)&#10;m_sid(p.getSid())&#10;keyboardComponent (p.keyboardState, juce::MidiKeyboardComponent::horizontalKeyboard)&#10;"
+                 variableInitialisers="AudioProcessorEditor (&amp;p)&#10;valueTreeState (vts)&#10;sid(p.getSid())&#10;keyboardComponent (p.keyboardState, juce::MidiKeyboardComponent::horizontalKeyboard)&#10;"
                  snapPixels="10" snapActive="1" snapShown="1" overlayOpacity="0.330"
                  fixedSize="1" initialWidth="1024" initialHeight="530">
   <BACKGROUND backgroundColour="ffffff">
@@ -1558,7 +1558,7 @@ BEGIN_JUCER_METADATA
            mode="0"/>
     <IMAGE pos="14 28 315 41" resource="typenschild_a_png" opacity="1.0"
            mode="0"/>
-    <TEXT pos="336 49 50 20" fill="solid: ff000000" hasStroke="0" text="v. 0.9.6"
+    <TEXT pos="336 49 50 20" fill="solid: ff000000" hasStroke="0" text="v. 0.9.7"
           fontname="Default font" fontsize="15.0" kerning="0.0" bold="0"
           italic="0" justification="36"/>
     <IMAGE pos="728 312 159 125" resource="sidblaster02_png" opacity="1.0"

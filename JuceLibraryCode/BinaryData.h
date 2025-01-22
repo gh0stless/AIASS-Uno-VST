@@ -8,6 +8,12 @@
 
 namespace BinaryData
 {
+    extern const char*   redledoff_png;
+    const int            redledoff_pngSize = 2598;
+
+    extern const char*   redledon_png;
+    const int            redledon_pngSize = 2874;
+
     extern const char*   CrazyMidi_grau_png;
     const int            CrazyMidi_grau_pngSize = 32809;
 
@@ -17,11 +23,8 @@ namespace BinaryData
     extern const char*   CrazyMidi_grau_128x128_png;
     const int            CrazyMidi_grau_128x128_pngSize = 21339;
 
-    extern const char*   README_md;
-    const int            README_mdSize = 786;
-
     // Number of elements in the namedResourceList and originalFileNames arrays.
-    const int namedResourceListSize = 4;
+    const int namedResourceListSize = 5;
 
     // Points to the start of a list of resource names.
     extern const char* namedResourceList[];

@@ -706,6 +706,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\Mutex.cpp">
+      <Filter>AIASS\Source</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\interproc.cpp">
       <Filter>AIASS\Source</Filter>
     </ClCompile>
@@ -3648,6 +3651,27 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\hardsid.h">
+      <Filter>AIASS\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\LedIndicator.h">
+      <Filter>AIASS\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\libhardsid.h">
+      <Filter>AIASS\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Mutex.h">
+      <Filter>AIASS\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\sid_definitions.h">
+      <Filter>AIASS\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\SIDWriteThread.h">
+      <Filter>AIASS\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\ThreadSafeRingBuffer.h">
+      <Filter>AIASS\Source</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\interproc.h">
       <Filter>AIASS\Source</Filter>
     </ClInclude>
@@ -3659,9 +3683,6 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\Sid.h">
       <Filter>AIASS\Source</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\Source\libhardsid.h">
-      <Filter>AIASS</Filter>
     </ClInclude>
     <ClInclude Include="F:\Frameworks\JUCE\modules\juce_audio_basics\audio_play_head\juce_AudioPlayHead.h">
       <Filter>JUCE Modules\juce_audio_basics\audio_play_head</Filter>
@@ -7673,6 +7694,12 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\Source\images\red-led-off.png">
+      <Filter>AIASS\Source</Filter>
+    </None>
+    <None Include="..\..\Source\images\red-led-on.png">
+      <Filter>AIASS\Source</Filter>
+    </None>
     <None Include="..\..\Source\images\CrazyMidi_grau.png">
       <Filter>AIASS\Source</Filter>
     </None>
@@ -7681,9 +7708,6 @@
     </None>
     <None Include="..\..\Source\images\CrazyMidi_grau_128x128.png">
       <Filter>AIASS\Source</Filter>
-    </None>
-    <None Include="..\..\docs\README.md">
-      <Filter>AIASS</Filter>
     </None>
     <None Include="F:\Frameworks\JUCE\modules\juce_audio_devices\native\oboe\src\common\README.md">
       <Filter>JUCE Modules\juce_audio_devices\native\oboe\src\common</Filter>
