@@ -1,0 +1,10 @@
+Package: sidblaster-asid-player
+Version: 1.0
+Section: custom
+Priority: optional
+Architecture: all
+Essential: no
+Installed-Size: 14336
+Maintainer: Andreas Schumm <info@crazy-midi.de>
+Homepage: https://crazy-midi.de
+Description: A simple ASID Protocol Player for the SIDBlaster-USB.
