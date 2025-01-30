@@ -28,6 +28,8 @@ Or, you copy it in the C:\Windows folder. 32 bit Version not longer supported.
 ##### linux
 Open project in Projucer then build with "make CONFIG=Release".
 
+If memory is tight, try make -j1 to avoid parallel compilation.
+
 ##### macOS
 Open Project in Projucer and export an build with XCode.
 

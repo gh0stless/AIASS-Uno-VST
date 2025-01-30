@@ -1,0 +1,15 @@
+#!/bin/sh
+set -e
+
+# Symbolischen Link für libftd2xx erstellen
+if [ -f /usr/local/lib/libftd2xx.1.4.30.dylib ]; then
+    ln -sf /usr/local/lib/libftd2xx.1.4.30.dylib /usr/local/lib/libftd2xx.dylib
+    chmod 755 /usr/local/lib/libftd2xx.dylib
+    echo "Symbolischer Link für libftd2xx wurde erstellt und Berechtigungen gesetzt."
+else
+    echo "Fehler: Die Datei libftd2xx.1.4.30.dylib wurde nicht gefunden." >&2
+    exit 1
+fi
+
+# Hinweis für macOS: DYLD_LIBRARY_PATH einstellen, falls erforderlich
+echo "Falls erforderlich, stellen Sie sicher, dass DYLD_LIBRARY_PATH korrekt gesetzt ist."
