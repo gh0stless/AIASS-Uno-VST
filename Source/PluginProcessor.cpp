@@ -1043,6 +1043,8 @@
 
 		sid = new Sid();
 
+		if (!sid->GetErrorState()) sid->startPlayerThread();
+
 		sid->init();
 		
 		sid->set_volume(15);
@@ -1072,6 +1074,7 @@
 	AiassAudioProcessor::~AiassAudioProcessor()
 	{
 		sid->init();
+		if (!sid->GetErrorState()) sid->stopPlayerThread();
 		delete sid;
 	}
 

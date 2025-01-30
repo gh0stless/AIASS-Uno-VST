@@ -8,20 +8,22 @@ It is the further development of the AIASS-mono.
 
 The AIASS-Uno now also has a poly mode.
 
-https://github.com/gh0stless/AIASS-for-MAX4LIVE
+
 
 ![](./docs/AIASS-Uno-VST-Preview.jpg)
 
 ## Description
-In the event of errors (wrong or missing DLL, no SIDBlaster connected) the red LED flashes.
+In the event of errors (wrong or missing DLL, no SIDBlaster connected) the red LED flashes. See manual.
 
 ## Build
 
 ##### windows
 
-Open project in Projucer (part of juce package)(status: version 6.1.6) and export to and compile with Visual Studio 2019.
+Open project in Projucer (part of juce package)(status: version 8.0.4) and export to and compile with Visual Studio 2022.
 
-Under Windows, the correct DLL (32 or 64 bit) must be in the same folder as the host exe or, in the case of the standalone version, in its folder.
+Under Windows, the correct hardsid.dll must be in the same folder as the host exe or, in the case of the standalone version, in its folder.
+
+Or, you copy it in the C:\Windows folder. 32 bit Version not longer supported.
 
 ##### linux
 Open project in Projucer then build with "make CONFIG=Release".

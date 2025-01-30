@@ -19,6 +19,8 @@ enum SID_TYPE {
 	SID_TYPE_NONE = 0, SID_TYPE_6581, SID_TYPE_8580
 };
 
+
+
 #define NUMSIDREGS 0x18 // numbers of (writable) SID-registers
 #define SIDWRITEDELAY 14 // lda $xxxx,x 4 cycles, sta $d400,x 5 cycles, dex 2 cycles, bpl 3 cycles
 #define HARDSID_FLUSH_CYCLES 1000

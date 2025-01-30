@@ -4,7 +4,10 @@
 extern "C" {
 #endif
 
-enum {  HSID_USB_WSTATE_OK = 1, HSID_USB_WSTATE_BUSY, HSID_USB_WSTATE_ERROR, HSID_USB_WSTATE_END};
+	enum HSID_STATES {
+		HSID_USB_WSTATE_OK = 1, HSID_USB_WSTATE_BUSY,
+		HSID_USB_WSTATE_ERROR, HSID_USB_WSTATE_END
+	};
 
 typedef unsigned char Uint8;
 typedef unsigned short Uint16;

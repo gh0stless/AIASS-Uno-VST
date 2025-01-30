@@ -5,6 +5,9 @@ todo (for v.1.0):
 
 history
 -------
+- 2025/01/30 v.0.9.7
+  - better player engine
+  - installers
 - 2022/09/29 v.0.9.5
   -change DLL handling
 - 2022/02/01 v.0.9.3

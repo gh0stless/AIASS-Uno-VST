@@ -22,10 +22,6 @@
       <FILE id="iMYCxh" name="red-led-off.png" compile="0" resource="1" file="Source/images/red-led-off.png"/>
       <FILE id="RG0CIi" name="red-led-on.png" compile="0" resource="1" file="Source/images/red-led-on.png"/>
       <FILE id="CW47fx" name="hardsid.h" compile="0" resource="0" file="Source/hardsid.h"/>
-      <FILE id="GrIXiY" name="LedIndicator.h" compile="0" resource="0" file="Source/LedIndicator.h"/>
-      <FILE id="dl2nB4" name="libhardsid.h" compile="0" resource="0" file="Source/libhardsid.h"/>
-      <FILE id="qAUMiA" name="Mutex.cpp" compile="0" resource="0" file="Source/Mutex.cpp"/>
-      <FILE id="mmb0rV" name="Mutex.h" compile="0" resource="0" file="Source/Mutex.h"/>
       <FILE id="kAoe5b" name="sid_definitions.h" compile="0" resource="0"
             file="Source/sid_definitions.h"/>
       <FILE id="NCqK3b" name="SIDWriteThread.h" compile="0" resource="0"
@@ -38,8 +34,6 @@
             file="Source/images/CrazyMidi_grau_64x64.png"/>
       <FILE id="ZwcFXG" name="CrazyMidi_grau_128x128.png" compile="0" resource="1"
             file="Source/images/CrazyMidi_grau_128x128.png"/>
-      <FILE id="CcWDhU" name="interproc.cpp" compile="0" resource="0" file="Source/interproc.cpp"/>
-      <FILE id="srtaoW" name="interproc.h" compile="0" resource="0" file="Source/interproc.h"/>
       <FILE id="dyEJNU" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="xrsG2j" name="PluginProcessor.h" compile="0" resource="0"
@@ -99,13 +93,13 @@
         <MODULEPATH id="juce_audio_basics" path="../../juce"/>
       </MODULEPATHS>
     </XCODE_MAC>
-    <VS2022 targetFolder="Builds/VisualStudio2022" vstLegacyFolder="F:\Frameworks\VST_SDK_legacy\VST2_SDK"
-            smallIcon="mWQ68s" bigIcon="xfS8js">
+    <VS2022 targetFolder="Builds/VisualStudio2022" vstLegacyFolder="..\..\..\..\..\..\Frameworks\VST_SDK_legacy\VST2_SDK"
+            smallIcon="mWQ68s" bigIcon="xfS8js" externalLibraries="hardsid.lib">
       <CONFIGURATIONS>
-        <CONFIGURATION isDebug="1" name="Debug" binaryPath="Builds\Windows\DebugBuilds\Windows\Debug"
-                       targetName="AIASS-UNO"/>
-        <CONFIGURATION isDebug="0" name="Release" binaryPath="Builds\Windows\ReleaseBuilds\Windows\Release"
-                       targetName="AIASS-UNO"/>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="AIASS-UNO" libraryPath="..\..\libs\"
+                       enablePluginBinaryCopyStep="1" binaryPath="Builds\Windows\debug"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="AIASS-UNO" libraryPath="..\..\libs\"
+                       enablePluginBinaryCopyStep="1" binaryPath="Builds/Windows/release"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_audio_basics" path="E:\Frameworks\JUCE\modules"/>

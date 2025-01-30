@@ -1401,7 +1401,7 @@ void AiassAudioProcessorEditor::comboBoxChanged (juce::ComboBox* comboBoxThatHas
 
 void AiassAudioProcessorEditor::timerCallback()
 {
-	int Error_State = (sid->error_state);
+	int Error_State = (sid->GetErrorState());
     if (Mode_State != (getProcessor().MODE)) {
         Mode_State = (getProcessor().MODE);
         if (getProcessor().MODE) {
