@@ -80,7 +80,7 @@ class Sid {
 		typedef void    (*lpMuteHardSID_Line)(int Mute);
 		typedef void    (*lpHardSID_Reset2)(Uint8 DeviceID, Uint8 Volume);
 		typedef void    (*lpHardSID_Unlock)(Uint8 DeviceID);
-		typedef Uint8   (*lpHardSID_Try_Write)(Uint8 DeviceID, Uint16 Cycles, Uint8 SID_reg, Uint8 Data);
+		typedef Uint8   (*lpHardSID_Try_Write)(Uint8 DeviceID, int Cycles, Uint8 SID_reg, Uint8 Data);
 		typedef bool    (*lpHardSID_ExternalTiming)(Uint8 DeviceID);
 		typedef void    (*lpHardSID_Uninitialize)(void);
 		typedef int 	(*lpHardSID_GetSIDType)(Uint8 DeviceID);
