@@ -17,5 +17,5 @@
 
 .DS_Store
 
-**/JuceLibraryCode
-**/Builds
+/JuceLibraryCode/
+/Builds/
