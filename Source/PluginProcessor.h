@@ -13,6 +13,8 @@
 #include "../JuceLibraryCode/JuceHeader.h"
 #include "Sid.h"
 #include <math.h>
+#include "SIDBlasterServer.h"
+#include "SIDBlasterClient.h"
 
 //==============================================================================
 
@@ -78,9 +80,11 @@ public:
 	void setStateInformation(const void* data, int sizeInBytes) override;
 
 private:
+	static inline std::unique_ptr<SIDBlasterServer> server;
+	std::unique_ptr<SIDBlasterClient> client;
+
 	void parameterChanged(const String& parameterID, float newValue) override;
 	void setWaveformStatus(Uint8 Voice, Uint8 Waveform, bool State);
-private:
 	void setFilterStatus(Uint8 FilterStatusBit, bool State);
 	void setFilterMode(Uint8 FilterModeBit, bool State);
 	void noteOn(MidiMessage mm, bool triggernote, int VoiceNo);
@@ -93,7 +97,7 @@ private:
 	enum PlayModes { Retrigger, Legato, LastStep };
 	enum PriorityModes { LastNote, HighNote, LowNote };
 
-	Sid* sid;
+	//Sid* sid;
 
 	bool VOICE1 = true;
 	bool VOICE2 = true;

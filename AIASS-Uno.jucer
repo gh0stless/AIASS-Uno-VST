@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="xAsfkL" name="AIASS" displaySplashScreen="1" reportAppUsage="1"
-              splashScreenColour="Dark" projectType="audioplug" version="0.9.7"
+              splashScreenColour="Dark" projectType="audioplug" version="0.9.8"
               bundleIdentifier="com.crazymidi.AIASSUno" includeBinaryInAppConfig="1"
               companyCopyright="crazy-midi.de 2017-2025" buildVST="1" buildVST3="1"
               buildAU="0" buildAUv3="0" buildRTAS="0" buildAAX="0" buildStandalone="1"
@@ -19,6 +19,14 @@
               cppLanguageStandard="latest">
   <MAINGROUP id="wcvXYs" name="AIASS">
     <GROUP id="{A833233E-AA9A-81CB-EE47-6EDEE7A913DD}" name="Source">
+      <FILE id="sxDJxk" name="SIDBlasterClient.cpp" compile="1" resource="0"
+            file="Source/SIDBlasterClient.cpp"/>
+      <FILE id="ZmeiFz" name="SIDBlasterClient.h" compile="0" resource="0"
+            file="Source/SIDBlasterClient.h"/>
+      <FILE id="zX0jwV" name="SIDBlasterServer.cpp" compile="1" resource="0"
+            file="Source/SIDBlasterServer.cpp"/>
+      <FILE id="DAQguJ" name="SIDBlasterServer.h" compile="0" resource="0"
+            file="Source/SIDBlasterServer.h"/>
       <FILE id="iMYCxh" name="red-led-off.png" compile="0" resource="1" file="Source/images/red-led-off.png"/>
       <FILE id="RG0CIi" name="red-led-on.png" compile="0" resource="1" file="Source/images/red-led-on.png"/>
       <FILE id="CW47fx" name="hardsid.h" compile="0" resource="0" file="Source/hardsid.h"/>

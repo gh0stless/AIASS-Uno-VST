@@ -26,6 +26,13 @@
 		
 		,parameters(*this, nullptr)
 	{
+		if (!server) {
+			server = std::make_unique<SIDBlasterServer>();
+			server->startServer();
+		}
+		client = std::make_unique<SIDBlasterClient>();
+		client->connectToServer();
+
 		using Parameter = AudioProcessorValueTreeState::Parameter;
 		
 		parameters.createAndAddParameter(std::make_unique<Parameter>("SidVol",       // parameterID
@@ -1076,6 +1083,11 @@
 		sid->init();
 		if (!sid->GetErrorState()) sid->stopPlayerThread();
 		delete sid;
+		client.reset();
+		if (server && server->getNumConnectedClients() == 0) {
+			server->stopServer();
+			server.reset();
+		}
 	}
 
 	//==============================================================================
