@@ -72,10 +72,12 @@
     </LINUX_MAKE>
     <XCODE_MAC targetFolder="Builds/MacOSX" xcodeValidArchs="arm64,arm64e,x86_64"
                vstLegacyFolder="../../Frameworks/VST_SDK_legacy/VST2_SDK" extraLinkerFlags="-Wl,-rpath,/usr/local/lib&#10;"
-               externalLibraries="hardsid" bigIcon="xfS8js" smallIcon="mWQ68s">
+               externalLibraries="hardsid" bigIcon="xfS8js" smallIcon="ZwcFXG">
       <CONFIGURATIONS>
-        <CONFIGURATION isDebug="1" name="Debug" libraryPath="/usr/local/lib/"/>
-        <CONFIGURATION isDebug="0" name="Release" libraryPath="/usr/local/lib/"/>
+        <CONFIGURATION isDebug="1" name="Debug" libraryPath="/usr/local/lib/" macOSDeploymentTarget="10.12"
+                       osxCompatibility="10.12 SDK"/>
+        <CONFIGURATION isDebug="0" name="Release" libraryPath="/usr/local/lib/" macOSDeploymentTarget="10.12"
+                       osxCompatibility="10.12 SDK"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_video" path="../../juce"/>
