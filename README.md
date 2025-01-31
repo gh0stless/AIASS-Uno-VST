@@ -19,7 +19,7 @@ In the event of errors (wrong or missing DLL, no SIDBlaster connected) the red L
 
 ##### windows
 
-Open project in Projucer (part of juce package)(status: version 8.0.4) and export to and compile with Visual Studio 2022.
+Open project in Projucer (part of juce package)(status: version 8.0.6) and export to and compile with Visual Studio 2022.
 
 Under Windows, the correct hardsid.dll must be in the same folder as the host exe or, in the case of the standalone version, in its folder.
 
