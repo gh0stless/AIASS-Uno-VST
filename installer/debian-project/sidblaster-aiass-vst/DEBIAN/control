@@ -1,0 +1,10 @@
+Package: sidblaster-aiass-vst
+Version: 0.9.7
+Section: sound
+Priority: optional
+Architecture: amd64
+Essential: no
+Maintainer: Andreas Schumm <info@crazy-midi.de>
+Homepage: https://crazy-midi.de
+Depends: libc6, sidblaster-driver
+Description: A VST-Plugin for the SIDBlaster-USB Hardware.
