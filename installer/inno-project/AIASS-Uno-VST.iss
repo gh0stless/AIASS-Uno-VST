@@ -13,6 +13,7 @@ SetupIconFile=icon.ico
 
 [Files]
 Source: "AIASS-UNO.exe"; DestDir: "{app}"; Flags: ignoreversion
+Source: "SIDBlastertool.exe"; DestDir: "{app}"; Flags: ignoreversion
 Source: "hardsid.dll"; DestDir: "{win}"; Flags: ignoreversion
 Source: "readme.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "AIASS-Uno-Manual.pdf"; DestDir: "{app}"; Flags: ignoreversion
@@ -22,6 +23,7 @@ Source: "AIASS-UNO.vst3\*"; DestDir: "{code:GetVST3Dir}"; Flags: ignoreversion r
 
 [Icons]
 Name: "{group}\AIASS-UNO"; Filename: "{app}\AIASS-UNO.exe"
+Name: "{group}\SIDBlastertool"; Filename: "{app}\SIDBlastertool.exe"
 Name: "{group}\Readme"; Filename: "{app}\readme.txt"
 Name: "{group}\AIASS-Uno Manual"; Filename: "{app}\AIASS-Uno-Manual.pdf"
 Name: "{userdesktop}\AIASS-UNO"; Filename: "{app}\AIASS-UNO.exe"; Tasks: desktopicon
