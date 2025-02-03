@@ -9,7 +9,7 @@
               pluginManufacturer="crazy-midi.de" pluginManufacturerCode="CRMI"
               pluginCode="Aia2" pluginChannelConfigs="" pluginIsSynth="1" pluginWantsMidiIn="1"
               pluginProducesMidiOut="0" pluginIsMidiEffectPlugin="0" pluginEditorRequiresKeys="0"
-              pluginAUExportPrefix="AIAS2AU" pluginRTASCategory="" aaxIdentifier="com.crazy-midi.AIASS-Uno"
+              pluginAUExportPrefix="AIAS2AU" pluginRTASCategory="" aaxIdentifier="com.crazymidi.AIASSUno"
               pluginAAXCategory="2" companyName="crazy" companyWebsite="www.crazy-midi.de"
               companyEmail="info@crazy-midi.de" pluginFormats="buildStandalone,buildVST,buildVST3"
               pluginCharacteristicsValue="pluginIsSynth,pluginWantsMidiIn"
@@ -75,9 +75,11 @@
                externalLibraries="hardsid" bigIcon="xfS8js" smallIcon="ZwcFXG">
       <CONFIGURATIONS>
         <CONFIGURATION isDebug="1" name="Debug" libraryPath="/usr/local/lib/" macOSDeploymentTarget="10.12"
-                       osxCompatibility="10.12 SDK"/>
+                       osxCompatibility="10.12 SDK" vst3BinaryLocation="$(HOME)/Library/Audio/Plug-Ins/VST3"
+                       vstBinaryLocation="$(HOME)/Library/Audio/Plug-Ins/VST"/>
         <CONFIGURATION isDebug="0" name="Release" libraryPath="/usr/local/lib/" macOSDeploymentTarget="10.12"
-                       osxCompatibility="10.12 SDK"/>
+                       osxCompatibility="10.12 SDK" vst3BinaryLocation="$(HOME)/Library/Audio/Plug-Ins/VST3"
+                       vstBinaryLocation="$(HOME)/Library/Audio/Plug-Ins/VST"/>
       </CONFIGURATIONS>
       <MODULEPATHS>
         <MODULEPATH id="juce_video" path="../../juce"/>
