@@ -80,7 +80,6 @@ public:
 private:
 	void parameterChanged(const String& parameterID, float newValue) override;
 	void setWaveformStatus(Uint8 Voice, Uint8 Waveform, bool State);
-private:
 	void setFilterStatus(Uint8 FilterStatusBit, bool State);
 	void setFilterMode(Uint8 FilterModeBit, bool State);
 	void noteOn(MidiMessage mm, bool triggernote, int VoiceNo);

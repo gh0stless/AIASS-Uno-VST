@@ -25,6 +25,17 @@
 
 //[MiscUserDefs] You can add your own user definitions and misc code here...
 
+namespace {
+juce::String FatalErrorMessage(int errorState) {
+    // See Sid.cpp's constructor for what sets each value.
+    switch (errorState) {
+    case 1: return "hardsid.dll konnte nicht geladen werden.";
+    case 2: return "Die geladene hardsid.dll ist zu alt fuer dieses Plugin.";
+    case 3: return "Kein SIDBlaster gefunden.";
+    default: return {};
+    }
+}
+}
 
 //[/MiscUserDefs]
 
@@ -1335,7 +1346,7 @@ void AiassAudioProcessorEditor::paint (juce::Graphics& g)
 
     {
         int x = 336, y = 49, width = 50, height = 20;
-        juce::String text (TRANS("v. 0.9.7"));
+        juce::String text (TRANS("v. 0.9.8"));
         juce::Colour fillColour = juce::Colours::black;
         //[UserPaintCustomArguments] Customize the painting arguments here..
         //[/UserPaintCustomArguments]
@@ -1402,6 +1413,29 @@ void AiassAudioProcessorEditor::comboBoxChanged (juce::ComboBox* comboBoxThatHas
 void AiassAudioProcessorEditor::timerCallback()
 {
 	int Error_State = (sid->GetErrorState());
+	if (Error_State && !m_shownFatalErrorDialog) {
+		// Previously only the error-LED blink pattern (see below) signalled
+		// this - easy to miss since it's just a different blink rate per
+		// error code. Shown once per editor-open (timerCallback runs at
+		// 30Hz, so this must be latched, not re-triggered every tick).
+		m_shownFatalErrorDialog = true;
+		bool isStandalone = (getProcessor().wrapperType == juce::AudioProcessor::wrapperType_Standalone);
+		juce::NativeMessageBox::showAsync(
+			juce::MessageBoxOptions()
+				.withIconType(juce::MessageBoxIconType::WarningIcon)
+				.withTitle("AIASS")
+				.withMessage(FatalErrorMessage(Error_State))
+				.withButton("OK"),
+			[isStandalone](int) {
+				// Standalone: OK closes the app, matching the ASID Player's
+				// behaviour. As a plugin (VST/VST3) there is no app of ours
+				// to close - just dismiss the dialog, the host keeps running
+				// and the error-LED stays as a persistent indicator.
+				if (isStandalone) {
+					juce::JUCEApplication::getInstance()->systemRequestedQuit();
+				}
+			});
+	}
     if (Mode_State != (getProcessor().MODE)) {
         Mode_State = (getProcessor().MODE);
         if (getProcessor().MODE) {
@@ -1558,7 +1592,7 @@ BEGIN_JUCER_METADATA
            mode="0"/>
     <IMAGE pos="14 28 315 41" resource="typenschild_a_png" opacity="1.0"
            mode="0"/>
-    <TEXT pos="336 49 50 20" fill="solid: ff000000" hasStroke="0" text="v. 0.9.7"
+    <TEXT pos="336 49 50 20" fill="solid: ff000000" hasStroke="0" text="v. 0.9.8"
           fontname="Default font" fontsize="15.0" kerning="0.0" bold="0"
           italic="0" justification="36"/>
     <IMAGE pos="728 312 159 125" resource="sidblaster02_png" opacity="1.0"

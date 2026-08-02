@@ -195,6 +195,7 @@ private:
 	   Sid * sid;
 
 	   int hz1 = 0; //for error-LED flashing
+	   bool m_shownFatalErrorDialog = false; //show the hardsid error dialog at most once per editor open
 
        bool Link_State = false;
        bool Mode_State = false;
