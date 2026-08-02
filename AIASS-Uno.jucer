@@ -19,11 +19,11 @@
               cppLanguageStandard="latest">
   <MAINGROUP id="wcvXYs" name="AIASS">
     <GROUP id="{A833233E-AA9A-81CB-EE47-6EDEE7A913DD}" name="Source">
-      <FILE id="sxDJxk" name="SIDBlasterClient.cpp" compile="1" resource="0"
+      <FILE id="sxDJxk" name="SIDBlasterClient.cpp" compile="0" resource="0"
             file="Source/SIDBlasterClient.cpp"/>
       <FILE id="ZmeiFz" name="SIDBlasterClient.h" compile="0" resource="0"
             file="Source/SIDBlasterClient.h"/>
-      <FILE id="zX0jwV" name="SIDBlasterServer.cpp" compile="1" resource="0"
+      <FILE id="zX0jwV" name="SIDBlasterServer.cpp" compile="0" resource="0"
             file="Source/SIDBlasterServer.cpp"/>
       <FILE id="DAQguJ" name="SIDBlasterServer.h" compile="0" resource="0"
             file="Source/SIDBlasterServer.h"/>
@@ -76,6 +76,7 @@
         <MODULEPATH id="juce_audio_formats" path="../../juce"/>
         <MODULEPATH id="juce_audio_devices" path="../../juce"/>
         <MODULEPATH id="juce_audio_basics" path="../../juce"/>
+        <MODULEPATH id="juce_audio_processors_headless" path="../../../../../Frameworks/JUCE/modules"/>
       </MODULEPATHS>
     </LINUX_MAKE>
     <XCODE_MAC targetFolder="Builds/MacOSX" xcodeValidArchs="arm64,arm64e,x86_64"
@@ -105,9 +106,10 @@
         <MODULEPATH id="juce_audio_formats" path="../../juce"/>
         <MODULEPATH id="juce_audio_devices" path="../../juce"/>
         <MODULEPATH id="juce_audio_basics" path="../../juce"/>
+        <MODULEPATH id="juce_audio_processors_headless" path="../../../../../Frameworks/JUCE/modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
-    <VS2022 targetFolder="Builds/VisualStudio2022" vstLegacyFolder="..\..\..\..\..\..\Frameworks\VST_SDK_legacy\VST2_SDK"
+    <VS2022 targetFolder="Builds/VisualStudio2022" vstLegacyFolder="C:\Users\andre\Frameworks\VST_SDK_legacy\VST2_SDK"
             smallIcon="mWQ68s" bigIcon="xfS8js" externalLibraries="hardsid.lib">
       <CONFIGURATIONS>
         <CONFIGURATION isDebug="1" name="Debug" targetName="AIASS-UNO" libraryPath="..\..\libs\"
@@ -131,6 +133,7 @@
         <MODULEPATH id="juce_gui_extra" path="E:\Frameworks\JUCE\modules"/>
         <MODULEPATH id="juce_opengl" path="E:\Frameworks\JUCE\modules"/>
         <MODULEPATH id="juce_video" path="E:\Frameworks\JUCE\modules"/>
+        <MODULEPATH id="juce_audio_processors_headless" path="../../../../../Frameworks/JUCE/modules"/>
       </MODULEPATHS>
     </VS2022>
   </EXPORTFORMATS>
@@ -141,6 +144,8 @@
     <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
             useGlobalPath="1"/>
     <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors_headless" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
     <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
@@ -152,7 +157,7 @@
     <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_video" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
   </MODULES>
-  <JUCEOPTIONS JUCE_QUICKTIME="disabled"/>
+  <JUCEOPTIONS JUCE_QUICKTIME="disabled" JUCE_FORCE_USE_LEGACY_PARAM_IDS="1"/>
   <LIVE_SETTINGS>
     <WINDOWS buildEnabled="0" continuousRebuildEnabled="0" warningsEnabled="1"
              systemHeaderPath="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.16.27023\include"/>

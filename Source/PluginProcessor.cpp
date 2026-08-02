@@ -26,13 +26,6 @@
 		
 		,parameters(*this, nullptr)
 	{
-		if (!server) {
-			server = std::make_unique<SIDBlasterServer>();
-			server->startServer();
-		}
-		client = std::make_unique<SIDBlasterClient>();
-		client->connectToServer();
-
 		using Parameter = AudioProcessorValueTreeState::Parameter;
 		
 		parameters.createAndAddParameter(std::make_unique<Parameter>("SidVol",       // parameterID
@@ -1083,11 +1076,6 @@
 		sid->init();
 		if (!sid->GetErrorState()) sid->stopPlayerThread();
 		delete sid;
-		client.reset();
-		if (server && server->getNumConnectedClients() == 0) {
-			server->stopServer();
-			server.reset();
-		}
 	}
 
 	//==============================================================================
@@ -1527,7 +1515,7 @@
 					float newGUIBend = 0;
 					if (newBend == 0) newGUIBend = 0.5f;
 					else newGUIBend = ((float)CCBend) * (1.0f / 16383.0f);
-					sendParamChangeMessageToListeners(63, newGUIBend);
+					getParameters()[63]->sendValueChangedMessageToListeners(newGUIBend);
 				}
 			}
 
@@ -1541,7 +1529,7 @@
 						float newVolume = ((float)CCVolume) * (15.0f / 127.0f);
 						parameterChanged("SidVol", newVolume);
 						float newGUIVolume = ((float)CCVolume) * (1.0f / 127.0f);
-						sendParamChangeMessageToListeners(0, newGUIVolume);
+						getParameters()[0]->sendValueChangedMessageToListeners(newGUIVolume);
 					}
 					if (m.getControllerNumber() == 74) //Filterfrq.
 					{
@@ -1549,7 +1537,7 @@
 						float newFilterFreq = ((float)CCFilterFreq) * (2047.0f / 127.0f);
 						parameterChanged("FilterFreq", newFilterFreq);
 						float newGUIFilterFreq = ((float)CCFilterFreq) * (1.0f / 127.0f);
-						sendParamChangeMessageToListeners(47, newGUIFilterFreq);
+						getParameters()[47]->sendValueChangedMessageToListeners(newGUIFilterFreq);
 					}
 					if (m.getControllerNumber() == 71) //Resonance
 					{
@@ -1557,7 +1545,7 @@
 						float newFilterRes = ((float)CCFilterRes) * (15.0f / 127.0f);
 						parameterChanged("ResoNance", newFilterRes);
 						float newGUIFilterRes = ((float)CCFilterRes) * (1.0f / 127.0f);
-						sendParamChangeMessageToListeners(48, newGUIFilterRes);
+						getParameters()[48]->sendValueChangedMessageToListeners(newGUIFilterRes);
 					}
 					if (m.getControllerNumber() == 73) //Attack1
 					{
@@ -1565,7 +1553,7 @@
 						float newAttack1 = ((float)CCAttack1) * (15.0f / 127.0f);
 						parameterChanged("AttAck1", newAttack1);
 						float newGUIAttack1 = ((float)CCAttack1) * (1.0f / 127.0f);
-						sendParamChangeMessageToListeners(2, newGUIAttack1);
+						getParameters()[2]->sendValueChangedMessageToListeners(newGUIAttack1);
 					}
 					if (m.getControllerNumber() == 75) //Decay1
 					{
@@ -1573,7 +1561,7 @@
 						float newDecay1 = ((float)CCDecay1) * (15.0f / 127.0f);
 						parameterChanged("DeCay1", newDecay1);
 						float newGUIDecay1 = ((float)CCDecay1) * (1.0f / 127.0f);
-						sendParamChangeMessageToListeners(5, newGUIDecay1);
+						getParameters()[5]->sendValueChangedMessageToListeners(newGUIDecay1);
 					}
 					if (m.getControllerNumber() == 76) //Sustain1
 					{
@@ -1581,7 +1569,7 @@
 						float newSustain1 = ((float)CCSustain1) * (15.0f / 127.0f);
 						parameterChanged("SuStain", newSustain1);
 						float newGUISustain1 = ((float)CCSustain1) * (1.0f / 127.0f);
-						sendParamChangeMessageToListeners(8, newGUISustain1);
+						getParameters()[8]->sendValueChangedMessageToListeners(newGUISustain1);
 					}
 					if (m.getControllerNumber() == 72) //Release1
 					{
@@ -1589,7 +1577,7 @@
 						float newRelease1 = ((float)CCRelease1) * (15.0f / 127.0f);
 						parameterChanged("ReLease1", newRelease1);
 						float newGUIRelease1 = ((float)CCRelease1) * (1.0f / 127.0f);
-						sendParamChangeMessageToListeners(11, newGUIRelease1);
+						getParameters()[11]->sendValueChangedMessageToListeners(newGUIRelease1);
 					}
 					if (m.getControllerNumber() == 77) //Pulsew1
 					{
@@ -1597,7 +1585,7 @@
 						float newPulsew1 = ((float)CCPulsew1) * (4094.0f / 127.0f);
 						parameterChanged("PulsW1", newPulsew1);
 						float newGUIPulsew1 = ((float)CCPulsew1) * (1.0f / 127.0f);
-						sendParamChangeMessageToListeners(14, newGUIPulsew1);
+						getParameters()[14]->sendValueChangedMessageToListeners(newGUIPulsew1);
 					}
 					if (!LINK) {
 						if (m.getControllerNumber() == 20) //Attack2
@@ -1606,7 +1594,7 @@
 							float newAttack2 = ((float)CCAttack2) * (15.0f / 127.0f);
 							parameterChanged("AttAck2", newAttack2);
 							float newGUIAttack2 = ((float)CCAttack2) * (1.0f / 127.0f);
-							sendParamChangeMessageToListeners(3, newGUIAttack2);
+							getParameters()[3]->sendValueChangedMessageToListeners(newGUIAttack2);
 						}
 						if (m.getControllerNumber() == 21) //Decay2
 						{
@@ -1614,7 +1602,7 @@
 							float newDecay2 = ((float)CCDecay2) * (15.0f / 127.0f);
 							parameterChanged("DeCay2", newDecay2);
 							float newGUIDecay2 = ((float)CCDecay2) * (1.0f / 127.0f);
-							sendParamChangeMessageToListeners(6, newGUIDecay2);
+							getParameters()[6]->sendValueChangedMessageToListeners(newGUIDecay2);
 						}
 						if (m.getControllerNumber() == 22) //Sustain2
 						{
@@ -1622,7 +1610,7 @@
 							float newSustain2 = ((float)CCSustain2) * (15.0f / 127.0f);
 							parameterChanged("SuStain2", newSustain2);
 							float newGUISustain2 = ((float)CCSustain2) * (1.0f / 127.0f);
-							sendParamChangeMessageToListeners(9, newGUISustain2);
+							getParameters()[9]->sendValueChangedMessageToListeners(newGUISustain2);
 						}
 						if (m.getControllerNumber() == 23) //Release2
 						{
@@ -1630,7 +1618,7 @@
 							float newRelease2 = ((float)CCRelease2) * (15.0f / 127.0f);
 							parameterChanged("ReLease2", newRelease2);
 							float newGUIRelease2 = ((float)CCRelease2) * (1.0f / 127.0f);
-							sendParamChangeMessageToListeners(12, newGUIRelease2);
+							getParameters()[12]->sendValueChangedMessageToListeners(newGUIRelease2);
 						}
 						if (m.getControllerNumber() == 24) //Pulsew2
 						{
@@ -1638,7 +1626,7 @@
 							float newPulsew2 = ((float)CCPulsew2) * (4094.0f / 127.0f);
 							parameterChanged("PulsW2", newPulsew2);
 							float newGUIPulsew2 = ((float)CCPulsew2) * (1.0f / 127.0f);
-							sendParamChangeMessageToListeners(15, newGUIPulsew2);
+							getParameters()[15]->sendValueChangedMessageToListeners(newGUIPulsew2);
 						}
 						if (m.getControllerNumber() == 25) //Attack3
 						{
@@ -1646,7 +1634,7 @@
 							float newAttack3 = ((float)CCAttack3) * (15.0f / 127.0f);
 							parameterChanged("AttAck3", newAttack3);
 							float newGUIAttack3 = ((float)CCAttack3) * (1.0f / 127.0f);
-							sendParamChangeMessageToListeners(4, newGUIAttack3);
+							getParameters()[4]->sendValueChangedMessageToListeners(newGUIAttack3);
 						}
 						if (m.getControllerNumber() == 26) //Decay3
 						{
@@ -1654,7 +1642,7 @@
 							float newDecay3 = ((float)CCDecay3) * (15.0f / 127.0f);
 							parameterChanged("DeCay3", newDecay3);
 							float newGUIDecay3 = ((float)CCDecay3) * (1.0f / 127.0f);
-							sendParamChangeMessageToListeners(7, newGUIDecay3);
+							getParameters()[7]->sendValueChangedMessageToListeners(newGUIDecay3);
 						}
 						if (m.getControllerNumber() == 27) //Sustain3
 						{
@@ -1662,7 +1650,7 @@
 							float newSustain3 = ((float)CCSustain3) * (15.0f / 127.0f);
 							parameterChanged("SuStain3", newSustain3);
 							float newGUISustain3 = ((float)CCSustain3) * (1.0f / 127.0f);
-							sendParamChangeMessageToListeners(10, newGUISustain3);
+							getParameters()[10]->sendValueChangedMessageToListeners(newGUISustain3);
 						}
 						if (m.getControllerNumber() == 28) //Release3
 						{
@@ -1670,7 +1658,7 @@
 							float newRelease3 = ((float)CCRelease3) * (15.0f / 127.0f);
 							parameterChanged("ReLease3", newRelease3);
 							float newGUIRelease3 = ((float)CCRelease3) * (1.0f / 127.0f);
-							sendParamChangeMessageToListeners(13, newGUIRelease3);
+							getParameters()[13]->sendValueChangedMessageToListeners(newGUIRelease3);
 						}
 						if (m.getControllerNumber() == 29) //Pulsew3
 						{
@@ -1678,7 +1666,7 @@
 							float newPulsew3 = ((float)CCPulsew3) * (4094.0f / 127.0f);
 							parameterChanged("PulsW3", newPulsew3);
 							float newGUIPulsew3 = ((float)CCPulsew3) * (1.0f / 127.0f);
-							sendParamChangeMessageToListeners(16, newGUIPulsew3);
+							getParameters()[16]->sendValueChangedMessageToListeners(newGUIPulsew3);
 						}
 					}
 					if (m.getControllerNumber() == 78) //Octave1
@@ -1687,7 +1675,7 @@
 						float newOctave1 = -4.00 + ((float)CCOctave1) * ((4.0f - -4.0f) / 127.0f);
 						parameterChanged("OcTave1", newOctave1);
 						float newGUIOctave1 = ((float)CCOctave1) * (1.0f / 127.0f);
-						sendParamChangeMessageToListeners(20, newGUIOctave1);
+						getParameters()[20]->sendValueChangedMessageToListeners(newGUIOctave1);
 					}
 					if (m.getControllerNumber() == 79) //Semi1
 					{
@@ -1695,7 +1683,7 @@
 						float newSemi1 = -12 + ((float)CCSemi1) * ((12.0f - -12.0f) / 127.0f);
 						parameterChanged("SeMi1", newSemi1);
 						float newGUISemi1 = ((float)CCSemi1) * (1.0f / 127.0f);
-						sendParamChangeMessageToListeners(23, newGUISemi1);
+						getParameters()[23]->sendValueChangedMessageToListeners(newGUISemi1);
 					}
 					if (m.getControllerNumber() == 70) //Cent1
 					{
@@ -1703,7 +1691,7 @@
 						float newCent1 = ((float)CCCent1) * ((100.0f - -100.0f) / 127.0f);
 						parameterChanged("CenT1", newCent1);
 						float newGUICent1 = ((float)CCCent1) * (1.0f / 127.0f);
-						sendParamChangeMessageToListeners(26, newGUICent1);
+						getParameters()[26]->sendValueChangedMessageToListeners(newGUICent1);
 					}
 					if (!LINK) {
 						if (m.getControllerNumber() == 85) //Octave2
@@ -1712,7 +1700,7 @@
 							float newOctave2 = -4.00 + ((float)CCOctave2) * ((4.0f - -4.0f) / 127.0f);
 							parameterChanged("OcTave2", newOctave2);
 							float newGUIOctave2 = ((float)CCOctave2) * (1.0f / 127.0f);
-							sendParamChangeMessageToListeners(21, newGUIOctave2);
+							getParameters()[21]->sendValueChangedMessageToListeners(newGUIOctave2);
 						}
 						if (m.getControllerNumber() == 86) //Semi2
 						{
@@ -1720,7 +1708,7 @@
 							float newSemi2 = -12 + ((float)CCSemi2) * ((12.0f - -12.0f) / 127.0f);
 							parameterChanged("SeMi2", newSemi2);
 							float newGUISemi2 = ((float)CCSemi2) * (1.0f / 127.0f);
-							sendParamChangeMessageToListeners(24, newGUISemi2);
+							getParameters()[24]->sendValueChangedMessageToListeners(newGUISemi2);
 						}
 						if (m.getControllerNumber() == 87) //Cent2
 						{
@@ -1728,7 +1716,7 @@
 							float newCent2 = ((float)CCCent2) * ((100.0f - -100.0f) / 127.0f);
 							parameterChanged("CenT2", newCent2);
 							float newGUICent2 = ((float)CCCent2) * (1.0f / 127.0f);
-							sendParamChangeMessageToListeners(27, newGUICent2);
+							getParameters()[27]->sendValueChangedMessageToListeners(newGUICent2);
 						}
 						if (m.getControllerNumber() == 88) //Octave3
 						{
@@ -1736,7 +1724,7 @@
 							float newOctave3 = -4.00 + ((float)CCOctave3) * ((4.0f - -4.0f) / 127.0f);
 							parameterChanged("OcTave3", newOctave3);
 							float newGUIOctave3 = ((float)CCOctave3) * (1.0f / 127.0f);
-							sendParamChangeMessageToListeners(22, newGUIOctave3);
+							getParameters()[22]->sendValueChangedMessageToListeners(newGUIOctave3);
 						}
 						if (m.getControllerNumber() == 89) //Semi3
 						{
@@ -1744,7 +1732,7 @@
 							float newSemi3 = -12 + ((float)CCSemi3) * ((12.0f - -12.0f) / 127.0f);
 							parameterChanged("SeMi3", newSemi3);
 							float newGUISemi3 = ((float)CCSemi3) * (1.0f / 127.0f);
-							sendParamChangeMessageToListeners(25, newGUISemi3);
+							getParameters()[25]->sendValueChangedMessageToListeners(newGUISemi3);
 						}
 						if (m.getControllerNumber() == 90) //Cent3
 						{
@@ -1752,7 +1740,7 @@
 							float newCent3 = ((float)CCCent3) * ((100.0f - -100.0f) / 127.0f);
 							parameterChanged("CenT3", newCent3);
 							float newGUICent3 = ((float)CCCent3) * (1.0f / 127.0f);
-							sendParamChangeMessageToListeners(28, newGUICent3);
+							getParameters()[28]->sendValueChangedMessageToListeners(newGUICent3);
 						}
 					}
 				}
