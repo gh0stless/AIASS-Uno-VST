@@ -39,7 +39,7 @@ Open the project in the Projucer, export for Xcode, and build.
 
 ## Version
 
-Current release: **0.9.8**
+Current release: **1.0**
 
 ## Hardware
 
