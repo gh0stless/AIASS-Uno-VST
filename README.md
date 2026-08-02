@@ -1,37 +1,45 @@
 # AIASS-Uno VST
 
-... is a quick and dirty VST-Plugin for use with SIDBlaster-USB, made by Juce Framework.
+A VST plugin that drives real SID chip hardware (MOS 6581/8580) via
+[SIDBlaster-USB](https://github.com/gh0stless/SIDBlaster-USB-Tic-Tac-Edition) -
+register-level hardware remote control, not classic audio DSP emulation.
 
-Compiled binary files also on www.crazy-midi.de.
+Compiled binaries also available on [www.crazy-midi.de](https://www.crazy-midi.de).
 
-It is the further development of the AIASS-mono.
-
-The AIASS-Uno now also has a poly mode.
-
-
+AIASS-Uno is the further development of AIASS-Mono, now with poly mode.
 
 ![](./docs/AIASS-Uno-VST-Preview.jpg)
 
 ## Description
-In the event of errors (wrong or missing DLL, no SIDBlaster connected) the red LED flashes. See manual.
+
+In the event of errors (wrong or missing `hardsid.dll`, no SIDBlaster
+connected) the red LED flashes and, on fatal init failure, a dialog explains
+what's wrong. See the manual for details.
 
 ## Build
 
-##### windows
+Built with [JUCE](https://juce.com) 9.0.0 via the Projucer.
 
-Open project in Projucer (part of juce package)(status: version 8.0.6) and export to and compile with Visual Studio 2022.
+##### Windows
 
-Under Windows, the correct hardsid.dll must be in the same folder as the host exe or, in the case of the standalone version, in its folder.
+Open the project in the Projucer, export for Visual Studio 2022, and build.
+`hardsid.dll` must be next to the host exe (or, for the standalone build, next
+to `AIASS-UNO.exe`) - or copied into `C:\Windows`. 32-bit is no longer
+supported.
 
-Or, you copy it in the C:\Windows folder. 32 bit Version not longer supported.
+##### Linux
 
-##### linux
-Open project in Projucer then build with "make CONFIG=Release".
-
-If memory is tight, try make -j1 to avoid parallel compilation.
+Open the project in the Projucer, export for Linux Makefile, then
+`make CONFIG=Release`. If memory is tight, use `make CONFIG=Release -j1` to
+avoid parallel compilation.
 
 ##### macOS
-Open Project in Projucer and export an build with XCode.
+
+Open the project in the Projucer, export for Xcode, and build.
+
+## Version
+
+Current release: **0.9.8**
 
 ## Hardware
 
@@ -39,41 +47,31 @@ https://github.com/gh0stless/SIDBlaster-USB-Tic-Tac-Edition
 
 ## hardsid.dll
 
-https://github.com/Galfodo/SIDBlasterUSB_HardSID-emulation-driver
-
-https://haendel.ddns.net/~ken/sidblaster.html
+- https://github.com/Galfodo/SIDBlasterUSB_HardSID-emulation-driver
+- https://haendel.ddns.net/~ken/sidblaster.html
 
 ## License
 
-AIASS-Uno VST is under GPL v3:
-
+AIASS-Uno VST is licensed under GPL v3:
 https://www.gnu.org/licenses/gpl-3.0.en.html
 
-Please also note the end user license of Juce: 
-
-https://juce.com/juce-5-license
+Please also note the JUCE end user license: https://juce.com/juce-9-licence
 
 The original SIDBlaster-USB was created by Davey:
-
 https://github.com/stg/SIDBlaster-USB
 
-hardsid.dll for SIDBlaster-USB is by Stein Petersen:
-
+`hardsid.dll` for SIDBlaster-USB is by Stein Pedersen:
 https://github.com/Galfodo/SIDBlasterUSB_HardSID-emulation-driver
 
-linux/mac port of hardsid.dll by Ken Händel:
-
-https://haendel.ddns.net/~ken/
-
-https://haendel.ddns.net/~ken/sidblaster.html
+Linux/macOS port of `hardsid.dll` by Ken Händel:
+https://haendel.ddns.net/~ken/ · https://haendel.ddns.net/~ken/sidblaster.html
 
 ## Thanks
 
-Thanks a lot: Wilfred Bos, Stein Pedersen & Ken Händel for your help. 
+Thanks a lot to Wilfred Bos, Stein Pedersen & Ken Händel for your help.
 
-Thanks Davey for the SIDBlaster-USB.
+Thanks to Davey for the SIDBlaster-USB.
 
-And to my bride-to-be, Borjana Konstantinowa,  for your patience with me 
+And to my bride-to-be, Borjana Konstantinowa, for your patience with me.
 
-***-Andreas Schumm (gh0stless) in December 2021***
-
+***- Andreas Schumm (gh0stless), crazy-midi.de***
