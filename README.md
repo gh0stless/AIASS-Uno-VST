@@ -47,8 +47,7 @@ https://github.com/gh0stless/SIDBlaster-USB-Tic-Tac-Edition
 
 ## hardsid.dll
 
-- https://github.com/Galfodo/SIDBlasterUSB_HardSID-emulation-driver
-- https://haendel.ddns.net/~ken/sidblaster.html
+https://github.com/gh0stless/SIDBlasterUSB_HardSID-emulation-driver
 
 ## License
 
@@ -60,11 +59,8 @@ Please also note the JUCE end user license: https://juce.com/juce-9-licence
 The original SIDBlaster-USB was created by Davey:
 https://github.com/stg/SIDBlaster-USB
 
-`hardsid.dll` for SIDBlaster-USB is by Stein Pedersen:
-https://github.com/Galfodo/SIDBlasterUSB_HardSID-emulation-driver
-
-Linux/macOS port of `hardsid.dll` by Ken Händel:
-https://haendel.ddns.net/~ken/ · https://haendel.ddns.net/~ken/sidblaster.html
+`hardsid.dll` for SIDBlaster-USB is by Stein Pedersen, Linux/macOS port by
+Ken Händel - see the fork linked under [hardsid.dll](#hardsiddll) above.
 
 ## Thanks
 
