@@ -8,7 +8,7 @@ Compiled binaries also available on [www.crazy-midi.de](https://www.crazy-midi.d
 
 AIASS-Uno is the further development of AIASS-Mono, now with poly mode.
 
-![](./docs/AIASS-Uno-VST-Preview.jpg)
+![](./images/AIASS-Uno-VST-Preview.jpg)
 
 ## Description
 
